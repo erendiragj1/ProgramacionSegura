@@ -4,4 +4,4 @@ def suma(n1,n2):
     :param n2: Es un segundo numero entero
     :return: Es un numero resultado de la suma de los dos numeros anteriores
     '''
-    return n1+n2
+    return n1+n2 
