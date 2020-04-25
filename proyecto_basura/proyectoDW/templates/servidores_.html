@@ -1,0 +1,59 @@
+﻿{% extends 'plantilla.html' %}
+
+{% block titulo %}Servidores{% endblock %}
+
+{% block contenido %}
+  <div id="navegador"></div>
+  <section class="container">
+    <div class="page-header">
+      <h1>Listado de Servidores</h3>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th class="text-center">Id de Servidor</th>
+            <th class="text-center">Nombre de Servidor</th>
+            <th class="text-center">Dirección IP</th>
+            <th class="text-center">Descripción</th>
+            <th class="text-center">Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-center">{{ IdSrv }}</td>
+            <td>{{ NomSrv }}</td>
+            <td class="text-center">{{ IpSrv}}</td>
+            <td>{{ DescSrv }}</td>
+            <td class="text-center">{{ StateSrv }}</td>
+          </tr>
+          <!-- Comentar lo siguiente una vez se termine de hacer pruebas -->
+          <tr>
+            <td class="text-center">1</td>
+            <td>Servidor web Público</td>
+            <td class="text-center">172.16.0.5/24</td>
+            <td>Servidor que tiene los servicios web públicos de la empresa.</td>
+            <td class="text-center">Encendido</td>
+          </tr>
+          <tr>
+            <td class="text-center">2</td>
+            <td>Servidor web privado</td>
+            <td class="text-center">172.16.0.6/24</td>
+            <td>Servidor con servicios web de la empresa, no se puede acceder desde fuera. Contiene herramienta de
+              registro de actividades e incidentes internos.</td>
+            <td class="text-center">Apagado</td>
+          </tr>
+          <tr>
+            <td class="text-center">2</td>
+            <td>Servidor de pruebas</td>
+            <td class="text-center">172.16.0.7/24</td>
+            <td>Servidor donde se realizan las pruebas antes de pasar a productivo.</td>
+            <td class="text-center">Indeterminado</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  
+{% endblock %}

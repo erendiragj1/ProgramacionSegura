@@ -1,0 +1,5 @@
+﻿.mostrar_pwd:hover{
+   cursor:pointer; 
+   cursor: hand;
+   background: rgba(78, 77, 77, 0.24);
+}
