@@ -25,7 +25,7 @@ SECRET_KEY = 'j-=@rc8d2gh49vp@=kt0h2s#614-@a3r1xv+%&4)dhjz)9va6-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [*] #JBarradas(25/04/2020): Se habilita para todos los hosts
+ALLOWED_HOSTS = ['*'] #JBarradas(25/04/2020): Se habilita para todos los hosts
 
 
 # Application definition
