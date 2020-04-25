@@ -1,0 +1,179 @@
+{% extends 'plantilla.html' %}
+
+{% block titulo %}Usuarios{% endblock %}
+
+{% block contenido %}
+  <div id="navegador"></div>
+  <section id="cont-show-user" class="container">
+    <div class="page-header">
+      <h1>Usuarios registrados</h1>
+    </div>
+    <div class="btn-group btn-group-justified">
+      <a class="btn btn-primary" data-toggle="modal" data-target="#cont-add-user"><span
+          class="glyphicon glyphicon-plus"></span> Agregar registro</a>
+      <a href="#" class="btn btn-primary"><span class="glyphicon glyphicon glyphicon glyphicon-minus"></span> Eliminar
+        registros</a>
+      <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#search-user"><span
+          class="glyphicon glyphicon glyphicon-search"></span> Buscar registro</a>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            {% comment %} <th class="text-center">Seleccionar</th> {% endcomment %}
+            <th class="text-center">Usuario</th>
+            <th class="text-center">Nombre</th>
+            <th class="text-center">Correo</th>
+            {% comment %} <th class="text-center">Editar</th> {% endcomment %}
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            {% comment %} <td class="text-center"><input type="checkbox" value="" /></td> {% endcomment %}
+            <td class="text-center">#=Usuario=#</td>
+            <td class="text-center">#=NomUsr=#</td>
+            <td class="text-center">#=MailUsr=#</td>
+            {% comment %} <td class="text-center"><span class="glyphicon glyphicon-edit"></span></td> {% endcomment %}
+            </td>
+          </tr>
+          <!-- Eliminar los siguientes elementos una vez se agregue el backend- -->
+          <tr>
+            {% comment %} <td class="text-center"><input type="checkbox" value="" /></td> {% endcomment %}
+            <td class="text-center">JBarradas</td>
+            <td class="text-center">Jesus Antonio Barradas Maldonado</td>
+            <td class="text-center">jbarradas.980@gmail.com</td>
+            {% comment %} <td class="text-center"><span class="glyphicon glyphicon-edit"></span></td> {% endcomment %}
+            </td>
+          </tr>
+          <tr>
+            {% comment %} <td class="text-center"><input type="checkbox" value="" /></td> {% endcomment %}
+            <td class="text-center">DCamacho</td>
+            <td class="text-center">Dulce Adaia Camacho Arredondo</td>
+            <td class="text-center">dcamacho.970@gmail.com</td>
+            {% comment %} <td class="text-center"><span class="glyphicon glyphicon-edit"></span></td> {% endcomment %}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="modal fade" tabindex="-1" id="cont-add-user">
+
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+
+        <!-- <div class="modal-title"> Agregar usuario</div> -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Agregar usuario</h4>
+        </div>
+
+        <div class="modal-body text-center">
+          
+          <form id="form-usr" action="#" method="POST">
+            {% csrf_token %}
+            
+            <div class="container-fluid">
+    
+              <div class="row">
+
+                  <div class="form-group col-md-6">
+                      <label class="control-label">Nombre(s)</label>
+                      <div class="input-group" id="div-name">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Ingrese el nombre(s)" />
+                      </div>
+                    </div>
+      
+                  <div class="form-group col-md-6">
+                     <label class="control-label">Apellidos</label>
+                     <div class="input-group" id="div-apellidos">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Ingrese los Apellidos" />
+                     </div>
+                  </div>
+
+              </div>
+              
+              <div class="row">
+              <div class="form-group col-md-6">
+                <label class="control-label">Nombre de usuario</label>
+                <div class="input-group" id="div-usr">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                  <input type="text" class="form-control" id="usr" name="usr" placeholder="Ingrese su usuario" />
+                </div>
+              </div>
+
+              <div class="form-group col-md-6">
+                <label class="control-label">Correo eléctronico</label>
+                <div class="input-group" id="div-correo_elec">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                  <input type="text" class="form-control" id="correo_elec" name="correo_elec" placeholder="Ingrese el correo eléctronico" />
+                </div>
+              </div>
+            </div>
+            
+            <div class="row" >
+              <div class="form-group col-md-6"  id="mtr_pwd">
+                <label class="control-label">Contraseña</label>
+                <div class="input-group" id="div-pwd">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                  <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Ingrese su contraseña" />
+                  <div class="input-group-addon mostrar_pwd"><a href=""><i class="glyphicon glyphicon-eye-open" ></i></div></a>
+                </div>
+              </div>
+
+              <div class="form-group col-md-6" id="mtr_conf_pwd">
+                <label class="control-label">Confirmar Contraseña</label>
+                <div class="input-group" id="div-conf_pwd">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                  <input type="password" class="form-control" id="conf_pwd" name="conf_pwd" placeholder="Confirmar contraseña" />
+                  <div class="input-group-addon mostrar_pwd" ><a href=""><i class="glyphicon glyphicon-eye-open" ></i></a></div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="modal-footer">
+
+                <input type="submit" value="Agregar Usuario" class="btn btn-primary " />
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              </div>
+
+              <div class="form-group">
+                <div id="form_error" class=""></div>
+              </div>
+              </div>
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="modal fade" tabindex="-1" id="search-user">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="input-group">
+            <input type="text" class="form-control" id="txt_search" placeholder="Search">
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="submit">
+                <i class="glyphicon glyphicon-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+{% endblock %}

@@ -1,0 +1,142 @@
+{% extends 'plantilla.html' %}
+
+{% block titulo %}Servidores{% endblock %}
+
+{% block contenido %}
+  <div id="navegador"></div>
+  <div class="form-group">
+    {% if errores %}  
+      <div id="form_error" class="alert alert-danger alert-dismissible fade in col-sm-offset-2 col-sm-8">{{errores}}</div>
+    {% endif %}
+  </div>
+  <section id="cont-show-srv" class="container">
+    <div class="page-header">
+      <h1>Servidores registrados</h1>
+    </div>
+    <div class="btn-group btn-group-justified">
+      <a class="btn btn-primary" data-toggle="modal" data-target="#cont-add-srv"><span
+          class="glyphicon glyphicon-plus"></span> Agregar registro</a>
+      <a href="../actualizaStatus" class="btn btn-primary"><span class="glyphicon glyphicon-refresh"></span> Actualizar
+        registros</a>
+      <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#search-srv"><span
+          class="glyphicon glyphicon glyphicon-search"></span> Buscar registro</a>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            {% comment %} <th class="text-center">Seleccionar</th> {% endcomment %}
+            <th class="text-center">Id del Servidor</th>
+            <th class="text-center">Desc. del servidor</th>
+            <th class="text-center">Dirección IP</th>
+            <th class="text-center">Estado</th>
+            {% comment %} <th class="text-center">Editar</th> {% endcomment %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for servidor in lista_servidores %}
+          <tr>
+            {% comment %} <td class="text-center"><input type="checkbox" value="" /></td> {% endcomment %}
+            <td class="text-center">{{ servidor.id }}</td>
+            <td class="text-center">{{ servidor.desc_srv }}</td>
+            <td class="text-center">{{ servidor.ip_srv }}</td>
+            <td class="text-center">
+               {% if servidor.status == 'E' %}<b><i class="glyphicon glyphicon-signal alert-success"></i></b>{% endif %}
+               {% if servidor.status == 'I' %}<b><i class="glyphicon glyphicon-signal alert-warning"></i></b>{% endif %}
+               {% if servidor.status == 'A' %}<b><i class="glyphicon glyphicon-signal alert-danger"></i></b>{% endif %}
+            </td>  {% comment %} {{ servidor.status }}{% endcomment %}
+            {% comment %} <td class="text-center"><span class="glyphicon glyphicon-edit"></span></td> {% endcomment %}
+            </td>
+          </tr>
+          {% endfor %} 
+          <!-- Eliminar los siguientes elementos una vez se agregue el backend- -->
+        </tbody>
+      </table>
+      
+    </div>
+  </section>
+
+  <section class="modal fade" tabindex="-1" id="cont-add-srv">
+
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- <div class="modal-title"> Agregar usuario</div> -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Agregar Servidor</h4>
+        </div>
+
+        <div class="modal-body text-center">
+          
+          <form id="form-srv" action="../servidores/" method="POST">
+            {% csrf_token %}
+            
+            <div class="container-fluid">
+              
+              <div class="row">
+                <div class="form-group">
+                  <label class="control-label">Nombre del servidor</label>
+                  <div class="input-group" id="div-servidor">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-hdd"></i></span>
+                    <input type="text" class="form-control" id="servidor" name="servidor" placeholder="Ingrese el nombre del servidor" />
+                  </div>
+                </div>
+              </div>
+            
+              <div class="row" >
+                <div class="form-group">
+                  <label class="control-label">Dirección IP</label>
+                  <div class="input-group" id="div-ip_srv">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-signal"></i></span>
+                    <input type="text" class="form-control" id="ip_srv" name="ip_srv" placeholder="Ingrese la dirección ip" />
+                  </div>
+                </div>
+              </div>
+            
+              <div class="row">
+                <div class="modal-footer">
+                  <input type="submit" value="Agregar Servidor" class="btn btn-primary " />
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                </div>
+               
+                <div class="form-group">
+                  {% if errores %}  
+                    <div id="form_error" class="alert alert-danger alert-dismissible fade in col-sm-offset-1 col-sm-10">{{errores}}</div>
+                  {% else %}
+                    <div id="form_error" class="col-sm-offset-1 col-sm-10"></div>
+                  {% endif %}
+                </div>
+              </div>
+
+            </div>
+         
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="modal fade" tabindex="-1" id="search-srv">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="input-group">
+            <input type="text" class="form-control" id="txt_search" placeholder="Search">
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="submit">
+                <i class="glyphicon glyphicon-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+{% endblock %}
