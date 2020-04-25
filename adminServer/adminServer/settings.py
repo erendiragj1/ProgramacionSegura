@@ -25,7 +25,7 @@ SECRET_KEY = 'j-=@rc8d2gh49vp@=kt0h2s#614-@a3r1xv+%&4)dhjz)9va6-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [*] #JBarradas(25/04/2020): Se habilita para todos los hosts
 
 
 # Application definition
@@ -55,8 +55,8 @@ ROOT_URLCONF = 'adminServer.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [[BASE_DIR + '/appMain/template'],],
-        'APP_DIRS': True,
+        'DIRS': [BASE_DIR + '/appMain/template'],
+        'APP_DIRS': True, 
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -104,15 +104,15 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-MX' #JBarradas (25/04/2020): Se cambia codificación 
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Mexico_City' #JBarradas (25/04/2020): Se cambia zona horaria
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False #JBarradas (25/04/2020): Se deshabilita para que tome la hora del sistema.
 
 
 # Static files (CSS, JavaScript, Images)
