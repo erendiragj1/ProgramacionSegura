@@ -119,3 +119,4 @@ USE_TZ = False #JBarradas (25/04/2020): Se deshabilita para que tome la hora del
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
