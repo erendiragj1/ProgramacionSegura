@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'appWeb',
 ]
 
 MIDDLEWARE = [
@@ -76,7 +77,7 @@ WSGI_APPLICATION = 'adminServer.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'progSegura',
+        'NAME': 'db_proyProgSeg2020',
         'USER': 'u_django_proySeg',
         'PASSWORD': 'pwd_Dj4ng0_$0$0',
         'HOST': 'localhost',
