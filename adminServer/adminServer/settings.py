@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'adminServer.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db_proyProgSeg2020',
-        'USER': 'u_django_proySeg',
-        'PASSWORD': 'pwd_Dj4ng0_$0$0',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': os.environ.get('DB_PORT'),
     }
 }
 

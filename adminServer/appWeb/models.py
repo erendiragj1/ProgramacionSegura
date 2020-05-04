@@ -1,5 +1,5 @@
 from django.db import models
-
+#from django.contrib.auth.models import User, UserManager
 # 4 de tamaño al id de servidores
 # Create your models here.
 class Usuario(models.Model):
