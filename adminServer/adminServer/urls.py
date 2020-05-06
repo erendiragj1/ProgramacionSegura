@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from appWeb.views import login
+from appWeb.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/',login,name='login'),
+    path('esperar_token/', solicitar_token, name="solicitar_token")
 ]
