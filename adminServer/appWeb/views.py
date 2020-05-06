@@ -3,7 +3,10 @@ from .forms import *
 import os
 from .models import Usuario
 import requests
-import unicodedata
+import base64
+import random
+import string
+
 
 # Create your views here.
 def login(request):
@@ -11,22 +14,22 @@ def login(request):
         user_form = userForm(request.POST)
         print(request.POST)
         print("loggin post")
-        #if user_form.is_valid():
+        # if user_form.is_valid():
         print("Es valido")
         nomUsuario = request.POST.get("usr")
         print(nomUsuario)
         usuario = Usuario.objects.get(usr=nomUsuario)
         token = generar_token()
-        usuario.token=token
+        usuario.token = token
         enviar_token(token, usuario.chat_id)
         usuario.save()
         return redirect("solicitar_token")
-        #else:
-            #print(user_form.errors)
+        # else:
+        # print(user_form.errors)
     elif request.method == "GET":
         user_form = userForm()
         print(user_form)
-    return render(request, "login.html", {"user_form": user_form})
+        return render(request, "login.html", {"user_form": user_form})
 
 
 def solicitar_token(request):
@@ -42,13 +45,20 @@ def solicitar_token(request):
     return render(request, "esperando_token.html", {"token_form": token_form})
 
 
-def generar_token():
+def randomString(stringLength):
+   letters = string.ascii_lowercase
+   return ''.join(random.choice(letters) for i in range(stringLength))
 
-    token = os.urandom(16).decode("UTF-8","ignore")
+
+def generar_token():
+    tam_token = 12
+    token = randomString(tam_token)
+    print(token)
     return token
 
 
 def enviar_token(token, chatid):
     BOT_TOKEN = "1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w"
-    send_text = 'https://api.telegram.org/bot%s/sendMessage?chat_id=%s&parse_mode=Markdown&text=%s' % ( BOT_TOKEN, chatid, token)
+    send_text = 'https://api.telegram.org/bot%s/sendMessage?chat_id=%s&parse_mode=Markdown&text=%s' % (
+    BOT_TOKEN, chatid, token)
     response = requests.get(send_text)
