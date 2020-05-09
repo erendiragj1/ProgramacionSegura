@@ -3,26 +3,29 @@ from .forms import *
 import os
 from .models import Usuario
 import requests
-import base64
 import random
 import string
-
+import hashlib
 
 # Create your views here.
 def login(request):
     if request.method == "POST":
         user_form = userForm(request.POST)
         print(request.POST)
-        print("loggin post")
-        # if user_form.is_valid():
-        print("Es valido")
         nomUsuario = request.POST.get("usr")
+        pwdEnviada = request.POST.get("pwd")
         print(nomUsuario)
         usuario = Usuario.objects.get(usr=nomUsuario)
-        token = generar_token()
-        usuario.token = token
-        enviar_token(token, usuario.chat_id)
-        usuario.save()
+        if usuario is not None:
+            password_usuario = usuario.pwd
+            print(password_usuario)
+            if validar_contrasena(pwdEnviada,password_usuario):
+                token = generar_token()
+                usuario.token = token
+                enviar_token(token, usuario.chat_id)
+                usuario.save()
+            else:
+                return redirect("login")
         return redirect("solicitar_token")
         # else:
         # print(user_form.errors)
@@ -46,8 +49,8 @@ def solicitar_token(request):
 
 
 def randomString(stringLength):
-   letters = string.ascii_lowercase
-   return ''.join(random.choice(letters) for i in range(stringLength))
+    letters = string.ascii_lowercase
+    return ''.join(random.choice(letters) for i in range(stringLength))
 
 
 def generar_token():
@@ -60,5 +63,21 @@ def generar_token():
 def enviar_token(token, chatid):
     BOT_TOKEN = "1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w"
     send_text = 'https://api.telegram.org/bot%s/sendMessage?chat_id=%s&parse_mode=Markdown&text=%s' % (
-    BOT_TOKEN, chatid, token)
+        BOT_TOKEN, chatid, token)
     response = requests.get(send_text)
+
+
+def validar_contrasena(pwdEnviada,pwdBD):
+    print("Si entro")
+    terminaSalt = 8 #Es la posicion donde termina el salt
+    hashBd = pwdBD[terminaSalt:]
+    saltBd = pwdBD[:terminaSalt]
+    md5 = hashlib.md5()
+    md5.update(pwdEnviada.encode("UTF-8")+saltBd.encode("UTF-8"))
+    hashObtenido = md5.hexdigest()
+    print(hashObtenido)
+    print(hashBd)
+    if hashObtenido == hashBd:
+        return True
+    else:
+        return False

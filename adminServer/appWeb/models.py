@@ -4,7 +4,7 @@ from django.db import models
 # Create your models here.
 class Usuario(models.Model):
     usr = models.CharField("Usuario", max_length=16, blank=False, null=False, primary_key=True)
-    pwd = models.CharField("Contraseña", max_length=32, blank=False, null=False)
+    pwd = models.CharField("Contraseña", max_length=42, blank=False, null=False)
     nombres = models.CharField("Nombre", max_length=20, blank=False, null=False)
     apellidos = models.CharField("Apellido", max_length=20, blank=True, null=False)
     correo = models.EmailField(max_length=32, blank=True, null=True)
