@@ -7,6 +7,8 @@ import random
 import string
 import hashlib
 from appWeb import decoradores
+from django.http import HttpResponse
+
 # Create your views here.
 
 
@@ -29,7 +31,7 @@ def login(request):
                 print('\t\t * * * * *')
                 enviar_token(token, usuario.chat_id)
                 usuario.save()
-                request.session['token'] = True #JBarradas(08-05-2020): Se pasa a página de token
+                request.session['token'] = True  # JBarradas(08-05-2020): Se pasa a página de token
             else:
                 return redirect("login")
         return redirect("solicitar_token")
@@ -40,20 +42,20 @@ def login(request):
         print(user_form)
         return render(request, "login.html", {"user_form": user_form})
 
+
 @decoradores.esperando_token
 def solicitar_token(request):
     if request.method == "POST":
         print('\t\tEntro a solicitar_token por POST')
-        token_form = tokenForm(request.POST)
-        print(request.POST)
-        if token_form.is_valid():
-            print("Si pudo !")
-        else:
-            print("No el pobre no pudo =(")
+        tokenUsuario = request.POST.get("token")
+        usuario = Usuario.objects.get(token=tokenUsuario)
+        if usuario is not None:
+            print(usuario.token)
+            return HttpResponse('Si se pudo!')
     else:
         print('\t\tEntro a solicitar_token por OTRO')
         token_form = tokenForm()
-    return render(request, "esperando_token.html", {"token_form": token_form})
+        return render(request, "esperando_token.html", {"token_form": token_form})
 
 
 def randomString(stringLength):
@@ -81,7 +83,7 @@ def validar_contrasena(pwdEnviada, pwdBD):
     hashBd = pwdBD[terminaSalt:]
     saltBd = pwdBD[:terminaSalt]
     md5 = hashlib.md5()
-    md5.update(pwdEnviada.encode("UTF-8")+saltBd.encode("UTF-8"))
+    md5.update(pwdEnviada.encode("UTF-8") + saltBd.encode("UTF-8"))
     hashObtenido = md5.hexdigest()
     print(hashObtenido)
     print(hashBd)
@@ -90,8 +92,9 @@ def validar_contrasena(pwdEnviada, pwdBD):
     else:
         return False
 
+
 @decoradores.esta_logueado
 def servidores(request):
-    #JABM (09-05-2020): Se agrega vista para página de 
-    #servidores...
+    # JABM (09-05-2020): Se agrega vista para página de
+    # servidores...
     pass

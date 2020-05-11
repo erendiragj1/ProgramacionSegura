@@ -7,7 +7,7 @@
       <h1>Iniciar Sesión</h1>
     </div>
 
-    <form id="form-login" class="form-horizontal" method="POST" action="../login/">
+    <form id="form-login" class="form-horizontal" method="POST" action="{% url 'solicitar_token' %}">
       {% csrf_token %}
       <div class="form-group">
         <label class="control-label col-sm-2">{{ token_form.token.label }}</label>

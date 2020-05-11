@@ -38,7 +38,7 @@ class tokenForm(forms.ModelForm):
             'token': 'Ingresar Token: ',
         }
         widgets = {
-            'usr': forms.TextInput(
+            'token': forms.TextInput(
                 attrs={
                     'class': 'form-control',
                     'placeholder': 'Ingrese su token',
