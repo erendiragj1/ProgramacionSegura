@@ -6,8 +6,10 @@ import requests
 import random
 import string
 import hashlib
-
+from appWeb import decoradores
 # Create your views here.
+
+
 def login(request):
     if request.method == "POST":
         user_form = userForm(request.POST)
@@ -19,11 +21,15 @@ def login(request):
         if usuario is not None:
             password_usuario = usuario.pwd
             print(password_usuario)
-            if validar_contrasena(pwdEnviada,password_usuario):
+            if validar_contrasena(pwdEnviada, password_usuario):
                 token = generar_token()
                 usuario.token = token
+                print('\t\t Su token')
+                print(token)
+                print('\t\t * * * * *')
                 enviar_token(token, usuario.chat_id)
                 usuario.save()
+                request.session['token'] = True #JBarradas(08-05-2020): Se pasa a página de token
             else:
                 return redirect("login")
         return redirect("solicitar_token")
@@ -34,9 +40,10 @@ def login(request):
         print(user_form)
         return render(request, "login.html", {"user_form": user_form})
 
-
+@decoradores.esperando_token
 def solicitar_token(request):
     if request.method == "POST":
+        print('\t\tEntro a solicitar_token por POST')
         token_form = tokenForm(request.POST)
         print(request.POST)
         if token_form.is_valid():
@@ -44,6 +51,7 @@ def solicitar_token(request):
         else:
             print("No el pobre no pudo =(")
     else:
+        print('\t\tEntro a solicitar_token por OTRO')
         token_form = tokenForm()
     return render(request, "esperando_token.html", {"token_form": token_form})
 
@@ -67,9 +75,9 @@ def enviar_token(token, chatid):
     response = requests.get(send_text)
 
 
-def validar_contrasena(pwdEnviada,pwdBD):
+def validar_contrasena(pwdEnviada, pwdBD):
     print("Si entro")
-    terminaSalt = 8 #Es la posicion donde termina el salt
+    terminaSalt = 8  # Es la posicion donde termina el salt
     hashBd = pwdBD[terminaSalt:]
     saltBd = pwdBD[:terminaSalt]
     md5 = hashlib.md5()
@@ -81,3 +89,9 @@ def validar_contrasena(pwdEnviada,pwdBD):
         return True
     else:
         return False
+
+@decoradores.esta_logueado
+def servidores(request):
+    #JABM (09-05-2020): Se agrega vista para página de 
+    #servidores...
+    pass
