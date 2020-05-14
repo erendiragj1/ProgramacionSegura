@@ -8,7 +8,6 @@ import string
 import hashlib
 from appWeb import decoradores
 from django.http import HttpResponse
-
 # Create your views here.
 
 
