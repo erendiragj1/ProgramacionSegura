@@ -1,7 +1,6 @@
 from django.contrib.auth import authenticate
 from django.shortcuts import render, redirect
 from .forms import *
-import os
 from .models import Usuario
 import requests
 import random
@@ -9,12 +8,15 @@ import string
 import hashlib
 from appWeb import decoradores
 from django.http import HttpResponse
+from axes.decorators import axes_dispatch
+
+
 # Create your views here.
 
-
+@axes_dispatch
 def login(request):
     if request.method == "POST":
-        user_form = userForm(request.POST)
+        # user_form = userForm(request.POST)
         print(request.POST)
         nomUsuario = request.POST.get("usr")
         pwdEnviada = request.POST.get("pwd")
@@ -22,10 +24,15 @@ def login(request):
         user = authenticate(request=request, username=nomUsuario, password=pwdEnviada)
         if user is not None:
             print("El usuario existe y es: ", user)
-        elif user == "NADA":
-            print("El usuario no existe")
+            token = generar_token()
+            user.token = token
+            user.save()
+            print(user.token)
+            request.session['token'] = True  # JBarradas(08-05-2020): Se pasa a página de token
+            return redirect("solicitar_token")
         else:
-            print("nisquiera entro")
+            print("El usuario no existe")
+            return redirect("login")
         # usuario = Usuario.objects.get(usr=nomUsuario)
         # if usuario is not None:
         #     password_usuario = usuario.pwd
@@ -38,10 +45,10 @@ def login(request):
         #         print('\t\t * * * * *')
         #         enviar_token(token, usuario.chat_id)
         #         usuario.save()
-        #         request.session['token'] = True  # JBarradas(08-05-2020): Se pasa a página de token
+
         #   else:
         #        return redirect("login")
-        return redirect("solicitar_token")
+
         # else:
         # print(user_form.errors)
     elif request.method == "GET":

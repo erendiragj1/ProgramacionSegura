@@ -15,9 +15,7 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 print(BASE_DIR)
-# AXES_LOGIN_FAILURE_LIMIT = 3
-# AXES_USERNAME_FORM_FIELD = "usr"
-AXES_ENABLED = False
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
@@ -50,6 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'axes.middleware.AxesMiddleware',
 ]
 
 ROOT_URLCONF = 'adminServer.urls'
@@ -120,9 +119,17 @@ USE_TZ = False  # JBarradas (25/04/2020): Se deshabilita para que tome la hora d
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+# AXES
+AXES_ENABLED = True
+#SILENCED_SYSTEM_CHECKS = ['axes.W001']
+AXES_FAILURE_LIMIT = 3
+AXES_ONLY_USER_FAILURES = True
+AXES_COOLOFF_TIME = 1
+
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 AUTHENTICATION_BACKENDS = (
+    'axes.backends.AxesBackend',
     'appWeb.backends.LoginBackend',
 )

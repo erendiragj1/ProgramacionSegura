@@ -6,7 +6,7 @@ from django.contrib.auth.backends import BaseBackend
 class LoginBackend(BaseBackend):
     # MML se crea nuestro propio back-end de authenticacion, se redefinen los metodos predefinidos de Django
     def authenticate(self, request, username=None, password=None, **kwargs):
-        print("Si entro")
+        print("Si entro al backend")
         terminaSalt = 8  # Es la posicion donde termina el salt
         try:
             user = Usuario.objects.get(usr=username)
