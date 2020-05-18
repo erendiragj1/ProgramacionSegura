@@ -15,8 +15,9 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 print(BASE_DIR)
-AXES_LOGIN_FAILURE_LIMIT = 3
-AXES_USERNAME_FORM_FIELD = "usr"
+# AXES_LOGIN_FAILURE_LIMIT = 3
+# AXES_USERNAME_FORM_FIELD = "usr"
+AXES_ENABLED = False
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
@@ -121,3 +122,7 @@ USE_TZ = False  # JBarradas (25/04/2020): Se deshabilita para que tome la hora d
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
+AUTHENTICATION_BACKENDS = (
+    'appWeb.backends.LoginBackend',
+)

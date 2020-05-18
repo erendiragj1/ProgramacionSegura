@@ -1,3 +1,4 @@
+from django.contrib.auth import authenticate
 from django.shortcuts import render, redirect
 from .forms import *
 import os
@@ -18,21 +19,28 @@ def login(request):
         nomUsuario = request.POST.get("usr")
         pwdEnviada = request.POST.get("pwd")
         print(nomUsuario)
-        usuario = Usuario.objects.get(usr=nomUsuario)
-        if usuario is not None:
-            password_usuario = usuario.pwd
-            print(password_usuario)
-            if validar_contrasena(pwdEnviada, password_usuario):
-                token = generar_token()
-                usuario.token = token
-                print('\t\t Su token')
-                print(token)
-                print('\t\t * * * * *')
-                enviar_token(token, usuario.chat_id)
-                usuario.save()
-                request.session['token'] = True  # JBarradas(08-05-2020): Se pasa a página de token
-            else:
-                return redirect("login")
+        user = authenticate(request=request, username=nomUsuario, password=pwdEnviada)
+        if user is not None:
+            print("El usuario existe y es: ", user)
+        elif user == "NADA":
+            print("El usuario no existe")
+        else:
+            print("nisquiera entro")
+        # usuario = Usuario.objects.get(usr=nomUsuario)
+        # if usuario is not None:
+        #     password_usuario = usuario.pwd
+        #     print(password_usuario)
+        #     if validar_contrasena(pwdEnviada, password_usuario):
+        #         token = generar_token()
+        #         usuario.token = token
+        #         print('\t\t Su token')
+        #         print(token)
+        #         print('\t\t * * * * *')
+        #         enviar_token(token, usuario.chat_id)
+        #         usuario.save()
+        #         request.session['token'] = True  # JBarradas(08-05-2020): Se pasa a página de token
+        #   else:
+        #        return redirect("login")
         return redirect("solicitar_token")
         # else:
         # print(user_form.errors)
