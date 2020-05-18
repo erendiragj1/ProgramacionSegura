@@ -120,6 +120,7 @@ USE_TZ = False  # JBarradas (25/04/2020): Se deshabilita para que tome la hora d
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 # AXES
+# MML Se establece la configuracion de axes
 AXES_ENABLED = True
 #SILENCED_SYSTEM_CHECKS = ['axes.W001']
 AXES_FAILURE_LIMIT = 3

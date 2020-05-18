@@ -21,11 +21,12 @@ def login(request):
         nomUsuario = request.POST.get("usr")
         pwdEnviada = request.POST.get("pwd")
         print(nomUsuario)
-        user = authenticate(request=request, username=nomUsuario, password=pwdEnviada)
+        user = authenticate(request=request, username=nomUsuario, password=pwdEnviada) # MML se usa la nueva funcion authenticate redefinida
         if user is not None:
             print("El usuario existe y es: ", user)
             token = generar_token()
             user.token = token
+            enviar_token(token, user.chat_id)
             user.save()
             print(user.token)
             request.session['token'] = True  # JBarradas(08-05-2020): Se pasa a página de token
@@ -89,6 +90,7 @@ def enviar_token(token, chatid):
     send_text = 'https://api.telegram.org/bot%s/sendMessage?chat_id=%s&parse_mode=Markdown&text=%s' % (
         BOT_TOKEN, chatid, token)
     response = requests.get(send_text)
+
 
 
 def validar_contrasena(pwdEnviada, pwdBD):
