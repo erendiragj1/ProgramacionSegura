@@ -5,7 +5,7 @@ from .models import Usuario
 import requests
 import random
 import string
-import hashlib
+import datetime
 from appWeb import decoradores
 from django.http import HttpResponse
 from axes.decorators import axes_dispatch
@@ -66,6 +66,8 @@ def solicitar_token(request):
         usuario = Usuario.objects.get(token=tokenUsuario)
         if usuario is not None:
             print(usuario.token)
+            request.session['logueado'] = True
+            request.session.set_expiry(200)
             return HttpResponse('Si se pudo!')
     else:
         print('\t\tEntro a solicitar_token por OTRO')
@@ -93,20 +95,20 @@ def enviar_token(token, chatid):
 
 
 
-def validar_contrasena(pwdEnviada, pwdBD):
-    print("Si entro")
-    terminaSalt = 8  # Es la posicion donde termina el salt
-    hashBd = pwdBD[terminaSalt:]
-    saltBd = pwdBD[:terminaSalt]
-    md5 = hashlib.md5()
-    md5.update(pwdEnviada.encode("UTF-8") + saltBd.encode("UTF-8"))
-    hashObtenido = md5.hexdigest()
-    print(hashObtenido)
-    print(hashBd)
-    if hashObtenido == hashBd:
-        return True
-    else:
-        return False
+# def validar_contrasena(pwdEnviada, pwdBD):
+#     print("Si entro")
+#     terminaSalt = 8  # Es la posicion donde termina el salt
+#     hashBd = pwdBD[terminaSalt:]
+#     saltBd = pwdBD[:terminaSalt]
+#     md5 = hashlib.md5()
+#     md5.update(pwdEnviada.encode("UTF-8") + saltBd.encode("UTF-8"))
+#     hashObtenido = md5.hexdigest()
+#     print(hashObtenido)
+#     print(hashBd)
+#     if hashObtenido == hashBd:
+#         return True
+#     else:
+#         return False
 
 
 @decoradores.esta_logueado
