@@ -15,63 +15,52 @@ from axes.decorators import axes_dispatch
 
 @axes_dispatch
 def login(request):
+    user_form = userForm()
     if request.method == "POST":
         # user_form = userForm(request.POST)
-        print(request.POST)
         nomUsuario = request.POST.get("usr")
         pwdEnviada = request.POST.get("pwd")
-        print(nomUsuario)
-        user = authenticate(request=request, username=nomUsuario, password=pwdEnviada) # MML se usa la nueva funcion authenticate redefinida
+        # MML se usa la nueva funcion authenticate redefinida
+        user = authenticate(
+            request=request, username=nomUsuario, password=pwdEnviada)
         if user is not None:
-            print("El usuario existe y es: ", user)
+            print("\t\ŧEl usuario existe y es: ", user)
             token = generar_token()
             user.token = token
             enviar_token(token, user.chat_id)
             user.save()
             print(user.token)
-            request.session['token'] = True  # JBarradas(08-05-2020): Se pasa a página de token
+            # JBarradas(08-05-2020): Se pasa a página de token
+            request.session['token'] = True
             return redirect("solicitar_token")
         else:
-            print("El usuario no existe")
-            return redirect("login")
-        # usuario = Usuario.objects.get(usr=nomUsuario)
-        # if usuario is not None:
-        #     password_usuario = usuario.pwd
-        #     print(password_usuario)
-        #     if validar_contrasena(pwdEnviada, password_usuario):
-        #         token = generar_token()
-        #         usuario.token = token
-        #         print('\t\t Su token')
-        #         print(token)
-        #         print('\t\t * * * * *')
-        #         enviar_token(token, usuario.chat_id)
-        #         usuario.save()
-
-        #   else:
-        #        return redirect("login")
-
-        # else:
-        # print(user_form.errors)
+            print('\t\ŧEl usuario no existe')
+            return render(request, 'login.html', {"user_form": user_form, "errores": "Usuario y contraseña inválidos."})
     elif request.method == "GET":
-        user_form = userForm()
-        print(user_form)
         return render(request, "login.html", {"user_form": user_form})
 
 
 @decoradores.esperando_token
 def solicitar_token(request):
+    token_form = tokenForm()
+    usuario = None
     if request.method == "POST":
         print('\t\tEntro a solicitar_token por POST')
         tokenUsuario = request.POST.get("token")
-        usuario = Usuario.objects.get(token=tokenUsuario)
+        try:  # JBarradas(22/05/2020): Se agrega por que manda error cuando el qry no hace match
+            usuario = Usuario.objects.get(token=tokenUsuario)
+        except:
+            pass
         if usuario is not None:
             print(usuario.token)
             request.session['logueado'] = True
-            request.session.set_expiry(200)
-            return HttpResponse('Si se pudo!')
+            request.session.set_expiry(18000)  # 5 horas
+            return redirect("servidores")
+        else:
+            return render(request, 'esperando_token.html', {"token_form": token_form, "errores": "Token inválido"})
     else:
         print('\t\tEntro a solicitar_token por OTRO')
-        token_form = tokenForm()
+
         return render(request, "esperando_token.html", {"token_form": token_form})
 
 
@@ -94,25 +83,9 @@ def enviar_token(token, chatid):
     response = requests.get(send_text)
 
 
-
-# def validar_contrasena(pwdEnviada, pwdBD):
-#     print("Si entro")
-#     terminaSalt = 8  # Es la posicion donde termina el salt
-#     hashBd = pwdBD[terminaSalt:]
-#     saltBd = pwdBD[:terminaSalt]
-#     md5 = hashlib.md5()
-#     md5.update(pwdEnviada.encode("UTF-8") + saltBd.encode("UTF-8"))
-#     hashObtenido = md5.hexdigest()
-#     print(hashObtenido)
-#     print(hashBd)
-#     if hashObtenido == hashBd:
-#         return True
-#     else:
-#         return False
-
-
 @decoradores.esta_logueado
 def servidores(request):
-    # JABM (09-05-2020): Se agrega vista para página de
-    # servidores...
-    pass
+    # JABM (09-05-2020): Se agrega vista para página de servidores
+    print("servidores")
+    if request.method == "GET":
+        return render(request, "servidores.html")

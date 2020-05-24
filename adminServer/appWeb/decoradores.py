@@ -12,10 +12,6 @@ def esta_logueado(vista):
             # JABM (09-05-2020): Si no esta logueado se redirigue al login.
             return redirect('/login/')
         # JABM (09-05-2020): Si esta logueado se permite acceso al recurso.
-        # fecha_actual = datetime.datetime.now()
-        # fecha_vencimiento = datetime.strptime(request.session.get('vencimiento'), "%d-%m-%Y %H:%M:%S")
-        # if fecha_actual >= fecha_vencimiento:
-        #     return redirect('login')
         return vista(request) 
     return interna
 
