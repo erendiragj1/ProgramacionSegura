@@ -89,3 +89,10 @@ def servidores(request):
     print("servidores")
     if request.method == "GET":
         return render(request, "servidores.html")
+
+
+# MML Se crea la funcion vista para el logout
+@decoradores.esta_logueado
+def logout(request):
+    request.session.flush()
+    return redirect("login")

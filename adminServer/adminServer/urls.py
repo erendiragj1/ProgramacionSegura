@@ -22,5 +22,6 @@ urlpatterns = [
     path('login/',login,name='login'),
     path('',login),
     path('esperar_token/', solicitar_token, name="solicitar_token"),
-    path('servidores',servidores, name="servidores")
+    path('servidores/',servidores, name="servidores"),
+    path('logout/',logout,name="logout"),
 ]
