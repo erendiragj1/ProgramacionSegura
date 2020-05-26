@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'appWeb',
     'axes',
+    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -126,6 +127,7 @@ AXES_ENABLED = True
 AXES_FAILURE_LIMIT = 3
 AXES_ONLY_USER_FAILURES = True
 AXES_COOLOFF_TIME = 1
+AXES_ENABLE_ADMIN = False
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
@@ -133,4 +135,5 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 AUTHENTICATION_BACKENDS = (
     'axes.backends.AxesBackend',
     'appWeb.backends.LoginBackend',
+    'django.contrib.auth.backends.ModelBackend',
 )
