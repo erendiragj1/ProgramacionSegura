@@ -18,7 +18,7 @@ from django.urls import path
 from rest_framework import routers
 from appMonitoreo.views import *  # NOQA
 
-# router = routers.DefaultRouter()
+router = routers.DefaultRouter()
 # router.register(r'user',views.UserViewSet)
 # router.register(r'groups',views.GroupViewSet)
 
