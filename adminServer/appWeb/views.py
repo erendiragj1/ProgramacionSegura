@@ -14,6 +14,7 @@ from axes.decorators import axes_dispatch
 # Create your views here.
 
 @axes_dispatch
+@decoradores.no_esta_logueado
 def login(request):
     user_form = userForm()
     if request.method == "POST":

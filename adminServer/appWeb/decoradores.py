@@ -23,6 +23,18 @@ def esperando_token(vista):
         if not request.session.get('token', False):
             # JABM (09-05-2020): Si no ha ingresado primero sus datos en login.
             return redirect('/login/')
-        # JABM (09-05-2020): Si ya ha ingresado primero sus datos en login.
+        #JABM (09-05-2020): Si ya ha ingresado primero sus datos en login.
+        return vista(request) 
+    return interna
+
+def no_esta_logueado(vista):
+    #JABM; Decorador que valida si no se esta logueado
+    #Tomese como logueado que el usuario, pwd y token
+    #estan correctos
+    def interna(request):
+        if request.session.get('logueado', False):
+            #JABM (09-05-2020): Si esta logueado se redirigue a servidores.
+            return redirect('/servidores/')
+        #JABM (09-05-2020): Si no esta logueado se permite acceso al recurso.
         return vista(request) 
     return interna
