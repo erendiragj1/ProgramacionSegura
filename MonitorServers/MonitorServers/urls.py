@@ -17,11 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from rest_framework import routers
 from appMonitoreo.views import *  # NOQA
+from rest_framework.authtoken import views
 
-router = routers.DefaultRouter()
-# router.register(r'user',views.UserViewSet)
-# router.register(r'groups',views.GroupViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('datos_monitor/',listar_datos, name='listar_datos'),
+    path('authenticacion/',views.obtain_auth_token),
 ]
