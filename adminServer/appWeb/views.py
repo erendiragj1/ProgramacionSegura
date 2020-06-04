@@ -1,7 +1,7 @@
 from django.contrib.auth import authenticate
 from django.shortcuts import render, redirect
 from .forms import *
-from .models import Usuario
+from .models import Usuario,Servidor
 import requests
 import random
 import string
@@ -91,8 +91,9 @@ def servidores(request):
     # JABM (09-05-2020): Se agrega vista para página de servidores
     print("servidores")
     if request.method == "GET":
-        contexto = {"usuario":request.session.get("usuario")}
-        return render(request, "servidores.html",contexto)
+        usuario = request.session.get("usuario")
+        servidores = Servidor.objects.filter(estado=True,usr=usuario)
+        return render(request, "servidores.html",{"servidores":servidores})
 
 
 # MML Se crea la funcion vista para el logout

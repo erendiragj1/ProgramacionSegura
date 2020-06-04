@@ -20,6 +20,7 @@ class Servidor(models.Model):
     desc_srv = models.CharField(max_length=16, blank=False, null=False)
     ip_srv = models.CharField(max_length=12, blank=False, null=False)  # Ay que cambiarlo al tipo de IP
     puerto = models.IntegerField(blank=False, null=False)
+    estado = models.BooleanField("Activo/Inactivo", default=True)
     usr = models.ForeignKey(Usuario, on_delete=models.CASCADE)
 
 # admin_M0nS3rv1c3s2020
