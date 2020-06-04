@@ -25,7 +25,7 @@ def login(request):
         user = authenticate(
             request=request, username=nomUsuario, password=pwdEnviada)
         if user is not None:
-            print("\t\ŧEl usuario existe y es: ", user)
+            print("\t El usuario existe y es: ", user)
             token = generar_token()
             user.token = token
             enviar_token(token, user.chat_id)
@@ -55,6 +55,7 @@ def solicitar_token(request):
         if usuario is not None:
             print(usuario.token)
             request.session['logueado'] = True
+            request.session['usuario'] = usuario.usr
             request.session.set_expiry(18000)  # 5 horas
             return redirect("servidores")
         else:
@@ -78,6 +79,7 @@ def generar_token():
 
 
 def enviar_token(token, chatid):
+    print("se empieza a enviar token")
     BOT_TOKEN = "1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w"
     send_text = 'https://api.telegram.org/bot%s/sendMessage?chat_id=%s&parse_mode=Markdown&text=%s' % (
         BOT_TOKEN, chatid, token)
@@ -89,7 +91,8 @@ def servidores(request):
     # JABM (09-05-2020): Se agrega vista para página de servidores
     print("servidores")
     if request.method == "GET":
-        return render(request, "servidores.html")
+        contexto = {"usuario":request.session.get("usuario")}
+        return render(request, "servidores.html",contexto)
 
 
 # MML Se crea la funcion vista para el logout
