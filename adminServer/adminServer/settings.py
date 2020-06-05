@@ -123,11 +123,12 @@ USE_TZ = False  # JBarradas (25/04/2020): Se deshabilita para que tome la hora d
 # AXES
 # MML Se establece la configuracion de axes
 AXES_ENABLED = True
-#SILENCED_SYSTEM_CHECKS = ['axes.W001']
 AXES_FAILURE_LIMIT = 3
 AXES_ONLY_USER_FAILURES = True
 AXES_COOLOFF_TIME = 1
-AXES_ENABLE_ADMIN = False
+AXES_ENABLE_ADMIN = True
+AXES_LOCKOUT_URL = "bloqueado/"
+AXES_LOCKOUT_TEMPLATE = "usuarioBloqueado.html"
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)

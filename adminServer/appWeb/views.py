@@ -91,9 +91,11 @@ def servidores(request):
     # JABM (09-05-2020): Se agrega vista para página de servidores
     print("servidores")
     if request.method == "GET":
-        usuario = request.session.get("usuario")
+        nom_usuario = request.session.get("usuario")
+        usuario = Usuario.objects.get(usr=nom_usuario)
         servidores = Servidor.objects.filter(estado=True,usr=usuario)
-        return render(request, "servidores.html",{"servidores":servidores})
+        contexto = {"usuario":usuario,"servidores":servidores}
+        return render(request, "servidores.html",contexto)
 
 
 # MML Se crea la funcion vista para el logout

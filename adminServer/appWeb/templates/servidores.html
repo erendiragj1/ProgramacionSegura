@@ -8,7 +8,12 @@
     </div>
   </section>
   <div class="container">
-    Bienvenido {{ usuario }}
+    Bienvenido {{ usuario.usr }}
+    Tus servidores actualmente son
+    {% for server in servidores %}
+       {{ server.desc_srv }}
+       {{ server.ip_srv }}
+    {% endfor %}
     <a class="btn btn-danger" href="{% url 'logout' %}">Salir</a>
   </div>
 {% endblock %}

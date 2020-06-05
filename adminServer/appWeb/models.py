@@ -23,4 +23,6 @@ class Servidor(models.Model):
     estado = models.BooleanField("Activo/Inactivo", default=True)
     usr = models.ForeignKey(Usuario, on_delete=models.CASCADE)
 
+
 # admin_M0nS3rv1c3s2020
+# (desc_srv = prueba1, ip_srv = 192.168.1.73, puerto = 8000, estado = True, usr= miguel)
