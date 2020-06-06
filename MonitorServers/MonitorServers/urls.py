@@ -25,3 +25,5 @@ urlpatterns = [
     path('datos_monitor/',listar_datos, name='listar_datos'),
     path('authenticacion/',views.obtain_auth_token),
 ]
+
+# curl http://localhost:8000/authentication/user = miguel/ pass = hola

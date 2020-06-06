@@ -21,6 +21,7 @@ class Servidor(models.Model):
     ip_srv = models.CharField(max_length=12, blank=False, null=False)  # Ay que cambiarlo al tipo de IP
     puerto = models.IntegerField(blank=False, null=False)
     estado = models.BooleanField("Activo/Inactivo", default=True)
+    pwd_srv = models.CharField("Contraseña Servidor",max_length=50,blank=False,null=False,default="0")
     usr = models.ForeignKey(Usuario, on_delete=models.CASCADE)
 
 
