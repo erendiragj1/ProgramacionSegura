@@ -9,18 +9,22 @@ import os
 
 class LoginBackend(BaseBackend):
     # MML se crea nuestro propio back-end de authenticacion, se redefinen los metodos predefinidos de Django
-    def authenticate(self, request, username=None, password=None, **kwargs):
+    def authenticate(self, request, username=None, password=None, **kwargs): # password anfsodbs
         print("Si entro al backend")
-        terminaSalt = 8  # MML Es la posicion donde termina el salt
+        # terminaSalt = 8  # MML Es la posicion donde termina el salt
         try:
             user = User.objects.get(username=username)
         except Exception:
             print("El usuario no existe")
             return None
 
-        llave_aes = os.urandom(32)
-        llave_mac = os.urandom(16)
-        pwdBD = user.password
+        llave_aes_b64 = '+w4cEgqzBN1KVUlapQwL5KuHgc1gh8zVjBEQHP+y9fs='
+        llave_aes = base64.b64decode(llave_aes_b64.encode('utf-8'))
+        print(llave_aes)
+        mac = 'utKTZxUrAkf7liJeEhC3pw=='
+        llave_mac = base64.b64decode(mac.encode('utf-8'))
+        pwdBD = user.password # pkbil 32fnb2i4bbs
+        print(pwdBD)
         pwd_sin_mac_b64_binario = base64.b64decode(password.encode('utf-8'))
         print("\tContraseña sin mac decode b64 en binario\n", pwd_sin_mac_b64_binario)
         pwd_descifrada = decifrar_mensaje(pwd_sin_mac_b64_binario, llave_aes, llave_mac)
@@ -53,11 +57,13 @@ class LoginBackend(BaseBackend):
 
 
 def decifrar_mensaje(mensaje_cifrado, llave, vector):
+    print("Aqui imprimimos todos los params",mensaje_cifrado,llave,vector)
     # Fuinción que regresa el mensaje descifrado
     aesCipher = Cipher(algorithms.AES(llave),
                        modes.CTR(vector),
                        backend=default_backend())
     decifrador = aesCipher.decryptor()
     mensaje_decifrado = decifrador.update(mensaje_cifrado)
+    print("Funcion decifrando mensaje",mensaje_decifrado)
     mensaje_decifrado += decifrador.finalize()
     return mensaje_decifrado
