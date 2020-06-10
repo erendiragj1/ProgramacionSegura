@@ -11,6 +11,7 @@ class Usuario(models.Model):
     apellidos = models.CharField("Apellido", max_length=20, blank=True, null=False)
     correo = models.EmailField(max_length=32, blank=True, null=True)
     numero = models.CharField(max_length=12, blank=True, null=True)
+   # estado = models.BooleanField("Activo/Inactivo", default=True)
     chat_id = models.CharField(max_length=15, blank=True, null=True, default=0)
     token = models.CharField(max_length=16, blank=False, null=False, default=0)
 

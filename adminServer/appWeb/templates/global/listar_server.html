@@ -1,0 +1,72 @@
+{% extends 'global/index.html' %}
+
+{% block titulo %}
+Biblioteca.dev | Listado de Servidores
+{% endblock titulo %}
+
+{% block body %}
+<div>
+  <button class="btn btn-primary" type="button" onclick="abrir_modal_creacion('{% url 'global:crear_server' %}')">Crear Servidor</button>
+</div>
+{% if servers %}
+<div class="card">
+  <div class="card-header">
+    <strong class="card-title">Listado de Servidores</strong>
+  </div>
+  <div class="table-stats order-table ov-h">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Descripcion</th>
+          <th>IP</th>
+          <th>Puerto</th>
+          <th>Usuario ligado</th>
+          <th>Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for server in servers %}
+        <tr>
+          <td>{{ server.desc_srv }}</td>
+          <td>{{ server.ip_srv }}</td>
+          <td>{{ server.puerto }}</td>
+          <td>{{ server.usr.usr }}</td>
+          <td>
+            <a href="{% url 'global:eliminar_server' server.id %}" class="btn btn-danger">Eliminar</a>
+            <button onclick="abrir_modal_edicion('{% url 'global:editar_server' server.id %}')" class="btn btn-primary">Editar</button>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% else %}
+<h1>No existen libros registrados</h1>
+{% endif %}
+
+<div class="modal fade" id="creacion" role="dialog">
+
+</div>
+
+<div class="modal fade" id="edicion" role="dialog">
+
+</div>
+
+{% endblock body %}
+
+{% block extrajs %}
+<script type="text/javascript">
+  var $ = jQuery.noConflict();
+  function abrir_modal_edicion(url){
+    $('#edicion').load(url, function (){
+      $(this).modal('show');
+    });
+  }
+  function abrir_modal_creacion(url){
+    $('#creacion').load(url,function(){
+      $(this).modal('show');
+    });
+  }
+</script>
+{% endblock extrajs %}

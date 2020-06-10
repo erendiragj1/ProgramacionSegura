@@ -1,0 +1,13 @@
+{% extends 'global/index.html' %}
+{% block titulo %}
+  Eliminaciar un Administrador
+{% endblock titulo %}
+{% block body %}
+<form method="POST">
+  {% csrf_token %}
+  <h2>¿Desea elminar el registro {{ usuario.usr }}?</h2>
+    <button type = "submit">Eliminar</button>
+    <a href="{% url 'global:listar_admin' %}">Cancelar</a>
+</form>
+
+{% endblock body %}

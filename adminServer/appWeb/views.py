@@ -1,15 +1,14 @@
 from django.contrib.auth import authenticate
 from django.shortcuts import render, redirect
+from django.urls import reverse_lazy
 from .forms import *
 from .models import Usuario,Servidor
 import requests
 import random
 import string
-import datetime
 from appWeb import decoradores
-from django.http import HttpResponse
 from axes.decorators import axes_dispatch
-
+from django.views.generic import TemplateView,ListView,UpdateView,CreateView,DeleteView
 
 # Create your views here.
 
@@ -103,3 +102,76 @@ def servidores(request):
 def logout(request):
     request.session.flush()
     return redirect("login")
+
+
+###########################Vistas del administrador global #############################
+
+
+class Inicio(TemplateView):
+    template_name = 'global/index.html'
+
+
+class ListarAdministrador(ListView):
+    model = Usuario
+    template_name = 'global/listar_admin.html'
+    context_object_name = 'admins'
+    queryset = Usuario.objects.all()
+
+
+class ActualizarAdministrador(UpdateView):
+    model = Usuario
+    form_class = AdminForm
+    template_name = 'global/crear_admin.html'
+    success_url = reverse_lazy('global:listar_admin')
+
+
+class CrearAdministrador(CreateView):
+    model = Usuario
+    form_class = AdminForm
+    template_name = 'global/crear_admin.html'
+    success_url = reverse_lazy('global:listar_admin')
+
+
+class EliminarAdministrador(DeleteView):
+    model = Usuario
+
+    def post(self, request,pk, *args, **kwargs):
+        object = Usuario.objects.get(usr = pk)
+        object.delete()
+        return redirect("global:listar_admin")
+
+
+class CrearServer(CreateView):
+    model = Servidor
+    form_class = ServerForm
+    template_name = 'global/crear_server.html'
+    success_url = reverse_lazy('global:listar_server')
+
+
+class ListarServidor(ListView): # MML esta incompleto
+    model = Servidor
+    template_name = 'global/listar_server.html'
+    context_object_name = 'servers'
+    queryset = Servidor.objects.filter(estado=True)
+
+
+class ActualizarServidor(UpdateView):
+    model = Servidor
+    form_class = ServerForm
+    template_name = 'global/server.html'
+    success_url = reverse_lazy('global:listar_server')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['servers'] = Servidor.objects.filter(estado=True)
+        return context
+
+
+class EliminarServidor(DeleteView):
+    model = Servidor
+
+    def post(self, request,pk, *args, **kwargs):
+        object = Servidor.objects.get(id = pk)
+        object.estado = False
+        object.save() # MML solo el objeto tiene la propidad save() por lo tanto un filter no funciona
+        return redirect('global:listar_server')
