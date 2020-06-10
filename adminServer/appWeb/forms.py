@@ -68,7 +68,7 @@ class AdminForm(forms.ModelForm):
             'usr': forms.TextInput(
                 attrs={
                     'class': 'form-control',
-                    'placeholder': 'Ingrese el nombre de usario del administrador',
+                    'placeholder': 'Ingrese el usario del administrador',
                     'id': 'usr'  # probablemente el id se deba cambiar al que tienen las plantillas
                 }
             ),
@@ -82,29 +82,29 @@ class AdminForm(forms.ModelForm):
             'nombres': forms.TextInput(
                 attrs={
                     'class': 'form-control',
-                    'placeholder': 'Ingrese el nombre de usario del administrador',
+                    'placeholder': 'Ingrese el nombre del administrador',
                     'id': 'nombres'  # probablemente el id se deba cambiar al que tienen las plantillas
                 }
             ),
             'apellidos': forms.TextInput(
                 attrs={
                     'class': 'form-control',
-                    'placeholder': 'Ingrese el nombre de usario del administrador',
+                    'placeholder': 'Ingrese los apellidos del administrador',
                     'id': 'apellidos'  # probablemente el id se deba cambiar al que tienen las plantillas
                 }
             ),
             'correo': forms.EmailInput(
                 attrs={
                     'class': 'form-control',
-                    'placeholder': 'Ingrese el nombre de usario del administrador',
+                    'placeholder': 'Ingrese el correo del administrador',
                     'id': 'correo'  # probablemente el id se deba cambiar al que tienen las plantillas
                 }
             ),
             'numero': forms.TextInput(
                 attrs={
                     'class': 'form-control',
-                    'placeholder': 'Ingrese el nombre de usario del administrador',
-                    'id': 'usr'  # probablemente el id se deba cambiar al que tienen las plantillas
+                    'placeholder': 'Ingrese el número del administrador',
+                    'id': 'numero'  # probablemente el id se deba cambiar al que tienen las plantillas
                 }
             ),
         }
