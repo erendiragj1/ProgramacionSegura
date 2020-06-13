@@ -1,5 +1,7 @@
 from django import forms
+from . import api
 from .models import *
+
 
 
 class userForm(forms.ModelForm):
@@ -52,9 +54,18 @@ class tokenForm(forms.ModelForm):
 ################# MML Forms del Admin global ########################
 
 class AdminForm(forms.ModelForm):
+    # MML verificacion de Contraseña
+    pwd2 = forms.CharField(label= 'Contraseña de confirmación', widget= forms.PasswordInput(
+        attrs= {
+            'class':'form-control',
+            'placeholder':'Ingrese de nuevo la contraseña',
+            'id':'pwd2',
+            'required':'required',
+        }
+    ))
     class Meta:
         model = Usuario
-        fields = ['usr', 'pwd', 'nombres', 'apellidos', 'correo', 'numero']
+        fields = ['usr', 'pwd', 'nombres', 'apellidos', 'correo', 'numero','chat_id']
         labels = {
             'usr': 'Nombre de usuario',
             'pwd': 'Contraseña del administrador',
@@ -62,6 +73,7 @@ class AdminForm(forms.ModelForm):
             'apellidos': 'Apellidos del administrador',
             'correo': 'Correo del administrador',
             'numero': 'Numero del administrador',
+            'chat_id': 'Chat id de Telegram'
         }
 
         widgets = {
@@ -107,19 +119,41 @@ class AdminForm(forms.ModelForm):
                     'id': 'numero'  # probablemente el id se deba cambiar al que tienen las plantillas
                 }
             ),
+            'chat_id': forms.TextInput(
+                attrs={
+                    'class': 'form-control',
+                    'placeholder': 'Ingrese el id del chat del administrador',
+                    'id': 'chat_id'  # probablemente el id se deba cambiar al que tienen las plantillas
+                }
+            ),
         }
+    def clean_pwd2(self): # MML Hacemos la verificacion de si la contraeña coincide
+        pwd1 = self.cleaned_data['pwd']
+        pwd2 = self.cleaned_data['pwd2']
+        if pwd1 != pwd2:
+            raise forms.ValidationError('Las contraseñas no coinciden') # Este es el error que esta en forms.error
+        return pwd2
+
+    def save(self, commit=True):
+        user = super().save(commit=False) # MML se redefine la forma en que se guarda la contraseña
+        pwd_hash = api.hashear_contrasena(self.cleaned_data['pwd'])
+        user.pwd = pwd_hash
+        if commit:
+            user.save()
+        return user
 
 
 class ServerForm(forms.ModelForm):
     class Meta:
         model = Servidor
-        fields = ('desc_srv', 'ip_srv', 'puerto', 'pwd_srv', 'usr')
+        fields = ('desc_srv', 'ip_srv', 'puerto', 'pwd_srv', 'usr', 'estado')
         label = {
             'desc_srv': 'Descrićión del servidor',
             'ip_srv': 'IP del servidor',
             'puerto': 'Puerto del servidor',
             'pwd_srv': 'Contraseña del servidor',
             'usr': 'Administrador del servidor',
+            'estado': 'Estado del servidor'
         }
         widgets = {
             'desc_srv': forms.TextInput(
@@ -151,4 +185,6 @@ class ServerForm(forms.ModelForm):
                     'class': 'form-control',
                 }
             ),
+            'estado': forms.CheckboxInput(),
         }
+

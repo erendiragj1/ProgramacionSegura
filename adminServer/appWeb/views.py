@@ -4,8 +4,7 @@ from django.urls import reverse_lazy
 from .forms import *
 from .models import Usuario,Servidor
 import requests
-import random
-import string
+from . import api
 from appWeb import decoradores
 from axes.decorators import axes_dispatch
 from django.views.generic import TemplateView,ListView,UpdateView,CreateView,DeleteView
@@ -21,13 +20,12 @@ def login(request):
         nomUsuario = request.POST.get("usr")
         pwdEnviada = request.POST.get("pwd")
         # MML se usa la nueva funcion authenticate redefinida
-        user = authenticate(
-            request=request, username=nomUsuario, password=pwdEnviada)
+        user = authenticate(request=request, username=nomUsuario, password=pwdEnviada)
         if user is not None:
             print("\t El usuario existe y es: ", user)
-            token = generar_token()
+            token = api.generar_token()
             user.token = token
-            enviar_token(token, user.chat_id)
+            api.enviar_token(token, user.chat_id)
             user.save()
             print(user.token)
             # JBarradas(08-05-2020): Se pasa a página de token
@@ -63,26 +61,6 @@ def solicitar_token(request):
         print('\t\tEntro a solicitar_token por OTRO')
 
         return render(request, "esperando_token.html", {"token_form": token_form})
-
-
-def randomString(stringLength):
-    letters = string.ascii_lowercase
-    return ''.join(random.choice(letters) for i in range(stringLength))
-
-
-def generar_token():
-    tam_token = 12
-    token = randomString(tam_token)
-    print(token)
-    return token
-
-
-def enviar_token(token, chatid):
-    print("se empieza a enviar token")
-    BOT_TOKEN = "1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w"
-    send_text = 'https://api.telegram.org/bot%s/sendMessage?chat_id=%s&parse_mode=Markdown&text=%s' % (
-        BOT_TOKEN, chatid, token)
-    response = requests.get(send_text)
 
 
 @decoradores.esta_logueado
@@ -135,6 +113,8 @@ def monitoreo(request,pk):
         #Delete this 
         contexto = {"usuario":usuario,"servidores":servidores}
         return render(request, "servidores.html",contexto)
+
+
 # MML Se crea la funcion vista para el logout
 @decoradores.esta_logueado
 def logout(request):
@@ -190,7 +170,7 @@ class ListarServidor(ListView): # MML esta incompleto
     model = Servidor
     template_name = 'global/listar_server.html'
     context_object_name = 'servers'
-    queryset = Servidor.objects.filter(estado=True)
+    queryset = Servidor.objects.all()
 
 
 class ActualizarServidor(UpdateView):

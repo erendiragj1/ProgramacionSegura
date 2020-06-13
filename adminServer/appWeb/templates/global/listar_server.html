@@ -17,20 +17,29 @@ Biblioteca.dev | Listado de Servidores
     <table class="table">
       <thead>
         <tr>
+          <th>ID</th>
           <th>Descripcion</th>
           <th>IP</th>
           <th>Puerto</th>
           <th>Usuario ligado</th>
+          <th>Estado</th>
           <th>Opciones</th>
         </tr>
       </thead>
       <tbody>
         {% for server in servers %}
         <tr>
+          <td>{{ server.id }}</td>
           <td>{{ server.desc_srv }}</td>
           <td>{{ server.ip_srv }}</td>
           <td>{{ server.puerto }}</td>
           <td>{{ server.usr.usr }}</td>
+          <td>
+            {% if server.estado %}
+              Activo
+            {% else %}
+              Inactivo
+            {% endif %}
           <td>
             <a href="{% url 'global:eliminar_server' server.id %}" class="btn btn-danger">Eliminar</a>
             <button onclick="abrir_modal_edicion('{% url 'global:editar_server' server.id %}')" class="btn btn-primary">Editar</button>
