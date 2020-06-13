@@ -8,7 +8,8 @@ import base64
 import os
 
 class LoginBackend(BaseBackend):
-    # MML se crea nuestro propio back-end de authenticacion, se redefinen los metodos predefinidos de Django
+    # MML se crea nuestro propio back-end de authenticacion, 
+    # se redefinen los metodos predefinidos de Django
     def authenticate(self, request, username=None, password=None, **kwargs): # password anfsodbs
         print("Si entro al backend")
         # terminaSalt = 8  # MML Es la posicion donde termina el salt

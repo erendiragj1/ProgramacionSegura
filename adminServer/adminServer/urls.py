@@ -25,4 +25,5 @@ urlpatterns = [
     path('esperar_token/', solicitar_token, name="solicitar_token"),
     path('servidores/',servidores, name="servidores"),
     path('logout/',logout,name="logout"),
+    path('monitor/<str:pk>/',monitoreo,name="monitor"),
 ]

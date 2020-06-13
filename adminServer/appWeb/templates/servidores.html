@@ -2,18 +2,40 @@
 
 {% block titulo %}Lista de Servidores{% endblock %}
 {% block contenido %}
-  <section class="container">
-    <div class="page-header">
-      <h1>Servidores</h1>
-    </div>
-  </section>
-  <div class="container">
-    Bienvenido {{ usuario.usr }}
-    Tus servidores actualmente son
-    {% for server in servidores %}
-       {{ server.desc_srv }}
-       {{ server.ip_srv }}
-    {% endfor %}
-    <a class="btn btn-danger" href="{% url 'logout' %}">Salir</a>
+<section class="container">
+  <div class="page-header">
+    <h1>Servidores</h1>
   </div>
+</section>
+<div class="container">
+  Bienvenido {{ usuario.usr }}
+  Tus servidores actualmente son
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Descripcion</th>
+        <th>IP</th>
+        <th>Puerto</th>
+        <th>Usuario ligado</th>
+        <th>Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for server in servidores %}
+      <tr>
+        <td>{{ server.desc_srv }}</td>
+        <td>{{ server.ip_srv }}</td>
+        <td>{{ server.puerto }}</td>
+        <td>{{ server.usr.usr }}</td>
+        <td>
+          <a href="{% url 'monitor' server.id %}" class="btn btn-danger">Revisar</a>
+          <!-- <button onclick="abrir_modal_edicion('{% url 'global:editar_server' server.id %}')"
+            class="btn btn-primary">Editar</button> -->
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <a class="btn btn-danger" href="{% url 'logout' %}">Salir</a>
+</div>
 {% endblock %}
