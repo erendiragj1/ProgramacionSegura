@@ -8,8 +8,8 @@
   </div>
 </section>
 <div class="container">
-  Bienvenido {{ usuario.usr }}
-  Tus servidores actualmente son
+  Bienvenido <b> <span style="color:violet">{{ usuario.usr }}</span> </b> 
+  tus servidores actualmente son
   <table class="table">
     <thead>
       <tr>
@@ -28,14 +28,14 @@
         <td>{{ server.puerto }}</td>
         <td>{{ server.usr.usr }}</td>
         <td>
-          <a href="{% url 'monitor' server.id %}" class="btn btn-danger">Revisar</a>
+          <a href="{% url 'monitor' server.id %}" class="btn btn-success">Revisar</a>
           <!-- <button onclick="abrir_modal_edicion('{% url 'global:editar_server' server.id %}')"
-            class="btn btn-primary">Editar</button> -->
+            class="btn btn-success">Editar</button> -->
         </td>
       </tr>
       {% endfor %}
     </tbody>
   </table>
-  <a class="btn btn-danger" href="{% url 'logout' %}">Salir</a>
+  <a class="btn btn-danger" href="{% url 'logout' %}">Cerrar sesión</a>
 </div>
 {% endblock %}

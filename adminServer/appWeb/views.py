@@ -79,40 +79,32 @@ def monitoreo(request,pk):
         nom_usuario = request.session.get("usuario")
         usuario = Usuario.objects.get(usr=nom_usuario)
         id_srv = pk
-        print("\t\t*-*-*Imprimiendo pk")
-        print(id_srv)
         servidor = Servidor.objects.get(estado=True,id=id_srv)
         srv_llave_aes=servidor.llave
         srv_usr=servidor.usr.usr
         srv_pwd=servidor.pwd_srv
         srv_ip=servidor.ip_srv
         srv_puerto=servidor.puerto
-        data = {'username': srv_usr, 'password': srv_pwd}
-        print('http://'+srv_ip+':'+str(srv_puerto)+'/authenticacion/')
+        data = {'username': srv_usr, 'password': srv_llave_aes+srv_pwd, 
+            'llave_aes_b64': srv_llave_aes}
         solicitud = requests.post('http://'+srv_ip+':'+str(srv_puerto)+'/authenticacion/', data=data) 
-        print("\t\ŧ*-*-*Imprimiendo status")
-        print(solicitud.text)
         srv_token=solicitud.text[1:-1].split(':')[1][1:-1]
         dir_headers={'Authorization':'Token '+ srv_token}
-        solicitud = requests.get('http://'+srv_ip+':'+str(srv_puerto)+'/datos_monitor/', headers=dir_headers)
-        print(solicitud.text)
-        #srv_datos_monitor=solicitud.text.strip()[1:-1].strip(' ').split(',')[2].split(':')
-        print('\t\t\tDATOS MONITOR UwU')
-        print(solicitud.text)
-        print(solicitud.text.strip('\\'))
+        solicitud = requests.get('http://'+srv_ip+':'+str(srv_puerto)+'/datos_monitor/', 
+            headers=dir_headers)
         json_data=json.loads(solicitud.text)
+        print("json_data")
         print(json_data)
         data_full=json_data[1:-1].split(',')
-        print(data_full)
-        cpu=data_full[0].split(':')[1]
-        memoria=data_full[1].split(':')[1]
-        disco=data_full[2].split(':')[1]
-        print(cpu)        
-        print(memoria)
-        print(disco)
-        #Delete this 
-        contexto = {"usuario":usuario,"servidores":servidores}
-        return render(request, "servidores.html",contexto)
+        cpu=data_full[0].split(':')[1].strip('"')
+        memoria=data_full[1].split(':')[1].strip('"')
+        disco=data_full[2].split(':')[1].strip('"')
+
+        datos_servidor={"cpu": cpu, "disco": disco, "ram": memoria, 
+            "srv_ip":srv_ip, "srv_puerto":srv_puerto, "id_srv": id_srv}
+
+        contexto = {"usuario":usuario,"servidor":datos_servidor}
+        return render(request, "monitoreo.html",contexto)
 
 
 # MML Se crea la funcion vista para el logout
