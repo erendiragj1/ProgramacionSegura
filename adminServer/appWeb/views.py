@@ -1,4 +1,5 @@
 from django.contrib.auth import authenticate
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from .forms import *
@@ -8,8 +9,11 @@ from . import api
 from appWeb import decoradores
 from axes.decorators import axes_dispatch
 from django.views.generic import TemplateView,ListView,UpdateView,CreateView,DeleteView
+from django.views.generic.edit import FormView
 import json
 # Create your views here.
+from django.conf import settings
+
 
 @axes_dispatch
 @decoradores.no_esta_logueado
@@ -62,7 +66,7 @@ def solicitar_token(request):
             if (usr_name == usuario.usr):
                 request.session['logueado'] = True
                 # request.session['usuario'] = usuario.usr
-                
+                print("Imprimiendo expedicion tieme:", settings.EXPIRY_TIME)
                 request.session.set_expiry(18000)  # 5 horas
                 return redirect("servidores")
         return render(request, 'login.html', 
@@ -91,17 +95,15 @@ def monitoreo(request,pk):
         id_srv = pk
         servidor = Servidor.objects.get(estado=True,id=id_srv)
         srv_llave_aes=servidor.llave
-        srv_usr=servidor.usr.usr
+        srv_usr=servidor.usr_srv
         srv_pwd=servidor.pwd_srv
         srv_ip=servidor.ip_srv
         srv_puerto=servidor.puerto
-        data = {'username': srv_usr, 'password': srv_llave_aes+srv_pwd, 
-            'llave_aes_b64': srv_llave_aes}
+        data = {'username': srv_usr, 'password': srv_llave_aes+srv_pwd, 'llave_aes_b64': srv_llave_aes}
         solicitud = requests.post('http://'+srv_ip+':'+str(srv_puerto)+'/authenticacion/', data=data) 
         srv_token=solicitud.text[1:-1].split(':')[1][1:-1]
         dir_headers={'Authorization':'Token '+ srv_token}
-        solicitud = requests.get('http://'+srv_ip+':'+str(srv_puerto)+'/datos_monitor/', 
-            headers=dir_headers)
+        solicitud = requests.get('http://'+srv_ip+':'+str(srv_puerto)+'/datos_monitor/', headers=dir_headers)
         json_data=json.loads(solicitud.text)
         print("json_data")
         print(json_data)
@@ -126,6 +128,25 @@ def logout(request):
 
 ###########################Vistas del administrador global #############################
 
+class LoginGlobal(FormView):
+    template_name = "global.html"
+    form_class = FormularioLogin
+    success_url = reverse_lazy('global')
+
+    def dispatch(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            return  HttpResponseRedirect(self.get_success_url())
+        else:
+            return super(LoginGlobal,self).dispatch(request,*args,**kwargs)
+
+    def form_valid(self, form):
+        login(self.request,form.get_user())
+        return super(LoginGlobal,self).form_valid(form)
+
+
+def logoutGlobal(request):
+    logout(request)
+    return HttpResponseRedirect('login_global')
 
 class Inicio(TemplateView):
     template_name = 'global/index.html'
