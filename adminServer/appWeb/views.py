@@ -30,6 +30,7 @@ def login(request):
             print(user.token)
             # JBarradas(08-05-2020): Se pasa a página de token
             request.session['token'] = True
+            request.session['usuario'] = nomUsuario
             return redirect("solicitar_token")
         else:
             print('\t\ŧEl usuario no existe')
@@ -45,18 +46,27 @@ def solicitar_token(request):
     if request.method == "POST":
         print('\t\tEntro a solicitar_token por POST')
         tokenUsuario = request.POST.get("token")
+        usr_name=request.session['usuario']
+        request.session['token'] = False #Para que no regrese a esta página.
         try:  # JBarradas(22/05/2020): Se agrega por que manda error cuando el qry no hace match
             usuario = Usuario.objects.get(token=tokenUsuario)
         except:
             pass
-        if usuario is not None:
-            print(usuario.token)
-            request.session['logueado'] = True
-            request.session['usuario'] = usuario.usr
-            request.session.set_expiry(18000)  # 5 horas
-            return redirect("servidores")
-        else:
-            return render(request, 'esperando_token.html', {"token_form": token_form, "errores": "Token inválido"})
+        if (usuario is not None):
+            print('Usr_name: ', usr_name)
+            usuario = Usuario.objects.get(usr=usr_name)
+            print('token1', usuario.token)
+            usuario.token='0'
+            usuario.save()
+            print('token2', usuario.token)
+            if (usr_name == usuario.usr):
+                request.session['logueado'] = True
+                # request.session['usuario'] = usuario.usr
+                
+                request.session.set_expiry(18000)  # 5 horas
+                return redirect("servidores")
+        return render(request, 'login.html', 
+            {"token_form": token_form, "errores": "Token inválido","user_form": userForm()})
     else:
         print('\t\tEntro a solicitar_token por OTRO')
 
