@@ -9,7 +9,10 @@ from appWeb import decoradores
 from axes.decorators import axes_dispatch
 from django.views.generic import TemplateView,ListView,UpdateView,CreateView,DeleteView
 import json
+import logging
 # Create your views here.
+
+logging.basicConfig(filename='login.log', format='%(asctime)s %(message)s', level=logging.DEBUG)
 
 @axes_dispatch
 @decoradores.no_esta_logueado
@@ -31,9 +34,11 @@ def login(request):
             # JBarradas(08-05-2020): Se pasa a página de token
             request.session['token'] = True
             return redirect("solicitar_token")
+            logging.info('usuario valido')
         else:
             print('\t\ŧEl usuario no existe')
             return render(request, 'login.html', {"user_form": user_form, "errores": "Usuario y contraseña inválidos."})
+            logging.info('error, el usuario no existente')
     elif request.method == "GET":
         return render(request, "login.html", {"user_form": user_form})
 
@@ -47,6 +52,7 @@ def solicitar_token(request):
         tokenUsuario = request.POST.get("token")
         try:  # JBarradas(22/05/2020): Se agrega por que manda error cuando el qry no hace match
             usuario = Usuario.objects.get(token=tokenUsuario)
+            logging.info('usuario error')
         except:
             pass
         if usuario is not None:
@@ -57,9 +63,10 @@ def solicitar_token(request):
             return redirect("servidores")
         else:
             return render(request, 'esperando_token.html', {"token_form": token_form, "errores": "Token inválido"})
+            logging.info('error token')
     else:
         print('\t\tEntro a solicitar_token por OTRO')
-
+        logging.info('token entro')
         return render(request, "esperando_token.html", {"token_form": token_form})
 
 
@@ -69,6 +76,7 @@ def servidores(request):
     print("servidores")
     if request.method == "GET":
         nom_usuario = request.session.get("usuario")
+        logging.info('usuario loguedo')
         usuario = Usuario.objects.get(usr=nom_usuario)
         servidores = Servidor.objects.filter(estado=True,usr=usuario)
         contexto = {"usuario":usuario,"servidores":servidores}
