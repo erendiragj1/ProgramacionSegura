@@ -3,6 +3,16 @@ from . import api
 from .models import *
 import base64
 import os
+from django.contrib.auth.forms import AuthenticationForm
+
+class FormularioLogin(AuthenticationForm):
+    def __init__(self, *args, **kwargs):
+        super(FormularioLogin, self).__init__(*args,**kwargs)
+        self.fields['username'].widgets.attrs['class'] = 'form-control'
+        self.fields['username'].widgets.attrs['placeholder'] = 'Nombre del administrador global'
+        self.fields['username'].widgets.attrs['class'] = 'form-control'
+        self.fields['username'].widgets.attrs['placeholder'] = 'Contraseña'
+
 
 
 class userForm(forms.ModelForm):
