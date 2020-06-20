@@ -18,10 +18,10 @@ class Usuario(models.Model):
 class Servidor(models.Model):
     id = models.AutoField(primary_key=True, null=False)
     desc_srv = models.CharField(max_length=16, blank=False, null=False)
-    # Ay que cambiarlo al tipo de IP
     ip_srv = models.CharField(max_length=12, blank=False, null=False)
     puerto = models.IntegerField(blank=False, null=False)
     estado = models.BooleanField("Activo/Inactivo", default=True)
+    usr_srv = models.CharField("Usuario servidor", max_length=25, blank=False, null=False, default=" ")
     pwd_srv = models.CharField("Contraseña Servidor", max_length=50, blank=False, null=False, default="0")
     usr = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     llave = models.CharField(max_length=50, blank=False, null=False, default="0")

@@ -1,0 +1,37 @@
+﻿{% extends 'plantilla.html' %}
+
+{% block titulo %}Lista de Servidores{% endblock %}
+{% block contenido %}
+<section class="container">
+  <div class="page-header">
+    <h1>Servidores</h1>
+  </div>
+</section>
+<div class="container">
+  Bienvenido <b> <span style="color:violet">{{ usuario.usr }}</span> </b> 
+  <table class="table">
+    <thead>
+      <tr>
+        <th>IP</th>
+        <th>Puerto</th>
+        <th>CPU (%)</th>
+        <th>Disco (%)</th>
+        <th>RAM (%)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ servidor.srv_ip }}</td>
+        <td>{{ servidor.srv_puerto }}</td>
+        <td>{{ servidor.cpu }}</td>
+        <td>{{ servidor.disco }}</td>
+        <td>{{ servidor.ram }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <a class="btn btn-primary" href="{% url 'servidores' %}">Volver</a>
+  <a class="btn btn-primary" href="{% url 'monitor' servidor.id_srv %}">Actualizar</a>
+  <a class="btn btn-danger" href="{% url 'logout' %}">Cerrar sesión</a>
+  <script src="/static/js/monitoreo.js"></script>
+</div>
+{% endblock %}

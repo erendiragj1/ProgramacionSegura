@@ -10,23 +10,37 @@ import os
 class LoginBackend(BaseBackend):
     # MML se crea nuestro propio back-end de authenticacion, 
     # se redefinen los metodos predefinidos de Django
-    def authenticate(self, request, username=None, password=None, **kwargs): # password anfsodbs
-        print("Si entro al backend")
+    def authenticate(self, request, username=None, password=None,  **kwargs): # password anfsodbs
+        print("Si llave_aes_b64 entro al backend")
+        if kwargs:
+            print("si kwargs")
+        else:
+            print("no kwargs")
+        for arg in kwargs:
+            print("argument ", arg)
+        print('llave aes')
+        #print(llave_aes_b64)
+        #llave_aes_b64='+w4cEgqzBN1KVUlapQwL5KuHgc1gh8zVjBEQHP+y9fs=',
+        #print(len(llave_aes_b64)) #44
         # terminaSalt = 8  # MML Es la posicion donde termina el salt
         try:
             user = User.objects.get(username=username)
         except Exception:
             print("El usuario no existe")
             return None
-
-        llave_aes_b64 = '+w4cEgqzBN1KVUlapQwL5KuHgc1gh8zVjBEQHP+y9fs='
+        pwd_sin_mac_b64_binario = base64.b64decode(password[44:].encode('utf-8'))
+        print(pwd_sin_mac_b64_binario)
+        llave_aes_b64 = password[:44]
+        print(llave_aes_b64)
         llave_aes = base64.b64decode(llave_aes_b64.encode('utf-8'))
         print(llave_aes)
         mac = 'utKTZxUrAkf7liJeEhC3pw=='
         llave_mac = base64.b64decode(mac.encode('utf-8'))
         pwdBD = user.password # pkbil 32fnb2i4bbs
         print(pwdBD)
-        pwd_sin_mac_b64_binario = base64.b64decode(password.encode('utf-8'))
+
+        
+        
         print("\tContraseña sin mac decode b64 en binario\n", pwd_sin_mac_b64_binario)
         pwd_descifrada = decifrar_mensaje(pwd_sin_mac_b64_binario, llave_aes, llave_mac)
         print("binario pwd decifrada",pwd_descifrada)
