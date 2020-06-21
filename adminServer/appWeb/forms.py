@@ -1,19 +1,45 @@
 from django import forms
 from . import api
 from .models import *
+from django.contrib.auth.models import User
 import base64
 import os
 from django.contrib.auth.forms import AuthenticationForm
 
 class FormularioLogin(AuthenticationForm):
-    def __init__(self, *args, **kwargs):
-        super(FormularioLogin, self).__init__(*args,**kwargs)
-        self.fields['username'].widgets.attrs['class'] = 'form-control'
-        self.fields['username'].widgets.attrs['placeholder'] = 'Nombre del administrador global'
-        self.fields['username'].widgets.attrs['class'] = 'form-control'
-        self.fields['username'].widgets.attrs['placeholder'] = 'Contraseña'
+    def __init__(self,*args,**kwargs): #es el metodo que ejecuta toda clase de python lo redifinimos
+        super(FormularioLogin,self).__init__(*args,**kwargs)
+        self.fields['username'].widget.attrs['class'] = 'form-control'
+        self.fields['username'].widget.attrs['placeholder'] = 'Nombre del administrador global'
+        self.fields['password'].widget.attrs['class'] = 'form-control'
+        self.fields['password'].widget.attrs['placeholder'] = 'Contraseña'
 
-
+# class adminForm(forms.ModelForm):
+#     class Meta:
+#         model = User
+#         fields = ['username', 'password']
+#         labels = {
+#             'username': 'Nombre de usuario',
+#             'password': 'Contraseña',
+#         }
+#         widgets = {
+#             'username': forms.TextInput(
+#                 attrs={
+#                     'class': 'form-control',
+#                     'placeholder': 'Ingrese su usuario',
+#                     'name': 'username',
+#                     'id': 'username',
+#                 }
+#             ),
+#             'passowrd': forms.PasswordInput(
+#                 attrs={
+#                     'class': 'form-control',
+#                     'placeholder': 'Ingrese su contraseña',
+#                     'name': 'password',
+#                     'id': 'password',
+#                 }
+#             )
+#         }
 
 class userForm(forms.ModelForm):
     class Meta:

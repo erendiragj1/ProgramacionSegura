@@ -1,0 +1,46 @@
+{% extends '../plantilla.html' %}
+
+{% block titulo %}Iniciar Sesión{% endblock %}
+{% block contenido %}
+  <section class="container">
+    <div class="page-header">
+      <h1>Iniciar Sesión</h1>
+    </div>
+
+    <form id="form-login" class="form-horizontal" method="POST" action="../login/">
+      {% csrf_token %}
+      <div class="form-group">
+        <label class="control-label col-sm-2">{{ form.username.label }}</label>
+        <div class="input-group col-sm-4" id="div-usr">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            {{ form.username }}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2">{{ form.password.label }}</label>
+        <div class="input-group col-sm-4" id="div-pwd">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            {{ form.password }}
+          <!-- Icono "X" -->
+          <!-- <span class="glyphicon glyphicon-remove form-control-feedback"></span> -->
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-3">
+          <input type="submit" value="Iniciar sesión" class="btn btn-primary " style="width: 75%;" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        {% if errores %}
+           <div id="form_error" class="alert alert-danger alert-dismissible fade in col-sm-offset-1 col-sm-5">{{errores}}</div>
+        {% else %}
+           <div id="form_error" class="col-sm-offset-1 col-sm-5"></div>
+        {% endif %}
+      </div>
+
+    </form>
+  </section>
+{% endblock %}

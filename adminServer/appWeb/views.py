@@ -1,15 +1,19 @@
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate,login as do_login,logout as do_logout
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
+from django.utils.decorators import method_decorator
 from .forms import *
 from .models import Usuario,Servidor
 import requests
 from . import api
 from appWeb import decoradores
 from axes.decorators import axes_dispatch
-from django.views.generic import TemplateView,ListView,UpdateView,CreateView,DeleteView
+from django.views.generic import TemplateView, ListView, UpdateView, CreateView, DeleteView, FormView
 import json
 import logging
+from django.views.decorators.cache import never_cache
+from django.views.decorators.csrf import csrf_protect
 # Create your views here.
 
 logging.basicConfig(filename='login.log', format='%(asctime)s %(message)s', level=logging.DEBUG)
@@ -123,6 +127,52 @@ def logout(request):
 
 
 ###########################Vistas del administrador global #############################
+
+class LoginGlobal(FormView): #vista basada en clase
+    template_name = 'global/login_global.html'
+    form_class = FormularioLogin
+    success_url = reverse_lazy('global:index')
+
+    @method_decorator(csrf_protect)
+    @method_decorator(never_cache)
+    #@axes_dispatch
+    def dispatch(self, request, *args, **kwargs): # MML preguntamos al principio si el usuario esta authenticado por que dispatch es lo primero que se ejecuta
+        usr = request.POST.get("username")
+        pwd = request.POST.get("password")
+        print("Usuario y contraseña enviados", usr, pwd)
+        user = authenticate(request=request, username=usr, password=pwd)
+        if request.user.is_authenticated:
+            return HttpResponseRedirect(self.get_success_url()) # MML si lo esta lo llevamos a nuestra url de inicio, CON ESTO YA NO PUEDE REGRESAR A LA PAGINA DE LOGIN AUNQUE PONGA EN LA URL accounts/login
+        else:
+            return super(LoginGlobal,self).dispatch(request,*args,**kwargs)
+
+    def form_valid(self, form):
+        do_login(self.request,form.get_user())
+        return super(LoginGlobal,self).form_valid(form)
+
+def logoutAdmin(request):
+    do_logout(request) #MML se les tuvo que cambiar el nombre
+    return HttpResponseRedirect('/accounts/login')
+
+
+# @axes_dispatch
+# def login_global(request):
+#     admin_form = adminForm
+#     if request.method == "POST":
+#         # user_form = userForm(request.POST)
+#         nomUsuario = request.POST.get("username")
+#         pwdEnviada = request.POST.get("password")
+#         # MML se usa la nueva funcion authenticate redefinida
+#         user = authenticate(request=request, username=nomUsuario, password=pwdEnviada)
+#         if user is not None:
+#             login(user, backend='django.contrib.auth.backends.ModelBackend')
+#             return redirect('global:index')
+#         else:
+#             print('\t\ŧEl usuario no existe')
+#             return render(request, 'global/login_global.html', {"form": admin_form, "errores": "Usuario y contraseña inválidos."})
+#             logging.info('error, el usuario no existente')
+#     elif request.method == "GET":
+#         return render(request, "global/login_global.html", {"form": admin_form})
 
 
 class Inicio(TemplateView):

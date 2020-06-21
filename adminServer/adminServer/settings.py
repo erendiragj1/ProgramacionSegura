@@ -122,7 +122,7 @@ USE_TZ = False  # JBarradas (25/04/2020): Se deshabilita para que tome la hora d
 
 # AXES
 # MML Se establece la configuracion de axes
-AXES_ENABLED = True
+AXES_ENABLED = False
 AXES_FAILURE_LIMIT = 3
 AXES_ONLY_USER_FAILURES = True
 AXES_COOLOFF_TIME = 1
@@ -135,6 +135,6 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 AUTHENTICATION_BACKENDS = (
     'axes.backends.AxesBackend',
-    'appWeb.backends.LoginBackend',
     'django.contrib.auth.backends.ModelBackend',
+    'appWeb.backends.LoginBackend',
 )

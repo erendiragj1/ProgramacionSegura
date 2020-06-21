@@ -1,8 +1,10 @@
 from django.urls import path
 from .views import *
+from django.contrib.auth.decorators import login_required
 
 urlpatterns = [
-    path('',Inicio.as_view(),name='index'),
+    path('',login_required(Inicio.as_view()),name='index'),
+    path('logout/',logoutAdmin,name="logout_global"),
     path('crear_admin/',CrearAdministrador.as_view(),name='crear_admin'),
     path('listar_admin/',ListarAdministrador.as_view(), name = 'listar_admin'),
     path('editar_admin/<str:pk>/',ActualizarAdministrador.as_view(), name = 'editar_admin'),
