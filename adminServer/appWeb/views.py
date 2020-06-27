@@ -44,8 +44,9 @@ def login(request):
             logging.info('usuario valido')
         else:
             print('\t\ŧEl usuario no existe')
-            return render(request, 'login.html', {"user_form": user_form, "errores": "Usuario y contraseña inválidos."})
             logging.info('error, el usuario no existente')
+            return render(request, 'login.html', {"user_form": user_form, "errores": "Usuario y contraseña inválidos."})
+            
     elif request.method == "GET":
         return render(request, "login.html", {"user_form": user_form})
 
@@ -63,13 +64,15 @@ def solicitar_token(request):
         except:
             pass
         if usuario is not None:
-            print(usuario.token)
-            request.session['logueado'] = True
-            request.session.set_expiry(settings.EXPIRY_TIME)  # 5 horas
-            return redirect("servidores")
-        else:
-            return render(request, 'esperando_token.html', {"token_form": token_form, "errores": "Token inválido"})
-            logging.info('error token')
+            usuario.token='0'
+            usuario.save()
+            if usuario.usr == request.session.get("usuario"):
+                print(usuario.token)
+                request.session['logueado'] = True
+                request.session.set_expiry(settings.EXPIRY_TIME)  # 5 horas
+                return redirect("servidores")
+        return render(request, 'login.html', {"errores": "Token inválido.", "user_form": userForm()})
+        
     else:
         print('\t\tEntro a solicitar_token por OTRO')
         logging.info('token entro')
