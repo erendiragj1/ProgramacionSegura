@@ -1,12 +1,12 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 
 # from django.contrib.auth.models import User, UserManager
 # 4 de tamaño al id de servidores
 # Create your models here.
 class Usuario(models.Model):
     usr = models.CharField("Usuario", max_length=16,blank=False, null=False, primary_key=True)
-    pwd = models.CharField("Contraseña", max_length=42,blank=False, null=False)
+    pwd = models.CharField("Contraseña", max_length=80,blank=False, null=False)
     nombres = models.CharField("Nombre", max_length=20, blank=False, null=False)
     apellidos = models.CharField("Apellido", max_length=20, blank=True, null=False)
     correo = models.EmailField(max_length=32, blank=True, null=True)
@@ -25,6 +25,12 @@ class Servidor(models.Model):
     pwd_srv = models.CharField("Contraseña Servidor", max_length=50, blank=False, null=False, default="0")
     usr = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     llave = models.CharField(max_length=50, blank=False, null=False, default="0")
+
+
+class Tglobal(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    token = models.CharField("Token Administrador global", max_length=16, blank=False, null=False, default=0)
+    chat_id = models.CharField("Chat Id Administrador global", max_length=15, blank=True, null=True, default=0)
 
 
 # admin_M0nS3rv1c3s2020

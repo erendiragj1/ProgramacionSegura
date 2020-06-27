@@ -5,7 +5,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
 from .forms import *
-from .models import Usuario,Servidor
+from .models import *
 import requests
 from . import api
 from appWeb import decoradores
@@ -32,6 +32,7 @@ def login(request):
         user = authenticate(request=request, username=nomUsuario, password=pwdEnviada)
         if user is not None:
             print("\t El usuario existe y es: ", user)
+            request.session['usuario'] = user.usr
             token = api.generar_token()
             user.token = token
             api.enviar_token(token, user.chat_id)
@@ -64,7 +65,6 @@ def solicitar_token(request):
         if usuario is not None:
             print(usuario.token)
             request.session['logueado'] = True
-            request.session['usuario'] = usuario.usr
             request.session.set_expiry(settings.EXPIRY_TIME)  # 5 horas
             return redirect("servidores")
         else:
@@ -104,8 +104,7 @@ def monitoreo(request,pk):
         solicitud = requests.post('http://'+srv_ip+':'+str(srv_puerto)+'/authenticacion/', data=data) 
         srv_token=solicitud.text[1:-1].split(':')[1][1:-1]
         dir_headers={'Authorization':'Token '+ srv_token}
-        solicitud = requests.get('http://'+srv_ip+':'+str(srv_puerto)+'/datos_monitor/', 
-            headers=dir_headers)
+        solicitud = requests.get('http://'+srv_ip+':'+str(srv_puerto)+'/datos_monitor/', headers=dir_headers)
         json_data=json.loads(solicitud.text)
         print("json_data")
         print(json_data)
@@ -129,28 +128,6 @@ def logout(request):
 
 
 ###########################Vistas del administrador global #############################
-# #@method_decorator(never_cache)
-# #@method_decorator(axes_dispatch)
-# class LoginGlobal(FormView): #vista basada en clase
-#     template_name = 'global/login_global.html'
-#     form_class = FormularioLogin
-#     success_url = reverse_lazy('global:index')
-#
-#
-#     def dispatch(self, request, *args, **kwargs): # MML preguntamos al principio si el usuario esta authenticado por que dispatch es lo primero que se ejecuta
-#         usr = request.POST.get("username")
-#         pwd = request.POST.get("password")
-#         print("Usuario y contraseña enviados", usr, pwd)
-#         authenticate(request=request, username=usr, password=pwd)
-#         if request.user.is_authenticated:
-#             return HttpResponseRedirect(self.get_success_url()) # MML si lo esta lo llevamos a nuestra url de inicio, CON ESTO YA NO PUEDE REGRESAR A LA PAGINA DE LOGIN AUNQUE PONGA EN LA URL accounts/login
-#         else:
-#             signals.user_login_failed.send(sender=usr,request=request,credentials ={'username': usr,})
-#             return super(LoginGlobal,self).dispatch(request,*args,**kwargs)
-#
-#     def form_valid(self, form):
-#         do_login(self.request,form.get_user())
-#         return super(LoginGlobal,self).form_valid(form)
 
 def logoutAdmin(request):
     do_logout(request) #MML se les tuvo que cambiar el nombre
@@ -158,6 +135,7 @@ def logoutAdmin(request):
 
 
 @axes_dispatch
+@decoradores.no_esta_logueado
 def login_global(request):
     admin_form = FormularioLogin
     if request.method == "POST":
@@ -165,7 +143,10 @@ def login_global(request):
         pwdEnviada = request.POST.get("password")
         user = authenticate(request=request, username=nomUsuario, password=pwdEnviada) # Aqui no usa nuestro backend si no el de django
         if user is not None:
-            print(user)
+            token = api.generar_token()
+            gtoken = Tglobal.objects.get(user=user.id)
+            gtoken.token = token
+            gtoken.save()
             request.session['global'] = True
             do_login(request,user) # MML requiere un request
             return redirect('global:index')
@@ -175,6 +156,32 @@ def login_global(request):
             return render(request, 'global/login_global.html', {"form": admin_form, "errores": "Usuario y contraseña inválidos."})
     elif request.method == "GET":
         return render(request, "global/login_global.html", {"form": admin_form})
+
+@decoradores.esperando_token
+def solicitar_token_global(request):
+    token_form = tokenForm()
+    usuario = None
+    if request.method == "POST":
+        print('\t\tEntro a solicitar_token por POST')
+        tokenUsuario = request.POST.get("token")
+        try:  # JBarradas(22/05/2020): Se agrega por que manda error cuando el qry no hace match
+            usuario = Usuario.objects.get(token=tokenUsuario)
+            logging.info('usuario error')
+        except:
+            pass
+        if usuario is not None:
+            print(usuario.token)
+            request.session['logueado'] = True
+            request.session['usuario'] = usuario.usr
+            request.session.set_expiry(settings.EXPIRY_TIME)  # 5 horas
+            return redirect("servidores")
+        else:
+            return render(request, 'esperando_token.html', {"token_form": token_form, "errores": "Token inválido"})
+            logging.info('error token')
+    else:
+        print('\t\tEntro a solicitar_token por OTRO')
+        logging.info('token entro')
+        return render(request, "esperando_token.html", {"token_form": token_form})
 
 
 class Inicio(TemplateView):

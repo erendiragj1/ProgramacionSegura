@@ -5,18 +5,14 @@ import string
 import requests
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
-from cryptography.hazmat.primitives import cmac
+from django.contrib.auth.hashers import make_password, check_password
 
+
+def validar_password(pwd_enviada,pwd_bd):
+    return check_password(pwd_enviada,pwd_bd)
 
 def hashear_contrasena(password):
-    salt = secrets.token_hex(4).encode("utf-8")
-    m = hashlib.md5()
-    m.update(password.encode('utf-8') + salt)
-    miHash = m.hexdigest()
-    contrasena = salt.decode("utf-8") + miHash
-    print(len(contrasena))
-    print(contrasena)
-    return contrasena
+    return make_password(password)
 
 
 def randomString(stringLength):
