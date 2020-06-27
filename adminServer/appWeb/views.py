@@ -60,11 +60,11 @@ def solicitar_token(request):
         tokenUsuario = request.POST.get("token")
         try:  # JBarradas(22/05/2020): Se agrega por que manda error cuando el qry no hace match
             usuario = Usuario.objects.get(token=tokenUsuario)
-            logging.info('usuario error')
         except:
-            pass
+            logging.error('token no encontrado')
+            return render(request, 'login.html', {"errores": "Token inválido.", "user_form": userForm()})
         if usuario is not None:
-            usuario.token='0'
+            usuario.token = '0'
             usuario.save()
             if usuario.usr == request.session.get("usuario"):
                 print(usuario.token)
