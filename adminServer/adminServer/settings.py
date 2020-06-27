@@ -122,7 +122,7 @@ USE_TZ = False  # JBarradas (25/04/2020): Se deshabilita para que tome la hora d
 
 # AXES
 # MML Se establece la configuracion de axes
-AXES_ENABLED = False
+AXES_ENABLED = True
 AXES_FAILURE_LIMIT = 3
 AXES_ONLY_USER_FAILURES = True
 AXES_COOLOFF_TIME = 1

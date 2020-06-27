@@ -20,7 +20,7 @@ from appWeb.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/',login,name='login'),
-    path('accounts/login/',LoginGlobal.as_view(),name='login_global'),
+    path('accounts/login/',login_global,name='login_global'),
     path('global/', include(('appWeb.urls','global'))),
     path('',login),
     path('esperar_token/', solicitar_token, name="solicitar_token"),
