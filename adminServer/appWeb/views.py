@@ -166,6 +166,7 @@ def login_global(request):
         user = authenticate(request=request, username=nomUsuario, password=pwdEnviada) # Aqui no usa nuestro backend si no el de django
         if user is not None:
             print(user)
+            request.session['global'] = True
             do_login(request,user) # MML requiere un request
             return redirect('global:index')
         else:

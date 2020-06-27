@@ -32,6 +32,9 @@ def no_esta_logueado(vista):
     #Tomese como logueado que el usuario, pwd y token
     #estan correctos
     def interna(request):
+        if request.session.get('global', True):
+            #JABM (09-05-2020): Si esta logueado como administrador global....
+            return redirect('/global/')
         if request.session.get('logueado', False):
             #JABM (09-05-2020): Si esta logueado se redirigue a servidores.
             return redirect('/servidores/')
