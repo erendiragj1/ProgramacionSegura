@@ -1,0 +1,27 @@
+2020-06-29 11:19:42,497 /home/jbarradas/PROGRAMAS/GIT3/adminServer/appWeb/views.py changed, reloading.
+2020-06-29 11:21:31,665 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 11:21:31,668 AXES: Getting access attempts that are newer than 2020-06-29 10:21:31.664670
+2020-06-29 11:21:37,800 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 11:21:37,801 AXES: Getting access attempts that are newer than 2020-06-29 10:21:37.800622
+2020-06-29 11:21:37,808 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 11:21:37,809 AXES: Getting access attempts that are newer than 2020-06-29 10:21:37.800622
+2020-06-29 11:21:38,317 Starting new HTTPS connection (1): api.telegram.org
+2020-06-29 11:21:39,175 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=tnqekrjmxcma HTTP/1.1" 200 262
+2020-06-29 11:21:39,283 token entro
+2020-06-29 11:21:53,845 usuario loguedo
+2020-06-29 11:21:56,025 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 11:21:56,027 AXES: Getting access attempts that are newer than 2020-06-29 10:21:56.025441
+2020-06-29 11:22:00,246 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 11:22:00,246 AXES: Getting access attempts that are newer than 2020-06-29 10:22:00.246113
+2020-06-29 11:22:04,708 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 11:22:04,710 AXES: Getting access attempts that are newer than 2020-06-29 10:22:04.707981
+2020-06-29 11:22:04,715 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 11:22:04,716 AXES: Getting access attempts that are newer than 2020-06-29 10:22:04.707981
+2020-06-29 11:22:05,169 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-06-29 10:22:04.707981
+2020-06-29 11:22:05,169 AXES: Successful login by {username: "Admin", ip_address: "127.0.0.1", user_agent: "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0", path_info: "/accounts/login/"}.
+2020-06-29 11:22:11,440 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 11:22:11,442 AXES: Getting access attempts that are newer than 2020-06-29 10:22:11.440508
+2020-06-29 11:22:15,616 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-06-29 10:22:15.606573
+2020-06-29 11:22:15,616 AXES: Successful logout by {username: "Admin", ip_address: "127.0.0.1", user_agent: "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0", path_info: "/global/logout/"}.
+2020-06-29 11:22:15,748 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 11:22:15,750 AXES: Getting access attempts that are newer than 2020-06-29 10:22:15.748845
