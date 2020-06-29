@@ -24,6 +24,7 @@ class LoginBackend(BaseBackend):
         #print(len(llave_aes_b64)) #44
         # terminaSalt = 8  # MML Es la posicion donde termina el salt
         try:
+            print(username)
             user = User.objects.get(username=username)
         except Exception:
             print("El usuario no existe")

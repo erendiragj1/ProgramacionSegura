@@ -98,14 +98,15 @@ def monitoreo(request,pk):
         id_srv = pk
         servidor = Servidor.objects.get(estado=True,id=id_srv)
         srv_llave_aes=servidor.llave
-        srv_usr=servidor.usr.usr
+        srv_usr=servidor.usr_srv
         srv_pwd=servidor.pwd_srv
         srv_ip=servidor.ip_srv
         srv_puerto=servidor.puerto
-        data = {'username': srv_usr, 'password': srv_llave_aes+srv_pwd, 
-            'llave_aes_b64': srv_llave_aes}
+        data = {'username': srv_usr, 'password': srv_llave_aes+srv_pwd}
+        print('\t\tdata para solicitud\n\t\t', data)
         solicitud = requests.post('http://'+srv_ip+':'+str(srv_puerto)+'/authenticacion/', data=data) 
         srv_token=solicitud.text[1:-1].split(':')[1][1:-1]
+        print('\t\tToken\n\t\t', srv_token)
         dir_headers={'Authorization':'Token '+ srv_token}
         solicitud = requests.get('http://'+srv_ip+':'+str(srv_puerto)+'/datos_monitor/', headers=dir_headers)
         json_data=json.loads(solicitud.text)

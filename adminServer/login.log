@@ -25,3 +25,174 @@
 2020-06-29 11:22:15,616 AXES: Successful logout by {username: "Admin", ip_address: "127.0.0.1", user_agent: "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0", path_info: "/global/logout/"}.
 2020-06-29 11:22:15,748 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
 2020-06-29 11:22:15,750 AXES: Getting access attempts that are newer than 2020-06-29 10:22:15.748845
+2020-06-29 11:28:05,929 Not Found: //login/
+2020-06-29 11:28:09,396 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 11:28:09,400 AXES: Getting access attempts that are newer than 2020-06-29 10:28:09.392772
+2020-06-29 11:28:15,048 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 11:28:15,048 AXES: Getting access attempts that are newer than 2020-06-29 10:28:15.048142
+2020-06-29 11:28:15,051 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 11:28:15,052 AXES: Getting access attempts that are newer than 2020-06-29 10:28:15.048142
+2020-06-29 11:28:15,605 Starting new HTTPS connection (1): api.telegram.org
+2020-06-29 11:28:16,386 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=dqtcansxnpyf HTTP/1.1" 200 262
+2020-06-29 11:28:16,491 token entro
+2020-06-29 11:28:33,840 usuario loguedo
+2020-06-29 11:28:36,562 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 11:28:36,563 AXES: Getting access attempts that are newer than 2020-06-29 10:28:36.561832
+2020-06-29 11:28:39,954 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 11:28:39,955 AXES: Getting access attempts that are newer than 2020-06-29 10:28:39.954231
+2020-06-29 11:28:45,283 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 11:28:45,285 AXES: Getting access attempts that are newer than 2020-06-29 10:28:45.283571
+2020-06-29 11:28:45,299 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 11:28:45,300 AXES: Getting access attempts that are newer than 2020-06-29 10:28:45.283571
+2020-06-29 11:28:45,844 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-06-29 10:28:45.283571
+2020-06-29 11:28:45,845 AXES: Successful login by {username: "Admin", ip_address: "127.0.0.1", user_agent: "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0", path_info: "/accounts/login/"}.
+2020-06-29 12:12:29,409 AXES: Cleaned up 1 expired access attempts from database that were older than 2020-06-29 11:12:29.338628
+2020-06-29 12:12:29,409 AXES: Successful logout by {username: "Admin", ip_address: "127.0.0.1", user_agent: "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0", path_info: "/global/logout/"}.
+2020-06-29 12:12:29,548 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 12:12:29,550 AXES: Getting access attempts that are newer than 2020-06-29 11:12:29.548643
+2020-06-29 12:12:33,829 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 12:12:33,831 AXES: Getting access attempts that are newer than 2020-06-29 11:12:33.829108
+2020-06-29 12:12:33,848 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 12:12:33,849 AXES: Getting access attempts that are newer than 2020-06-29 11:12:33.829108
+2020-06-29 12:12:34,649 Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/home/jbarradas/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/jbarradas/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/jbarradas/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/jbarradas/.local/lib/python3.6/site-packages/axes/decorators.py", line 10, in inner
+    return func(request, *args, **kwargs)
+  File "/home/jbarradas/PROGRAMAS/GIT3/adminServer/appWeb/decoradores.py", line 42, in interna
+    return vista(request)
+  File "/home/jbarradas/PROGRAMAS/GIT3/adminServer/appWeb/views.py", line 150, in login_global
+    gtoken = Tglobal.objects.get(user=user.id)
+AttributeError: 'Usuario' object has no attribute 'id'
+2020-06-29 12:12:43,204 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 12:12:43,205 AXES: Getting access attempts that are newer than 2020-06-29 11:12:43.204598
+2020-06-29 12:12:50,392 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 12:12:50,393 AXES: Getting access attempts that are newer than 2020-06-29 11:12:50.392057
+2020-06-29 12:12:50,401 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 12:12:50,403 AXES: Getting access attempts that are newer than 2020-06-29 11:12:50.392057
+2020-06-29 12:12:51,126 Starting new HTTPS connection (1): api.telegram.org
+2020-06-29 12:12:51,920 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=toxqabvqwraw HTTP/1.1" 200 262
+2020-06-29 12:12:52,037 token entro
+2020-06-29 12:13:04,021 usuario loguedo
+2020-06-29 12:13:07,310 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:13:07,853 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 400 68
+2020-06-29 12:13:07,859 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:13:07,888 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 401 74
+2020-06-29 12:13:08,028 Internal Server Error: /monitor/1/
+Traceback (most recent call last):
+  File "/home/jbarradas/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/jbarradas/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/jbarradas/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/jbarradas/PROGRAMAS/GIT3/adminServer/appWeb/views.py", line 114, in monitoreo
+    data_full=json_data[1:-1].split(',')
+TypeError: unhashable type: 'slice'
+2020-06-29 12:16:33,601 /home/jbarradas/PROGRAMAS/GIT3/adminServer/appWeb/views.py changed, reloading.
+2020-06-29 12:17:22,741 usuario loguedo
+2020-06-29 12:17:24,592 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:17:24,918 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 400 68
+2020-06-29 12:17:24,923 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:17:24,931 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 401 74
+2020-06-29 12:17:25,084 Internal Server Error: /monitor/1/
+Traceback (most recent call last):
+  File "/home/jbarradas/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/jbarradas/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/jbarradas/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/jbarradas/PROGRAMAS/GIT3/adminServer/appWeb/views.py", line 115, in monitoreo
+    data_full=json_data[1:-1].split(',')
+TypeError: unhashable type: 'slice'
+2020-06-29 12:18:29,453 /home/jbarradas/PROGRAMAS/GIT3/adminServer/appWeb/views.py changed, reloading.
+2020-06-29 12:18:34,906 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:18:35,510 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 400 68
+2020-06-29 12:18:35,518 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:18:35,551 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 401 74
+2020-06-29 12:18:35,887 Internal Server Error: /monitor/1/
+Traceback (most recent call last):
+  File "/home/jbarradas/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/jbarradas/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/jbarradas/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/jbarradas/PROGRAMAS/GIT3/adminServer/appWeb/views.py", line 116, in monitoreo
+    data_full=json_data[1:-1].split(',')
+TypeError: unhashable type: 'slice'
+2020-06-29 12:20:47,336 /home/jbarradas/PROGRAMAS/GIT3/adminServer/appWeb/views.py changed, reloading.
+2020-06-29 12:24:33,475 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:24:33,871 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 400 68
+2020-06-29 12:24:33,878 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:24:33,894 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 401 74
+2020-06-29 12:24:34,051 Internal Server Error: /monitor/1/
+Traceback (most recent call last):
+  File "/home/jbarradas/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/jbarradas/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/jbarradas/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/jbarradas/PROGRAMAS/GIT3/adminServer/appWeb/views.py", line 115, in monitoreo
+    data_full=json_data[1:-1].split(',')
+TypeError: unhashable type: 'slice'
+2020-06-29 12:25:35,161 /home/jbarradas/PROGRAMAS/GIT3/adminServer/appWeb/views.py changed, reloading.
+2020-06-29 12:25:50,884 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:25:51,667 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-29 12:25:51,675 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:25:52,694 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 59
+2020-06-29 12:25:58,557 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:25:58,924 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-29 12:25:58,927 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:25:59,947 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 59
+2020-06-29 12:26:10,308 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:26:10,553 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-29 12:26:10,557 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:26:11,567 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 59
+2020-06-29 12:26:21,762 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:26:22,014 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-29 12:26:22,019 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:26:23,028 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 59
+2020-06-29 12:26:33,424 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:26:33,664 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-29 12:26:33,667 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:26:34,680 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 59
+2020-06-29 12:26:44,887 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:26:45,117 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-29 12:26:45,121 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:26:46,131 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 59
+2020-06-29 12:26:56,324 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:26:56,548 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-29 12:26:56,552 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:26:57,563 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 59
+2020-06-29 12:27:07,858 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:27:08,095 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-29 12:27:08,098 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:27:09,109 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 59
+2020-06-29 12:27:19,309 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:27:19,604 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-29 12:27:19,608 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:27:20,630 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 59
+2020-06-29 12:27:30,977 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:27:31,206 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-29 12:27:31,209 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:27:32,218 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 59
+2020-06-29 12:27:42,438 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:27:42,832 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-29 12:27:42,838 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:27:43,871 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 59
+2020-06-29 12:27:54,136 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:27:54,447 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-29 12:27:54,451 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:27:55,463 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 59
+2020-06-29 12:28:05,756 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:28:06,044 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-29 12:28:06,049 Starting new HTTP connection (1): 127.0.0.1
+2020-06-29 12:28:07,079 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 59
