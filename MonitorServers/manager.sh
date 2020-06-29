@@ -25,7 +25,7 @@ elif [ "$1" == "-m" ]; then
   encriptar
   python3 manage.py migrate
 else
-  echo "parametro invalida."
+  echo "parametro invalido."
   echo los pametros validos son:
   echo -c para checar
   echo -mm para hacer una migracion
