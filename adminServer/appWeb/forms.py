@@ -183,14 +183,16 @@ class AdminForm(forms.ModelForm):
 class ServerForm(forms.ModelForm):
     class Meta:
         model = Servidor
-        fields = ('desc_srv', 'ip_srv', 'puerto', 'pwd_srv', 'usr', 'estado')
+        fields = ('desc_srv', 'ip_srv', 'puerto', 'pwd_srv', 'usr', 'estado','usr_srv','puerto_tty')
         label = {
             'desc_srv': 'Descrićión del servidor',
             'ip_srv': 'IP del servidor',
             'puerto': 'Puerto del servidor',
             'pwd_srv': 'Contraseña del servidor',
             'usr': 'Administrador del servidor',
-            'estado': 'Estado del servidor'
+            'estado': 'Estado del servidor',
+            'usr_srv': 'Usuario API',
+            'puerto_tty': 'Puerto Terminal',
         }
         widgets = {
             'desc_srv': forms.TextInput(
@@ -215,6 +217,18 @@ class ServerForm(forms.ModelForm):
                 attrs={
                     'class': 'form-control',
                     'placeholder': 'Contraseña del nuevo servidor',
+                }
+            ),
+            'usr_srv': forms.TextInput(
+                attrs={
+                    'class': 'form-control',
+                    'placeholder': 'Usuario del API',
+                }
+            ),
+            'puerto_tty': forms.TextInput(
+                attrs={
+                    'class': 'form-control',
+                    'placeholder': 'Puerto de la terminal del servidor',
                 }
             ),
             'usr': forms.Select(

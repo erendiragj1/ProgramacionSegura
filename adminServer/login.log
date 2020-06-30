@@ -196,3 +196,451 @@ TypeError: unhashable type: 'slice'
 2020-06-29 12:28:06,044 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
 2020-06-29 12:28:06,049 Starting new HTTP connection (1): 127.0.0.1
 2020-06-29 12:28:07,079 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 59
+2020-06-29 13:06:15,427 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 13:06:15,429 AXES: Getting access attempts that are newer than 2020-06-29 12:06:15.383435
+2020-06-29 13:06:28,088 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 13:06:28,089 AXES: Getting access attempts that are newer than 2020-06-29 12:06:28.088095
+2020-06-29 13:06:52,971 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 13:06:52,976 AXES: Getting access attempts that are newer than 2020-06-29 12:06:52.971324
+2020-06-29 13:06:52,997 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 13:06:52,999 AXES: Getting access attempts that are newer than 2020-06-29 12:06:52.971324
+2020-06-29 13:06:53,828 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-06-29 12:06:52.971324
+2020-06-29 13:06:53,829 AXES: Successful login by {username: "Manager", ip_address: "127.0.0.1", user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36", path_info: "/accounts/login/"}.
+2020-06-29 13:06:56,955 Not Found: /favicon.ico
+2020-06-29 13:10:26,465 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-06-29 12:10:26.459137
+2020-06-29 13:10:26,466 AXES: Successful logout by {username: "Manager", ip_address: "127.0.0.1", user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36", path_info: "/global/logout/"}.
+2020-06-29 13:10:26,776 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 13:10:26,778 AXES: Getting access attempts that are newer than 2020-06-29 12:10:26.775862
+2020-06-29 13:10:35,338 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 13:10:35,340 AXES: Getting access attempts that are newer than 2020-06-29 12:10:35.338635
+2020-06-29 13:10:44,217 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 13:10:44,219 AXES: Getting access attempts that are newer than 2020-06-29 12:10:44.217447
+2020-06-29 13:10:44,233 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 13:10:44,234 AXES: Getting access attempts that are newer than 2020-06-29 12:10:44.217447
+2020-06-29 13:10:45,094 Starting new HTTPS connection (1): api.telegram.org:443
+2020-06-29 13:10:45,952 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=fxpjgyfbwiwb HTTP/1.1" 200 262
+2020-06-29 13:10:46,185 token entro
+2020-06-29 13:11:01,637 usuario loguedo
+2020-06-29 13:11:05,888 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-29 13:11:06,826 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-29 13:11:06,836 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-29 13:11:07,861 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 60
+2020-06-29 13:11:19,071 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-29 13:11:19,543 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-29 13:11:19,552 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-29 13:11:20,579 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 60
+2020-06-29 13:11:22,660 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-29 13:11:23,127 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-29 13:11:23,135 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-29 13:11:24,159 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 60
+2020-06-29 13:11:27,162 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-29 13:11:27,615 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-29 13:11:27,623 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-29 13:11:28,644 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 60
+2020-06-29 13:11:33,697 usuario loguedo
+2020-06-29 13:11:36,585 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 13:11:36,587 AXES: Getting access attempts that are newer than 2020-06-29 12:11:36.585726
+2020-06-29 13:14:37,233 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 13:14:37,266 AXES: Getting access attempts that are newer than 2020-06-29 12:14:37.233187
+2020-06-29 13:14:50,740 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 13:14:50,742 AXES: Getting access attempts that are newer than 2020-06-29 12:14:50.740041
+2020-06-29 13:15:10,263 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 13:15:10,266 AXES: Getting access attempts that are newer than 2020-06-29 12:15:10.263260
+2020-06-29 13:15:37,441 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 13:15:37,443 AXES: Getting access attempts that are newer than 2020-06-29 12:15:37.440883
+2020-06-29 13:16:12,258 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 13:16:12,259 AXES: Getting access attempts that are newer than 2020-06-29 12:16:12.257845
+2020-06-29 13:16:16,282 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 13:16:16,283 AXES: Getting access attempts that are newer than 2020-06-29 12:16:16.281870
+2020-06-29 13:18:35,899 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 13:18:35,900 AXES: Getting access attempts that are newer than 2020-06-29 12:18:35.898849
+2020-06-29 13:19:32,104 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 13:19:32,105 AXES: Getting access attempts that are newer than 2020-06-29 12:19:32.104072
+2020-06-29 13:20:08,667 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 13:20:08,669 AXES: Getting access attempts that are newer than 2020-06-29 12:20:08.667814
+2020-06-29 13:22:14,196 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 13:22:14,198 AXES: Getting access attempts that are newer than 2020-06-29 12:22:14.196582
+2020-06-29 13:22:37,286 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 13:22:37,292 AXES: Getting access attempts that are newer than 2020-06-29 12:22:37.286405
+2020-06-29 13:22:42,815 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 13:22:42,816 AXES: Getting access attempts that are newer than 2020-06-29 12:22:42.815331
+2020-06-29 13:22:45,098 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 13:22:45,099 AXES: Getting access attempts that are newer than 2020-06-29 12:22:45.098230
+2020-06-29 13:22:47,526 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 13:22:47,527 AXES: Getting access attempts that are newer than 2020-06-29 12:22:47.526199
+2020-06-29 13:22:49,986 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 13:22:49,988 AXES: Getting access attempts that are newer than 2020-06-29 12:22:49.986436
+2020-06-29 13:22:52,322 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 13:22:52,323 AXES: Getting access attempts that are newer than 2020-06-29 12:22:52.321911
+2020-06-29 16:32:42,053 /home/miguel/Documentos/ProyectoPS/adminServer/appWeb/models.py changed, reloading.
+2020-06-29 16:32:42,097 Using selector: EpollSelector
+2020-06-29 16:33:20,043 Using selector: EpollSelector
+2020-06-29 16:34:14,948 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 16:34:14,950 AXES: Getting access attempts that are newer than 2020-06-29 15:34:14.912255
+2020-06-29 16:34:18,049 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 16:34:18,051 AXES: Getting access attempts that are newer than 2020-06-29 15:34:18.049401
+2020-06-29 16:34:27,526 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 16:34:27,527 AXES: Getting access attempts that are newer than 2020-06-29 15:34:27.526032
+2020-06-29 16:34:27,562 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 16:34:27,563 AXES: Getting access attempts that are newer than 2020-06-29 15:34:27.526032
+2020-06-29 16:34:28,205 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-06-29 15:34:27.526032
+2020-06-29 16:34:28,206 AXES: Successful login by {username: "Manager", ip_address: "127.0.0.1", user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36", path_info: "/accounts/login/"}.
+2020-06-29 16:41:19,126 /home/miguel/Documentos/ProyectoPS/adminServer/appWeb/forms.py changed, reloading.
+2020-06-29 16:41:19,128 Using selector: EpollSelector
+2020-06-29 16:45:58,195 Using selector: EpollSelector
+2020-06-29 16:48:59,714 /home/miguel/Documentos/ProyectoPS/adminServer/appWeb/forms.py changed, reloading.
+2020-06-29 16:48:59,716 Using selector: EpollSelector
+2020-06-29 19:34:10,205 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-06-29 18:34:10.172984
+2020-06-29 19:34:10,206 AXES: Successful logout by {username: "Manager", ip_address: "127.0.0.1", user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36", path_info: "/global/logout/"}.
+2020-06-29 19:34:10,375 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 19:34:10,376 AXES: Getting access attempts that are newer than 2020-06-29 18:34:10.374827
+2020-06-29 19:34:22,443 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 19:34:22,444 AXES: Getting access attempts that are newer than 2020-06-29 18:34:22.442928
+2020-06-29 19:34:36,253 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 19:34:36,254 AXES: Getting access attempts that are newer than 2020-06-29 18:34:36.253054
+2020-06-29 19:34:36,296 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 19:34:36,297 AXES: Getting access attempts that are newer than 2020-06-29 18:34:36.253054
+2020-06-29 19:34:37,178 Starting new HTTPS connection (1): api.telegram.org:443
+2020-06-29 19:34:38,042 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=cgjswylwwtds HTTP/1.1" 200 262
+2020-06-29 19:34:38,294 token entro
+2020-06-29 19:34:54,723 usuario loguedo
+2020-06-29 19:34:57,633 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-29 19:34:58,163 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-29 19:34:58,171 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-29 19:34:59,188 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 60
+2020-06-29 19:35:02,795 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-29 19:35:03,191 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-29 19:35:03,198 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-29 19:35:04,214 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 60
+2020-06-29 19:35:08,285 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-29 19:35:08,697 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-29 19:35:08,703 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-29 19:35:09,721 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 60
+2020-06-29 19:35:12,059 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 19:35:12,060 AXES: Getting access attempts that are newer than 2020-06-29 18:35:12.058991
+2020-06-29 19:41:10,436 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 19:41:10,437 AXES: Getting access attempts that are newer than 2020-06-29 18:41:10.435769
+2020-06-29 19:41:22,939 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 19:41:22,940 AXES: Getting access attempts that are newer than 2020-06-29 18:41:22.938907
+2020-06-29 19:41:22,949 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 19:41:22,951 AXES: Getting access attempts that are newer than 2020-06-29 18:41:22.938907
+2020-06-29 19:41:23,722 Starting new HTTPS connection (1): api.telegram.org:443
+2020-06-29 19:41:24,641 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=hxemnqjxwrnd HTTP/1.1" 200 262
+2020-06-29 19:41:24,820 token entro
+2020-06-29 19:41:48,188 usuario loguedo
+2020-06-29 19:41:48,592 Internal Server Error: /servidores/
+Traceback (most recent call last):
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/miguel/Documentos/ProyectoPS/adminServer/appWeb/decoradores.py", line 15, in interna
+    return vista(request)
+  File "/home/miguel/Documentos/ProyectoPS/adminServer/appWeb/views.py", line 92, in servidores
+    return render(request, "servidores.html",contexto)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/defaulttags.py", line 811, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 448, in parse
+    raise self.error(token, e)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 446, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 562, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 661, in __init__
+    raise TemplateSyntaxError("Could not parse the remainder: '%s' "
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ':server.puerto' from 'server.ip_srv:server.puerto'
+2020-06-29 19:43:42,343 usuario loguedo
+2020-06-29 19:43:42,674 Internal Server Error: /servidores/
+Traceback (most recent call last):
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/miguel/Documentos/ProyectoPS/adminServer/appWeb/decoradores.py", line 15, in interna
+    return vista(request)
+  File "/home/miguel/Documentos/ProyectoPS/adminServer/appWeb/views.py", line 92, in servidores
+    return render(request, "servidores.html",contexto)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/defaulttags.py", line 811, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 448, in parse
+    raise self.error(token, e)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 446, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 562, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 661, in __init__
+    raise TemplateSyntaxError("Could not parse the remainder: '%s' "
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ':server.puerto_tty' from 'server.ip_srv:server.puerto_tty'
+2020-06-29 19:44:31,326 usuario loguedo
+2020-06-29 19:44:31,656 Internal Server Error: /servidores/
+Traceback (most recent call last):
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/miguel/Documentos/ProyectoPS/adminServer/appWeb/decoradores.py", line 15, in interna
+    return vista(request)
+  File "/home/miguel/Documentos/ProyectoPS/adminServer/appWeb/views.py", line 92, in servidores
+    return render(request, "servidores.html",contexto)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 477, in parse
+    raise self.error(token, e)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/defaulttags.py", line 811, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 448, in parse
+    raise self.error(token, e)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 446, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 562, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/template/base.py", line 661, in __init__
+    raise TemplateSyntaxError("Could not parse the remainder: '%s' "
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ':' from 'server.ip_srv:'
+2020-06-29 19:44:44,186 usuario loguedo
+2020-06-29 19:44:51,998 usuario loguedo
+2020-06-29 19:44:57,415 Not Found: /servidores/127.0.0.1:8888
+2020-06-29 19:47:05,844 Not Found: /servidores/127.0.0.1:8888
+2020-06-29 19:47:09,360 usuario loguedo
+2020-06-29 19:54:29,787 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 19:54:29,788 AXES: Getting access attempts that are newer than 2020-06-29 18:54:29.787195
+2020-06-29 19:55:35,078 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 19:55:35,080 AXES: Getting access attempts that are newer than 2020-06-29 18:55:35.078077
+2020-06-29 19:55:38,461 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 19:55:38,463 AXES: Getting access attempts that are newer than 2020-06-29 18:55:38.460860
+2020-06-29 19:55:40,090 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 19:55:40,092 AXES: Getting access attempts that are newer than 2020-06-29 18:55:40.090712
+2020-06-29 19:55:52,017 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 19:55:52,019 AXES: Getting access attempts that are newer than 2020-06-29 18:55:52.017715
+2020-06-29 19:56:03,175 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 19:56:03,177 AXES: Getting access attempts that are newer than 2020-06-29 18:56:03.175478
+2020-06-29 19:56:03,186 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 19:56:03,187 AXES: Getting access attempts that are newer than 2020-06-29 18:56:03.175478
+2020-06-29 19:56:03,962 Starting new HTTPS connection (1): api.telegram.org:443
+2020-06-29 19:56:04,864 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=uqpwkfkqkkwc HTTP/1.1" 200 262
+2020-06-29 19:56:05,075 token entro
+2020-06-29 19:56:19,393 usuario loguedo
+2020-06-29 19:56:24,968 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-29 19:56:25,377 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-29 19:56:25,384 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-29 19:56:26,402 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 60
+2020-06-29 19:56:32,285 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-29 19:56:32,683 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-29 19:56:32,690 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-29 19:56:33,710 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 60
+2020-06-29 19:56:36,504 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-29 19:56:36,901 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-29 19:56:36,907 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-29 19:56:37,927 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 60
+2020-06-29 19:56:43,203 usuario loguedo
+2020-06-29 19:57:27,578 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 19:57:27,579 AXES: Getting access attempts that are newer than 2020-06-29 18:57:27.578455
+2020-06-29 19:57:30,325 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 19:57:30,327 AXES: Getting access attempts that are newer than 2020-06-29 18:57:30.325545
+2020-06-29 19:57:43,542 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 19:57:43,544 AXES: Getting access attempts that are newer than 2020-06-29 18:57:43.542643
+2020-06-29 19:57:43,552 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 19:57:43,553 AXES: Getting access attempts that are newer than 2020-06-29 18:57:43.542643
+2020-06-29 19:57:44,164 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-06-29 18:57:43.542643
+2020-06-29 19:57:44,164 AXES: Successful login by {username: "Manager", ip_address: "127.0.0.1", user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36", path_info: "/accounts/login/"}.
+2020-06-29 19:58:53,380 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-06-29 18:58:53.367740
+2020-06-29 19:58:53,380 AXES: Successful logout by {username: "Manager", ip_address: "127.0.0.1", user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36", path_info: "/global/logout/"}.
+2020-06-29 19:58:53,568 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 19:58:53,570 AXES: Getting access attempts that are newer than 2020-06-29 18:58:53.568031
+2020-06-29 19:58:55,747 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 19:58:55,748 AXES: Getting access attempts that are newer than 2020-06-29 18:58:55.746932
+2020-06-29 19:59:05,416 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 19:59:05,417 AXES: Getting access attempts that are newer than 2020-06-29 18:59:05.416219
+2020-06-29 19:59:05,426 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 19:59:05,427 AXES: Getting access attempts that are newer than 2020-06-29 18:59:05.416219
+2020-06-29 19:59:06,189 Starting new HTTPS connection (1): api.telegram.org:443
+2020-06-29 19:59:07,001 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=scsmhnqzgzdq HTTP/1.1" 200 262
+2020-06-29 19:59:07,198 token entro
+2020-06-29 19:59:20,058 usuario loguedo
+2020-06-29 19:59:23,538 Starting new HTTP connection (1): 192.168.1.80:8000
+2020-06-29 19:59:23,751 Internal Server Error: /monitor/4/
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/usr/lib/python3.8/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.8/http/client.py", line 1240, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1286, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1235, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1006, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 946, in send
+    self.connect()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3.8/site-packages/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f5ffb5da0a0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.1.80', port=8000): Max retries exceeded with url: /authenticacion/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5ffb5da0a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/miguel/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/miguel/Documentos/ProyectoPS/adminServer/appWeb/views.py", line 107, in monitoreo
+    solicitud = requests.post('http://'+srv_ip+':'+str(srv_puerto)+'/authenticacion/', data=data)
+  File "/usr/lib/python3.8/site-packages/requests/api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='192.168.1.80', port=8000): Max retries exceeded with url: /authenticacion/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5ffb5da0a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2020-06-29 19:59:44,184 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-29 19:59:44,579 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-29 19:59:44,585 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-29 19:59:45,603 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 60
+2020-06-29 19:59:55,441 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-29 19:59:55,841 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-29 19:59:55,849 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-29 19:59:56,127 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-29 19:59:56,529 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-29 19:59:56,536 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-29 19:59:56,869 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 60
+2020-06-29 19:59:57,553 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 60
+2020-06-29 20:00:00,257 usuario loguedo
+2020-06-29 20:01:22,953 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-29 20:01:22,954 AXES: Getting access attempts that are newer than 2020-06-29 19:01:22.953021
+2020-06-29 20:01:33,688 Using selector: EpollSelector

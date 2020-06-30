@@ -29,8 +29,7 @@
         <td>{{ server.usr.usr }}</td>
         <td>
           <a href="{% url 'monitor' server.id %}" class="btn btn-success">Revisar</a>
-          <!-- <button onclick="abrir_modal_edicion('{% url 'global:editar_server' server.id %}')"
-            class="btn btn-success">Editar</button> -->
+          <a href="http://{{ server.ip_srv }}:{{ server.puerto_tty }}" class="btn btn-warning">Enviar comando</a>
         </td>
       </tr>
       {% endfor %}

@@ -5,7 +5,7 @@ for var in $(ccdecrypt -c settings.env.cpt); do
     # shellcheck disable=SC2163
     export "$var"
 done
-#python3 manage.py check
+python3 manage.py check
 #python3 manage.py makemigrations
 #python3 manage.py migrate
 #python3 manage.py createsuperuser

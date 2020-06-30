@@ -24,6 +24,7 @@ class Servidor(models.Model):
     usr_srv = models.CharField("Usuario servidor", max_length=25, blank=False, null=False, default=" ")
     pwd_srv = models.CharField("Contraseña Servidor", max_length=50, blank=False, null=False, default="0")
     usr = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+    puerto_tty = models.CharField("Puerto terminal", max_length=5, blank=False, null=False, default="0")
     llave = models.CharField(max_length=50, blank=False, null=False, default="0")
 
 
