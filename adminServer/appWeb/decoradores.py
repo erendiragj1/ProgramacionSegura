@@ -41,3 +41,15 @@ def no_esta_logueado(vista):
         #JABM (09-05-2020): Si no esta logueado se permite acceso al recurso.
         return vista(request) 
     return interna
+
+def esta_logueado_global(vista):
+    # JABM; Decorador que valida si esta logueado
+    # Tomese como logueado que el usuario, pwd y token
+    # estan correctos
+    def interna(request):
+        if request.session.get('global', False):
+            # JABM (09-05-2020): Si no esta logueado se redirigue al login.
+            return redirect('global:index')
+        # JABM (09-05-2020): Si esta logueado se permite acceso al recurso.
+        return vista(request) 
+    return interna

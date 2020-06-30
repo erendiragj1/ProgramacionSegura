@@ -8,33 +8,40 @@
   </div>
 </section>
 <div class="container">
-  Bienvenido <b> <span style="color:violet">{{ usuario.usr }}</span> </b> 
-  tus servidores actualmente son
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Descripcion</th>
-        <th>IP</th>
-        <th>Puerto</th>
-        <th>Usuario ligado</th>
-        <th>Opciones</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for server in servidores %}
-      <tr>
-        <td>{{ server.desc_srv }}</td>
-        <td>{{ server.ip_srv }}</td>
-        <td>{{ server.puerto }}</td>
-        <td>{{ server.usr.usr }}</td>
-        <td>
-          <a href="{% url 'monitor' server.id %}" class="btn btn-success">Revisar</a>
-          <a href="http://{{ server.ip_srv }}:{{ server.puerto_tty }}" class="btn btn-warning">Enviar comando</a>
-        </td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+  {% if usuario.usr %}
+    Bienvenido <b> <span style="color:violet">{{ usuario.usr }}</span> </b> 
+    tus servidores actualmente son
+  {% endif %}
+    {% if error %}
+      <h1>Ocurrió un error al conseguir los datos.</h1>
+    {% else  %}
+    
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Descripcion</th>
+            <th>IP</th>
+            <th>Puerto</th>
+            <th>Usuario ligado</th>
+            <th>Opciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for server in servidores %}
+          <tr>
+            <td>{{ server.desc_srv }}</td>
+            <td>{{ server.ip_srv }}</td>
+            <td>{{ server.puerto }}</td>
+            <td>{{ server.usr.usr }}</td>
+            <td>
+              <a href="{% url 'monitor' server.id %}" class="btn btn-success">Revisar</a>
+              <a href="http://{{ server.ip_srv }}:{{ server.puerto_tty }}" class="btn btn-warning">Enviar comando</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% endif %}
   <a class="btn btn-danger" href="{% url 'logout' %}">Cerrar sesión</a>
 </div>
 {% endblock %}

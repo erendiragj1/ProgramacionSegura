@@ -8,6 +8,9 @@
   </div>
 </section>
 <div class="container">
+  {% if error %}
+  <h1>Ocurrieron errores al cargar datos</h1>
+  {% else %}
   Bienvenido <b> <span style="color:violet">{{ usuario.usr }}</span> </b> 
   <table class="table">
     <thead>
@@ -29,8 +32,9 @@
       </tr>
     </tbody>
   </table>
-  <a class="btn btn-primary" href="{% url 'servidores' %}">Volver</a>
   <a class="btn btn-primary" href="{% url 'monitor' servidor.id_srv %}">Actualizar</a>
+  {% endif %}
+  <a class="btn btn-primary" href="{% url 'servidores' %}">Volver</a>
   <a class="btn btn-danger" href="{% url 'logout' %}">Cerrar sesión</a>
   <script src="/static/js/monitoreo.js"></script>
 </div>
