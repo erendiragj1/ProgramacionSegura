@@ -9,7 +9,8 @@
 </section>
 <div class="container">
   {% if error %}
-  <h1>Ocurrieron errores al cargar datos</h1>
+  <h3 style="color:red">Ocurrieron errores al cargar datos</h3>
+  <h4>Revise su conexión.</h4>
   {% else %}
   Bienvenido <b> <span style="color:violet">{{ usuario.usr }}</span> </b> 
   <table class="table">
@@ -24,8 +25,8 @@
     </thead>
     <tbody>
       <tr>
-        <td>{{ servidor.srv_ip }}</td>
-        <td>{{ servidor.srv_puerto }}</td>
+        <td id="ip_srv">{{ servidor.srv_ip }}</td>
+        <td id="puerto_srv  ">{{ servidor.srv_puerto }}</td>
         <td>{{ servidor.cpu }}</td>
         <td>{{ servidor.disco }}</td>
         <td>{{ servidor.ram }}</td>
@@ -36,6 +37,8 @@
   {% endif %}
   <a class="btn btn-primary" href="{% url 'servidores' %}">Volver</a>
   <a class="btn btn-danger" href="{% url 'logout' %}">Cerrar sesión</a>
+  {% if not error %}
   <script src="/static/js/monitoreo.js"></script>
+  {% endif %}
 </div>
 {% endblock %}

@@ -14,12 +14,12 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-print(BASE_DIR)
-EXPIRY_TIME = 18000
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
+#Inicia declaración de variables para el proyecto
+EXPIRY_TIME = 18000 #Se define el tiempo en que expirará la sesión
+PATH_LOG = '/tmp/appWeb_proySeg2020.log' #Ruta y nombre del archivo donde se guardará log.
+#Termina declaración de variables para el proyecto
+
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -72,9 +72,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'adminServer.wsgi.application'
 
-# Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -85,9 +82,6 @@ DATABASES = {
         'PORT': os.environ.get('DB_PORT'),
     }
 }
-
-# Password validation
-# https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -104,9 +98,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# Internationalization
-# https://docs.djangoproject.com/en/3.0/topics/i18n/
-
 LANGUAGE_CODE = 'es-MX'  # JBarradas (25/04/2020): Se cambia codificación
 
 TIME_ZONE = 'America/Mexico_City'  # JBarradas (25/04/2020): Se cambia zona horaria
@@ -116,9 +107,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = False  # JBarradas (25/04/2020): Se deshabilita para que tome la hora del sistema.
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 # AXES
 # MML Se establece la configuracion de axes

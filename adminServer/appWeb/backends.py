@@ -3,15 +3,12 @@ from .models import Usuario
 from django.contrib.auth.backends import BaseBackend
 from .api import validar_password
 
-
 class LoginBackend(BaseBackend):
     # MML se crea nuestro propio back-end de authenticacion, se redefinen los metodos predefinidos de Django
     def authenticate(self, request, username=None, password=None, **kwargs):
-        print("Si entro al backend")
         try:
             user = Usuario.objects.get(usr=username)
         except Exception:
-            print("El usuario no existe")
             return None
 
         pwdBD = user.pwd

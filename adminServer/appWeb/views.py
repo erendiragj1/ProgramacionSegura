@@ -18,7 +18,8 @@ from django.views.decorators.csrf import csrf_protect
 # Create your views here.
 from django.conf import settings
 
-logging.basicConfig(filename='login.log', format='%(asctime)s %(message)s', level=logging.DEBUG)
+#PATH_LOG: Se define en el archivo de settings.py
+logging.basicConfig(filename=settings.PATH_LOG, format='%(asctime)s %(message)s', level=logging.DEBUG)
 
 @axes_dispatch
 @decoradores.no_esta_logueado
@@ -104,8 +105,8 @@ def monitoreo(request,pk):
         except:
             logging.error('monitoreo: No se encontró el usuario: ' + nom_usuario)
             return render(request, "monitoreo.html",{'error': True})
-        id_srv = pk
         try:
+            id_srv = pk
             servidor = Servidor.objects.get(estado=True,id=id_srv)
         except:
             logging.error('monitoreo: No se encontró el servidor: ' + id_srv)
@@ -117,29 +118,29 @@ def monitoreo(request,pk):
         try:
             solicitud = requests.post(url_srv+'/authenticacion/', data=data) 
             logging.info('monitoreo: Resultado de solicitud: ' + solicitud.text)
+            if solicitud.status_code != 200:
+                raise api.ConeccionSrvMonitor('Error al autenticar el servidor')
             srv_token=solicitud.text[1:-1].split(':')[1][1:-1]
-        except:
-            logging.error('monitoreo: Error al autenticar el servidor.')
-            return render(request, "monitoreo.html",{'error': True})
-        dir_headers={'Authorization':'Token '+ srv_token}
-        try:
+            dir_headers={'Authorization':'Token '+ srv_token}
             solicitud = requests.get(url_srv+'/datos_monitor/', headers=dir_headers)
             logging.info('monitoreo: Resultado de datos de monitor: ' + solicitud.text)
+            if solicitud.status_code != 200:
+                raise api.ConeccionSrvMonitor('Error al tomar información de el servidor')
             json_data=json.loads(solicitud.text)
             data_full=json_data[1:-1].split(',')
-        except:
-            logging.error('monitoreo: Error al tomar información de el servidor.')
-            return render(request, "monitoreo.html",{'error': True})
-        
-        cpu=data_full[0].split(':')[1].strip('"')
-        memoria=data_full[1].split(':')[1].strip('"')
-        disco=data_full[2].split(':')[1].strip('"')
-
-        datos_servidor={"cpu": cpu, "disco": disco, "ram": memoria, 
+            cpu=data_full[0].split(':')[1].strip('"')
+            memoria=data_full[1].split(':')[1].strip('"')
+            disco=data_full[2].split(':')[1].strip('"')
+            datos_servidor={"cpu": cpu, "disco": disco, "ram": memoria, 
             "srv_ip":servidor.ip_srv, "srv_puerto": servidor.puerto, "id_srv": id_srv}
-        logging.info('monitoreo: Datos del servidor: ' + solicitud.text)
-        return render(request, "monitoreo.html",{"usuario":usuario,"servidor":datos_servidor, "error": False})
-
+            logging.info('monitoreo: Datos del servidor: ' + solicitud.text)
+            return render(request, "monitoreo.html",{"usuario":usuario,"servidor":datos_servidor, "error": False})
+        except api.ConeccionSrvMonitor as error:
+            logging.error('monitoreo: ' + error.args[0] )
+            return render(request, "monitoreo.html",{'error': True})
+        except Exception as error:
+            logging.error('monitoreo: Ocurrió un error al intentar comunicarse con el servidor de monitoreo' )
+            return render(request, "monitoreo.html",{'error': True})
 
 # MML Se crea la funcion vista para el logout
 @decoradores.esta_logueado
@@ -161,16 +162,16 @@ def logoutAdmin(request):
 @decoradores.no_esta_logueado
 @decoradores.esta_logueado_global
 def login_global(request):
+    logging.info('login_global: Se intento una petición por el método: ' + request.method )
     admin_form = FormularioLogin
     if request.method == "POST":
-        logging.info('login_global: Se ingresó por POST')
         nomUsuario = request.POST.get("username")
         pwdEnviada = request.POST.get("password")
         user = authenticate(request=request, username=nomUsuario, password=pwdEnviada) # Aqui no usa nuestro backend si no el de django
         logging.info('login_global: Se termina de utilizar authenticate')
         if user is not None:
-            token = api.generar_token()
             try:
+                token = api.generar_token()
                 gtoken = Tglobal.objects.get(user=user.id)
                 gtoken.token = token
                 gtoken.save()
@@ -179,40 +180,35 @@ def login_global(request):
                 do_login(request,user) # MML requiere un request
                 return redirect('global:index')
             except Exception as error:
-                logging.error('login_global: ' + error)
+                logging.error('login_global: ' + error.args[0])
                 return render(request, 'global/login_global.html', {"form": admin_form, "errores": "Error al iniciar sesión"})
             
         else:
             logging.error('login_global: El usuario' + nomUsuario + 'no existente')
             return render(request, 'global/login_global.html', {"form": admin_form, "errores": "Usuario y contraseña inválidos."})
     elif request.method == "GET":
-        logging.info('login_global: Se ingresó por GET')
         return render(request, "global/login_global.html", {"form": admin_form})
 
 @decoradores.esperando_token
 def solicitar_token_global(request):
+    logging.info('solicitar_token_global: Se intento una petición por el método: ' + request.method )
     token_form = tokenForm()
     usuario = None
     if request.method == "POST":
-        print('\t\tEntro a solicitar_token por POST')
         tokenUsuario = request.POST.get("token")
         try:  # JBarradas(22/05/2020): Se agrega por que manda error cuando el qry no hace match
             usuario = Usuario.objects.get(token=tokenUsuario)
-            logging.info('usuario error')
         except:
-            pass
+            logging.error('solicitar_token_global: No se localizó el token en la tabla usuarios: ' + tokenUsuario )
+            return render(request, 'global/login_global.html', {"form": FormularioLogin, "errores": "Token inválido."})
         if usuario is not None:
-            print(usuario.token)
             request.session['logueado'] = True
             request.session['usuario'] = usuario.usr
             request.session.set_expiry(settings.EXPIRY_TIME)  # 5 horas
             return redirect("servidores")
         else:
             return render(request, 'esperando_token.html', {"token_form": token_form, "errores": "Token inválido"})
-            logging.info('error token')
     else:
-        print('\t\tEntro a solicitar_token por OTRO')
-        logging.info('token entro')
         return render(request, "esperando_token.html", {"token_form": token_form})
 
 
