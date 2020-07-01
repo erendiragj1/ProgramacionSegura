@@ -129,3 +129,16 @@ AUTHENTICATION_BACKENDS = (
     'appMonitoreo.backends.LoginBackend',
     'django.contrib.auth.backends.ModelBackend',
 )
+
+
+# REST Framework
+REST_FRAMEWORK = {
+    'DEFAULT_THROTTLE_CLASSES': [
+        'rest_framework.throttling.AnonRateThrottle',
+        'rest_framework.throttling.UserRateThrottle'
+    ],
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '0/day',
+        'user': '5/minute'
+    }
+}

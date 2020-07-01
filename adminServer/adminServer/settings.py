@@ -130,9 +130,12 @@ AXES_ENABLE_ADMIN = False
 AXES_LOCKOUT_URL = "bloqueado/"
 AXES_LOCKOUT_TEMPLATE = "usuarioBloqueado.html"
 
+# Archivos estaticos
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
+
+# Backends de authenticacion
 AUTHENTICATION_BACKENDS = (
     'axes.backends.AxesBackend',
     'django.contrib.auth.backends.ModelBackend',

@@ -410,3 +410,105 @@ django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 36: 'e
 2020-06-30 00:39:26,354 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
 2020-06-30 00:39:26,355 AXES: Getting access attempts that are newer than 2020-06-29 23:39:26.354333
 2020-06-30 00:39:26,421 login_global: Se ingresó por GET
+2020-06-30 20:19:53,702 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 20:19:53,715 AXES: Getting access attempts that are newer than 2020-06-30 19:19:53.680032
+2020-06-30 20:19:53,760 login: Se hace petición por el método: GET
+2020-06-30 20:20:17,112 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 20:20:17,113 AXES: Getting access attempts that are newer than 2020-06-30 19:20:17.111814
+2020-06-30 20:20:17,127 login: Se hace petición por el método: POST
+2020-06-30 20:20:17,165 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 20:20:17,166 AXES: Getting access attempts that are newer than 2020-06-30 19:20:17.111814
+2020-06-30 20:20:18,027 login: Se termina de autenticar el usuario
+2020-06-30 20:20:18,028 login: Se genera el token
+2020-06-30 20:20:18,086 Starting new HTTPS connection (1): api.telegram.org:443
+2020-06-30 20:22:28,536 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=yeuidivbsonr HTTP/1.1" 200 262
+2020-06-30 20:22:28,542 login: Se envia el token: yeuidivbsonr
+2020-06-30 20:22:28,906 login: Se guarda el token en el usuario
+2020-06-30 20:22:29,046 solicitar_token: Se hace petición por el método: GET
+2020-06-30 20:23:16,156 solicitar_token: Se hace petición por el método: POST
+2020-06-30 20:23:16,221 solicitar_token: Se limpia el token al usuario: miguel
+2020-06-30 20:23:16,377 servidores: Se intento una petición por el método: GET
+2020-06-30 20:23:23,676 monitoreo: Se intento una petición por el método: GET
+2020-06-30 20:23:23,703 monitoreo: url del servidor a monitorear: http://127.0.0.1:8000
+2020-06-30 20:23:23,704 monitoreo: Datos a consultar: {'username': 'usr_api', 'password': 'wmfFkiXLbzxmh1Qne57sJrlPkJV+7d9JoL/U8PU7Gsw=TzqkPxU='}
+2020-06-30 20:23:23,714 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-30 20:23:24,249 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-30 20:23:24,252 monitoreo: Resultado de solicitud: {"token":"d5249487136d48899a9f338e1b6ccfe7c42ac83a"}
+2020-06-30 20:23:24,258 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-30 20:23:25,289 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 60
+2020-06-30 20:23:25,293 monitoreo: Resultado de datos de monitor: "{\"cpu\":\"99.2\",\"memoria\":\"89.7\",\"disco\":\"60.5\"}"
+2020-06-30 20:23:25,294 monitoreo: Datos del servidor: "{\"cpu\":\"99.2\",\"memoria\":\"89.7\",\"disco\":\"60.5\"}"
+2020-06-30 20:23:36,945 monitoreo: Se intento una petición por el método: GET
+2020-06-30 20:23:36,966 monitoreo: url del servidor a monitorear: http://127.0.0.1:8000
+2020-06-30 20:23:36,966 monitoreo: Datos a consultar: {'username': 'usr_api', 'password': 'wmfFkiXLbzxmh1Qne57sJrlPkJV+7d9JoL/U8PU7Gsw=TzqkPxU='}
+2020-06-30 20:23:36,975 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-30 20:23:37,424 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-30 20:23:37,429 monitoreo: Resultado de solicitud: {"token":"d5249487136d48899a9f338e1b6ccfe7c42ac83a"}
+2020-06-30 20:23:37,435 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-30 20:23:38,455 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 60
+2020-06-30 20:23:38,458 monitoreo: Resultado de datos de monitor: "{\"cpu\":\"73.4\",\"memoria\":\"89.6\",\"disco\":\"60.5\"}"
+2020-06-30 20:23:38,459 monitoreo: Datos del servidor: "{\"cpu\":\"73.4\",\"memoria\":\"89.6\",\"disco\":\"60.5\"}"
+2020-06-30 20:23:41,796 monitoreo: Se intento una petición por el método: GET
+2020-06-30 20:23:41,818 monitoreo: url del servidor a monitorear: http://127.0.0.1:8000
+2020-06-30 20:23:41,819 monitoreo: Datos a consultar: {'username': 'usr_api', 'password': 'wmfFkiXLbzxmh1Qne57sJrlPkJV+7d9JoL/U8PU7Gsw=TzqkPxU='}
+2020-06-30 20:23:41,828 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-30 20:23:42,281 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-30 20:23:42,284 monitoreo: Resultado de solicitud: {"token":"d5249487136d48899a9f338e1b6ccfe7c42ac83a"}
+2020-06-30 20:23:42,289 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-30 20:23:43,308 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 60
+2020-06-30 20:23:43,309 monitoreo: Resultado de datos de monitor: "{\"cpu\":\"66.1\",\"memoria\":\"89.9\",\"disco\":\"60.5\"}"
+2020-06-30 20:23:43,310 monitoreo: Datos del servidor: "{\"cpu\":\"66.1\",\"memoria\":\"89.9\",\"disco\":\"60.5\"}"
+2020-06-30 20:23:45,781 monitoreo: Se intento una petición por el método: GET
+2020-06-30 20:23:45,803 monitoreo: url del servidor a monitorear: http://127.0.0.1:8000
+2020-06-30 20:23:45,804 monitoreo: Datos a consultar: {'username': 'usr_api', 'password': 'wmfFkiXLbzxmh1Qne57sJrlPkJV+7d9JoL/U8PU7Gsw=TzqkPxU='}
+2020-06-30 20:23:45,811 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-30 20:23:46,231 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-30 20:23:46,233 monitoreo: Resultado de solicitud: {"token":"d5249487136d48899a9f338e1b6ccfe7c42ac83a"}
+2020-06-30 20:23:46,239 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-30 20:23:47,264 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 60
+2020-06-30 20:23:47,266 monitoreo: Resultado de datos de monitor: "{\"cpu\":\"75.7\",\"memoria\":\"89.8\",\"disco\":\"60.5\"}"
+2020-06-30 20:23:47,268 monitoreo: Datos del servidor: "{\"cpu\":\"75.7\",\"memoria\":\"89.8\",\"disco\":\"60.5\"}"
+2020-06-30 20:23:50,357 monitoreo: Se intento una petición por el método: GET
+2020-06-30 20:23:50,375 monitoreo: url del servidor a monitorear: http://127.0.0.1:8000
+2020-06-30 20:23:50,375 monitoreo: Datos a consultar: {'username': 'usr_api', 'password': 'wmfFkiXLbzxmh1Qne57sJrlPkJV+7d9JoL/U8PU7Gsw=TzqkPxU='}
+2020-06-30 20:23:50,382 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-30 20:23:50,838 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-30 20:23:50,840 monitoreo: Resultado de solicitud: {"token":"d5249487136d48899a9f338e1b6ccfe7c42ac83a"}
+2020-06-30 20:23:50,846 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-30 20:23:51,873 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 60
+2020-06-30 20:23:51,876 monitoreo: Resultado de datos de monitor: "{\"cpu\":\"71.5\",\"memoria\":\"90.0\",\"disco\":\"60.5\"}"
+2020-06-30 20:23:51,877 monitoreo: Datos del servidor: "{\"cpu\":\"71.5\",\"memoria\":\"90.0\",\"disco\":\"60.5\"}"
+2020-06-30 20:23:54,676 monitoreo: Se intento una petición por el método: GET
+2020-06-30 20:23:54,695 monitoreo: url del servidor a monitorear: http://127.0.0.1:8000
+2020-06-30 20:23:54,696 monitoreo: Datos a consultar: {'username': 'usr_api', 'password': 'wmfFkiXLbzxmh1Qne57sJrlPkJV+7d9JoL/U8PU7Gsw=TzqkPxU='}
+2020-06-30 20:23:54,705 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-30 20:23:55,147 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-30 20:23:55,149 monitoreo: Resultado de solicitud: {"token":"d5249487136d48899a9f338e1b6ccfe7c42ac83a"}
+2020-06-30 20:23:55,154 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-30 20:23:55,171 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 429 69
+2020-06-30 20:23:55,173 monitoreo: Resultado de datos de monitor: {"detail":"Request was throttled. Expected available in 30 seconds."}
+2020-06-30 20:23:55,174 monitoreo: Error al tomar información de el servidor.
+2020-06-30 20:24:02,607 servidores: Se intento una petición por el método: GET
+2020-06-30 20:27:36,856 logout: Se intento una petición por el método: GET
+2020-06-30 20:27:36,992 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 20:27:36,994 AXES: Getting access attempts that are newer than 2020-06-30 19:27:36.992609
+2020-06-30 20:27:37,001 login: Se hace petición por el método: GET
+2020-06-30 20:28:16,384 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 20:28:16,386 AXES: Getting access attempts that are newer than 2020-06-30 19:28:16.384722
+2020-06-30 20:28:16,397 login: Se hace petición por el método: POST
+2020-06-30 20:28:16,399 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 20:28:16,400 AXES: Getting access attempts that are newer than 2020-06-30 19:28:16.384722
+2020-06-30 20:28:17,227 login: Se termina de autenticar el usuario
+2020-06-30 20:28:17,228 login: Se genera el token
+2020-06-30 20:28:17,236 Starting new HTTPS connection (1): api.telegram.org:443
+2020-06-30 20:30:28,094 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=hlyakgosvytl HTTP/1.1" 200 262
+2020-06-30 20:30:28,096 login: Se envia el token: hlyakgosvytl
+2020-06-30 20:30:28,161 login: Se guarda el token en el usuario
+2020-06-30 20:30:28,288 solicitar_token: Se hace petición por el método: GET
+2020-06-30 20:30:56,075 solicitar_token: Se hace petición por el método: POST
+2020-06-30 20:30:56,137 solicitar_token: Se limpia el token al usuario: miguel
+2020-06-30 20:30:56,232 servidores: Se intento una petición por el método: GET
+2020-06-30 20:34:35,055 logout: Se intento una petición por el método: GET
+2020-06-30 20:34:35,193 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 20:34:35,194 AXES: Getting access attempts that are newer than 2020-06-30 19:34:35.192870
+2020-06-30 20:34:35,206 login: Se hace petición por el método: GET
