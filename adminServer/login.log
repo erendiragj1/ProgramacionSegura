@@ -410,6 +410,300 @@ django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 36: 'e
 2020-06-30 00:39:26,354 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
 2020-06-30 00:39:26,355 AXES: Getting access attempts that are newer than 2020-06-29 23:39:26.354333
 2020-06-30 00:39:26,421 login_global: Se ingresó por GET
+2020-06-30 15:14:49,614 Using selector: EpollSelector
+2020-06-30 15:15:24,251 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 15:15:24,253 AXES: Getting access attempts that are newer than 2020-06-30 14:15:24.213819
+2020-06-30 15:15:24,265 login: Se hace petición por el método: GET
+2020-06-30 15:17:45,197 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 15:17:45,198 AXES: Getting access attempts that are newer than 2020-06-30 14:17:45.196877
+2020-06-30 15:17:45,209 login_global: Se ingresó por GET
+2020-06-30 15:19:55,213 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 15:19:55,215 AXES: Getting access attempts that are newer than 2020-06-30 14:19:55.213686
+2020-06-30 15:19:55,242 login_global: Se ingresó por POST
+2020-06-30 15:19:55,277 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 15:19:55,279 AXES: Getting access attempts that are newer than 2020-06-30 14:19:55.213686
+2020-06-30 15:19:56,495 login_global: Se termina de utilizar authenticate
+2020-06-30 15:19:56,518 login_global: Se guarda token en base de datos.
+2020-06-30 15:19:56,649 AXES: Cleaned up 1 expired access attempts from database that were older than 2020-06-30 14:19:55.213686
+2020-06-30 15:19:56,651 AXES: Successful login by {username: "manager", ip_address: "127.0.0.1", user_agent: "Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0", path_info: "/accounts/login/"}.
+2020-06-30 15:29:00,003 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 15:29:00,005 AXES: Getting access attempts that are newer than 2020-06-30 14:29:00.003642
+2020-06-30 15:29:00,021 login_global: Se ingresó por GET
+2020-06-30 15:29:08,104 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 15:29:08,106 AXES: Getting access attempts that are newer than 2020-06-30 14:29:08.104133
+2020-06-30 15:29:08,120 login: Se hace petición por el método: GET
+2020-06-30 15:29:27,490 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 15:29:27,494 AXES: Getting access attempts that are newer than 2020-06-30 14:29:27.490234
+2020-06-30 15:29:27,506 login_global: Se ingresó por POST
+2020-06-30 15:29:27,507 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 15:29:27,508 AXES: Getting access attempts that are newer than 2020-06-30 14:29:27.490234
+2020-06-30 15:29:28,178 login_global: Se termina de utilizar authenticate
+2020-06-30 15:29:28,200 login_global: Se guarda token en base de datos.
+2020-06-30 15:29:28,239 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-06-30 14:29:27.490234
+2020-06-30 15:29:28,241 AXES: Successful login by {username: "manager", ip_address: "127.0.0.1", user_agent: "Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0", path_info: "/accounts/login/"}.
+2020-06-30 15:29:43,834 Internal Server Error: /global/listar_server/
+Traceback (most recent call last):
+  File "/home/aries/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/aries/.local/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 74, in execute
+    return self.cursor.execute(query, args)
+  File "/home/aries/.local/lib/python3.8/site-packages/MySQLdb/cursors.py", line 209, in execute
+    res = self._query(query)
+  File "/home/aries/.local/lib/python3.8/site-packages/MySQLdb/cursors.py", line 315, in _query
+    db.query(q)
+  File "/home/aries/.local/lib/python3.8/site-packages/MySQLdb/connections.py", line 239, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.OperationalError: (1054, "Unknown column 'appWeb_servidor.puerto_tty' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/aries/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/aries/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/aries/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 143, in _get_response
+    response = response.render()
+  File "/home/aries/.local/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/home/aries/.local/lib/python3.8/site-packages/django/template/response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "/home/aries/.local/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/aries/.local/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/aries/.local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/aries/.local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/aries/.local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/aries/.local/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/aries/.local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/aries/.local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/aries/.local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/aries/.local/lib/python3.8/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/aries/.local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/aries/.local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/aries/.local/lib/python3.8/site-packages/django/template/defaulttags.py", line 308, in render
+    if match:
+  File "/home/aries/.local/lib/python3.8/site-packages/django/db/models/query.py", line 280, in __bool__
+    self._fetch_all()
+  File "/home/aries/.local/lib/python3.8/site-packages/django/db/models/query.py", line 1261, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/aries/.local/lib/python3.8/site-packages/django/db/models/query.py", line 57, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/aries/.local/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1151, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/aries/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/home/aries/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/aries/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/aries/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/aries/.local/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/aries/.local/lib/python3.8/site-packages/django/db/backends/utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/aries/.local/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 74, in execute
+    return self.cursor.execute(query, args)
+  File "/home/aries/.local/lib/python3.8/site-packages/MySQLdb/cursors.py", line 209, in execute
+    res = self._query(query)
+  File "/home/aries/.local/lib/python3.8/site-packages/MySQLdb/cursors.py", line 315, in _query
+    db.query(q)
+  File "/home/aries/.local/lib/python3.8/site-packages/MySQLdb/connections.py", line 239, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'appWeb_servidor.puerto_tty' in 'field list'")
+2020-06-30 15:30:59,996 Using selector: EpollSelector
+2020-06-30 15:31:27,327 Using selector: EpollSelector
+2020-06-30 15:32:01,757 Using selector: EpollSelector
+2020-06-30 15:32:13,828 Using selector: EpollSelector
+2020-06-30 15:32:16,494 Using selector: EpollSelector
+2020-06-30 15:34:13,110 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 15:34:13,111 AXES: Getting access attempts that are newer than 2020-06-30 14:34:13.040292
+2020-06-30 15:34:13,119 login_global: Se ingresó por GET
+2020-06-30 15:34:16,786 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 15:34:16,788 AXES: Getting access attempts that are newer than 2020-06-30 14:34:16.785922
+2020-06-30 15:34:16,810 login_global: Se ingresó por GET
+2020-06-30 15:34:29,305 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 15:34:29,307 AXES: Getting access attempts that are newer than 2020-06-30 14:34:29.305480
+2020-06-30 15:34:29,319 login_global: Se ingresó por POST
+2020-06-30 15:34:29,363 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 15:34:29,364 AXES: Getting access attempts that are newer than 2020-06-30 14:34:29.305480
+2020-06-30 15:34:29,988 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-06-30 14:34:29.305480
+2020-06-30 15:34:29,988 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 15:34:29,989 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 15:34:29,990 AXES: Getting access attempts that are newer than 2020-06-30 14:34:29.305480
+2020-06-30 15:34:29,996 AXES: New login failure by {username: "manager", ip_address: "127.0.0.1", user_agent: "Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0", path_info: "/accounts/login/"}. Creating new record in the database.
+2020-06-30 15:34:30,012 login_global: Se termina de utilizar authenticate
+2020-06-30 15:34:30,012 login_global: El usuariomanagerno existente
+2020-06-30 15:34:41,338 Using selector: EpollSelector
+2020-06-30 15:36:58,695 Using selector: EpollSelector
+2020-06-30 15:38:08,162 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 15:38:08,170 AXES: Getting access attempts that are newer than 2020-06-30 14:38:08.157567
+2020-06-30 15:38:08,194 login_global: Se ingresó por POST
+2020-06-30 15:38:08,200 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 15:38:08,202 AXES: Getting access attempts that are newer than 2020-06-30 14:38:08.157567
+2020-06-30 15:38:08,818 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-06-30 14:38:08.157567
+2020-06-30 15:38:08,819 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 15:38:08,819 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 15:38:08,820 AXES: Getting access attempts that are newer than 2020-06-30 14:38:08.157567
+2020-06-30 15:38:08,824 AXES: New login failure by {username: "manger", ip_address: "127.0.0.1", user_agent: "Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0", path_info: "/accounts/login/"}. Creating new record in the database.
+2020-06-30 15:38:08,837 login_global: Se termina de utilizar authenticate
+2020-06-30 15:38:08,837 login_global: El usuariomangerno existente
+2020-06-30 15:38:27,784 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 15:38:27,785 AXES: Getting access attempts that are newer than 2020-06-30 14:38:27.783892
+2020-06-30 15:38:27,793 login_global: Se ingresó por POST
+2020-06-30 15:38:27,794 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 15:38:27,795 AXES: Getting access attempts that are newer than 2020-06-30 14:38:27.783892
+2020-06-30 15:38:28,500 login_global: Se termina de utilizar authenticate
+2020-06-30 15:38:28,954 Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/home/aries/PycharmProjects/ProgramacionSegura/adminServer/appWeb/views.py", line 174, in login_global
+    gtoken = Tglobal.objects.get(user=user.id)
+  File "/home/aries/.local/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/aries/.local/lib/python3.8/site-packages/django/db/models/query.py", line 415, in get
+    raise self.model.DoesNotExist(
+appWeb.models.Tglobal.DoesNotExist: Tglobal matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aries/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/aries/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/aries/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/aries/.local/lib/python3.8/site-packages/axes/decorators.py", line 10, in inner
+    return func(request, *args, **kwargs)
+  File "/home/aries/PycharmProjects/ProgramacionSegura/adminServer/appWeb/decoradores.py", line 42, in interna
+    return vista(request)
+  File "/home/aries/PycharmProjects/ProgramacionSegura/adminServer/appWeb/decoradores.py", line 54, in interna
+    return vista(request)
+  File "/home/aries/PycharmProjects/ProgramacionSegura/adminServer/appWeb/views.py", line 182, in login_global
+    logging.error('login_global: ' + error)
+TypeError: can only concatenate str (not "DoesNotExist") to str
+2020-06-30 15:42:11,580 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 15:42:11,581 AXES: Getting access attempts that are newer than 2020-06-30 14:42:11.580122
+2020-06-30 15:42:11,597 login_global: Se ingresó por POST
+2020-06-30 15:42:11,598 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 15:42:11,599 AXES: Getting access attempts that are newer than 2020-06-30 14:42:11.580122
+2020-06-30 15:42:12,178 login_global: Se termina de utilizar authenticate
+2020-06-30 15:42:12,192 login_global: Se guarda token en base de datos.
+2020-06-30 15:42:12,212 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-06-30 14:42:11.580122
+2020-06-30 15:42:12,213 AXES: Successful login by {username: "manager", ip_address: "127.0.0.1", user_agent: "Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0", path_info: "/accounts/login/"}.
+2020-06-30 15:42:14,863 Not Found: /favicon.ico
+2020-06-30 15:46:31,044 Not Found: /favicon.ico
+2020-06-30 16:02:18,621 Not Found: /favicon.ico
+2020-06-30 16:04:55,640 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 16:04:55,643 AXES: Getting access attempts that are newer than 2020-06-30 15:04:55.640336
+2020-06-30 16:04:55,652 login: Se hace petición por el método: GET
+2020-06-30 16:05:02,549 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 16:05:02,550 AXES: Getting access attempts that are newer than 2020-06-30 15:05:02.549509
+2020-06-30 16:05:02,561 login_global: Se ingresó por GET
+2020-06-30 16:05:13,077 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 16:05:13,078 AXES: Getting access attempts that are newer than 2020-06-30 15:05:13.077013
+2020-06-30 16:05:13,086 login: Se hace petición por el método: GET
+2020-06-30 16:05:35,732 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 16:05:35,734 AXES: Getting access attempts that are newer than 2020-06-30 15:05:35.732651
+2020-06-30 16:05:35,746 login: Se hace petición por el método: POST
+2020-06-30 16:05:35,748 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 16:05:35,749 AXES: Getting access attempts that are newer than 2020-06-30 15:05:35.732651
+2020-06-30 16:05:37,039 login: Se termina de autenticar el usuario
+2020-06-30 16:05:37,040 login: Se genera el token
+2020-06-30 16:05:37,167 Starting new HTTPS connection (1): api.telegram.org:443
+2020-06-30 16:05:38,222 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001480803961&parse_mode=Markdown&text=ncntsylbdpuq HTTP/1.1" 400 73
+2020-06-30 16:05:38,226 login: Se envia el token: ncntsylbdpuq
+2020-06-30 16:05:38,237 login: Se guarda el token en el usuario
+2020-06-30 16:05:38,272 solicitar_token: Se hace petición por el método: GET
+2020-06-30 16:06:20,181 solicitar_token: Se hace petición por el método: POST
+2020-06-30 16:06:20,222 solicitar_token: Se limpia el token al usuario: eren
+2020-06-30 16:06:20,270 servidores: Se intento una petición por el método: GET
+2020-06-30 16:06:25,571 monitoreo: Se intento una petición por el método: GET
+2020-06-30 16:06:25,589 monitoreo: url del servidor a monitorear: http://127.0.0.1:8000
+2020-06-30 16:06:25,589 monitoreo: Datos a consultar: {'username': 'prueba1', 'password': '07gjkZNUI0ZuX4koGaCBCtjLskhOesiTUdIFxfJ4bTA=ps/8OOE='}
+2020-06-30 16:06:25,595 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-30 16:06:26,349 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-30 16:06:26,350 monitoreo: Resultado de solicitud: {"token":"4818de23d987ab9d90625874e0ea48df957d77a0"}
+2020-06-30 16:06:26,356 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-30 16:06:27,383 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 60
+2020-06-30 16:06:27,384 monitoreo: Resultado de datos de monitor: "{\"cpu\":\"32.1\",\"memoria\":\"84.8\",\"disco\":\"10.8\"}"
+2020-06-30 16:06:27,384 monitoreo: Datos del servidor: "{\"cpu\":\"32.1\",\"memoria\":\"84.8\",\"disco\":\"10.8\"}"
+2020-06-30 16:06:37,795 monitoreo: Se intento una petición por el método: GET
+2020-06-30 16:06:37,810 monitoreo: url del servidor a monitorear: http://127.0.0.1:8000
+2020-06-30 16:06:37,811 monitoreo: Datos a consultar: {'username': 'prueba1', 'password': '07gjkZNUI0ZuX4koGaCBCtjLskhOesiTUdIFxfJ4bTA=ps/8OOE='}
+2020-06-30 16:06:37,818 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-30 16:06:38,541 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-30 16:06:38,543 monitoreo: Resultado de solicitud: {"token":"4818de23d987ab9d90625874e0ea48df957d77a0"}
+2020-06-30 16:06:38,550 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-30 16:06:39,575 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 60
+2020-06-30 16:06:39,578 monitoreo: Resultado de datos de monitor: "{\"cpu\":\"32.0\",\"memoria\":\"84.8\",\"disco\":\"10.8\"}"
+2020-06-30 16:06:39,578 monitoreo: Datos del servidor: "{\"cpu\":\"32.0\",\"memoria\":\"84.8\",\"disco\":\"10.8\"}"
+2020-06-30 16:06:40,649 monitoreo: Se intento una petición por el método: GET
+2020-06-30 16:06:40,692 monitoreo: url del servidor a monitorear: http://127.0.0.1:8000
+2020-06-30 16:06:40,692 monitoreo: Datos a consultar: {'username': 'prueba1', 'password': '07gjkZNUI0ZuX4koGaCBCtjLskhOesiTUdIFxfJ4bTA=ps/8OOE='}
+2020-06-30 16:06:40,703 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-30 16:06:41,372 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-30 16:06:41,373 monitoreo: Resultado de solicitud: {"token":"4818de23d987ab9d90625874e0ea48df957d77a0"}
+2020-06-30 16:06:41,379 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-30 16:06:42,401 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 60
+2020-06-30 16:06:42,403 monitoreo: Resultado de datos de monitor: "{\"cpu\":\"38.3\",\"memoria\":\"84.9\",\"disco\":\"10.8\"}"
+2020-06-30 16:06:42,404 monitoreo: Datos del servidor: "{\"cpu\":\"38.3\",\"memoria\":\"84.9\",\"disco\":\"10.8\"}"
+2020-06-30 16:06:47,248 monitoreo: Se intento una petición por el método: GET
+2020-06-30 16:06:47,275 monitoreo: url del servidor a monitorear: http://127.0.0.1:8000
+2020-06-30 16:06:47,275 monitoreo: Datos a consultar: {'username': 'prueba1', 'password': '07gjkZNUI0ZuX4koGaCBCtjLskhOesiTUdIFxfJ4bTA=ps/8OOE='}
+2020-06-30 16:06:47,288 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-30 16:06:47,929 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-30 16:06:47,932 monitoreo: Resultado de solicitud: {"token":"4818de23d987ab9d90625874e0ea48df957d77a0"}
+2020-06-30 16:06:47,936 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-30 16:06:48,959 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 60
+2020-06-30 16:06:48,961 monitoreo: Resultado de datos de monitor: "{\"cpu\":\"28.6\",\"memoria\":\"84.9\",\"disco\":\"10.8\"}"
+2020-06-30 16:06:48,962 monitoreo: Datos del servidor: "{\"cpu\":\"28.6\",\"memoria\":\"84.9\",\"disco\":\"10.8\"}"
+2020-06-30 16:06:56,267 monitoreo: Se intento una petición por el método: GET
+2020-06-30 16:06:56,287 monitoreo: url del servidor a monitorear: http://127.0.0.1:8000
+2020-06-30 16:06:56,287 monitoreo: Datos a consultar: {'username': 'prueba1', 'password': '07gjkZNUI0ZuX4koGaCBCtjLskhOesiTUdIFxfJ4bTA=ps/8OOE='}
+2020-06-30 16:06:56,293 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-30 16:06:57,093 http://127.0.0.1:8000 "POST /authenticacion/ HTTP/1.1" 200 52
+2020-06-30 16:06:57,096 monitoreo: Resultado de solicitud: {"token":"4818de23d987ab9d90625874e0ea48df957d77a0"}
+2020-06-30 16:06:57,103 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-30 16:06:58,134 http://127.0.0.1:8000 "GET /datos_monitor/ HTTP/1.1" 200 60
+2020-06-30 16:06:58,136 monitoreo: Resultado de datos de monitor: "{\"cpu\":\"25.6\",\"memoria\":\"85.0\",\"disco\":\"10.8\"}"
+2020-06-30 16:06:58,138 monitoreo: Datos del servidor: "{\"cpu\":\"25.6\",\"memoria\":\"85.0\",\"disco\":\"10.8\"}"
+2020-06-30 16:07:07,389 servidores: Se intento una petición por el método: GET
+2020-06-30 16:08:44,113 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 16:08:44,114 AXES: Getting access attempts that are newer than 2020-06-30 15:08:44.113249
+2020-06-30 16:08:44,195 servidores: Se intento una petición por el método: GET
+2020-06-30 16:09:27,359 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 16:09:27,361 AXES: Getting access attempts that are newer than 2020-06-30 15:09:27.359635
+2020-06-30 16:09:27,502 servidores: Se intento una petición por el método: GET
+2020-06-30 16:09:44,437 logout: Se intento una petición por el método: GET
+2020-06-30 16:09:44,508 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 16:09:44,509 AXES: Getting access attempts that are newer than 2020-06-30 15:09:44.508313
+2020-06-30 16:09:44,519 login: Se hace petición por el método: GET
+2020-06-30 16:09:47,820 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 16:09:47,822 AXES: Getting access attempts that are newer than 2020-06-30 15:09:47.820670
+2020-06-30 16:09:47,829 login_global: Se ingresó por GET
+2020-06-30 16:10:11,375 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 16:10:11,379 AXES: Getting access attempts that are newer than 2020-06-30 15:10:11.375585
+2020-06-30 16:10:11,395 login_global: Se ingresó por POST
+2020-06-30 16:10:11,396 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 16:10:11,397 AXES: Getting access attempts that are newer than 2020-06-30 15:10:11.375585
+2020-06-30 16:10:12,050 login_global: Se termina de utilizar authenticate
+2020-06-30 16:10:12,138 login_global: Se guarda token en base de datos.
+2020-06-30 16:10:12,211 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-06-30 15:10:11.375585
+2020-06-30 16:10:12,212 AXES: Successful login by {username: "manager", ip_address: "127.0.0.1", user_agent: "Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0", path_info: "/accounts/login/"}.
+2020-06-30 16:11:41,445 Using selector: EpollSelector
 2020-06-30 20:19:53,702 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
 2020-06-30 20:19:53,715 AXES: Getting access attempts that are newer than 2020-06-30 19:19:53.680032
 2020-06-30 20:19:53,760 login: Se hace petición por el método: GET
@@ -512,3 +806,35 @@ django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 36: 'e
 2020-06-30 20:34:35,193 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
 2020-06-30 20:34:35,194 AXES: Getting access attempts that are newer than 2020-06-30 19:34:35.192870
 2020-06-30 20:34:35,206 login: Se hace petición por el método: GET
+2020-06-30 20:50:02,995 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 20:50:02,996 AXES: Getting access attempts that are newer than 2020-06-30 19:50:02.962498
+2020-06-30 20:50:06,936 Not Found: /favicon.ico
+2020-06-30 20:50:47,568 logoutAdmin: Se intento una petición por el método: GET
+2020-06-30 20:50:47,656 AXES: Cleaned up 2 expired access attempts from database that were older than 2020-06-30 19:50:47.568547
+2020-06-30 20:50:47,657 AXES: Successful logout by {username: "manager", ip_address: "127.0.0.1", user_agent: "Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0", path_info: "/global/logout/"}.
+2020-06-30 20:50:47,813 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 20:50:47,814 AXES: Getting access attempts that are newer than 2020-06-30 19:50:47.813236
+2020-06-30 20:50:47,839 login_global: Se ingresó por GET
+2020-06-30 20:50:54,151 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 20:50:54,152 AXES: Getting access attempts that are newer than 2020-06-30 19:50:54.150555
+2020-06-30 20:50:54,163 login: Se hace petición por el método: GET
+2020-06-30 20:51:18,349 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 20:51:18,350 AXES: Getting access attempts that are newer than 2020-06-30 19:51:18.348564
+2020-06-30 20:51:18,365 login: Se hace petición por el método: POST
+2020-06-30 20:51:18,385 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-06-30 20:51:18,386 AXES: Getting access attempts that are newer than 2020-06-30 19:51:18.348564
+2020-06-30 20:51:19,627 login: Se termina de autenticar el usuario
+2020-06-30 20:51:19,627 login: Se genera el token
+2020-06-30 20:51:19,685 Starting new HTTPS connection (1): api.telegram.org:443
+2020-06-30 20:51:20,461 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001480803961&parse_mode=Markdown&text=ojheivfpnxwc HTTP/1.1" 400 73
+2020-06-30 20:51:20,464 login: Se envia el token: ojheivfpnxwc
+2020-06-30 20:51:20,474 login: Se guarda el token en el usuario
+2020-06-30 20:51:20,515 solicitar_token: Se hace petición por el método: GET
+2020-06-30 20:52:17,418 solicitar_token: Se hace petición por el método: POST
+2020-06-30 20:52:17,519 solicitar_token: Se limpia el token al usuario: eren
+2020-06-30 20:52:17,567 servidores: Se intento una petición por el método: GET
+2020-06-30 20:52:22,512 monitoreo: Se intento una petición por el método: GET
+2020-06-30 20:52:22,561 monitoreo: url del servidor a monitorear: http://127.0.0.1:8000
+2020-06-30 20:52:22,561 monitoreo: Datos a consultar: {'username': 'prueba1', 'password': '07gjkZNUI0ZuX4koGaCBCtjLskhOesiTUdIFxfJ4bTA=ps/8OOE='}
+2020-06-30 20:52:22,596 Starting new HTTP connection (1): 127.0.0.1:8000
+2020-06-30 20:52:22,601 monitoreo: Error al autenticar el servidor.
