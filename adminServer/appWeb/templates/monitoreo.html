@@ -27,9 +27,9 @@
       <tr>
         <td id="ip_srv">{{ servidor.srv_ip }}</td>
         <td id="puerto_srv  ">{{ servidor.srv_puerto }}</td>
-        <td>{{ servidor.cpu }}</td>
-        <td>{{ servidor.disco }}</td>
-        <td>{{ servidor.ram }}</td>
+        <td id="cpu"> {{ servidor.cpu }}</td>
+        <td id="disco">{{ servidor.disco }}</td>
+        <td id="memoria">{{ servidor.ram }}</td>
       </tr>
     </tbody>
   </table>
@@ -41,4 +41,28 @@
   <script src="/static/js/monitoreo.js"></script>
   {% endif %}
 </div>
+{% endblock %}
+
+{% block extrajs %}
+<script>
+    setInterval(function() {
+        $.ajax({
+            type: "GET",
+            crossDomain: true,
+            url: "http://{{ servidor.srv_ip }}:{{ servidor.srv_puerto }}/datos_monitor/",
+            dataType: "json",
+            headers: {'Authorization':'Token {{ servidor.token }}'},
+            success : function (data) {
+                      $('#cpu').text( data[0]);
+                      $('#disco').text( data[0]);
+                      $('#memoria').text( data[0]);
+                    },
+             error : function (error){
+                console.log(error);
+             }
+
+                 });
+
+    }, 30000)
+</script>
 {% endblock %}
