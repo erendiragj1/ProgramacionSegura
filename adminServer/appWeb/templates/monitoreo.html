@@ -48,14 +48,14 @@
     setInterval(function() {
         $.ajax({
             type: "GET",
-            crossDomain: true,
-            url: "http://{{ servidor.srv_ip }}:{{ servidor.srv_puerto }}/datos_monitor/",
+            url: "{% url 'monitoreo_ajax' servidor.id_srv %}",
             dataType: "json",
             headers: {'Authorization':'Token {{ servidor.token }}'},
             success : function (data) {
-                      $('#cpu').text( data[0]);
-                      $('#disco').text( data[0]);
-                      $('#memoria').text( data[0]);
+                      debugger;
+                      $('#cpu').text( data.data.cpu);
+                      $('#disco').text( data.data.disco);
+                      $('#memoria').text( data.data.ram);
                     },
              error : function (error){
                 console.log(error);
@@ -63,6 +63,6 @@
 
                  });
 
-    }, 30000)
+    }, 15000)
 </script>
 {% endblock %}

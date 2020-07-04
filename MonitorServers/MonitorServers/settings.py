@@ -139,6 +139,6 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_THROTTLE_RATES': {
         'anon': '0/day',
-        'user': '5/minute'
+        'user': '5/minute' #Por AJAX se toman 4/minute
     }
 }

@@ -18,6 +18,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #Inicia declaración de variables para el proyecto
 EXPIRY_TIME = 18000 #Se define el tiempo en que expirará la sesión
 PATH_LOG = '/tmp/appWeb_proySeg2020.log' #Ruta y nombre del archivo donde se guardará log.
+PROTOCOLO_MONITOR = 'http://' #http / https
 #Termina declaración de variables para el proyecto
 
 SECRET_KEY = os.environ.get('SECRET_KEY')

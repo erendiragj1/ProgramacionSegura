@@ -27,4 +27,5 @@ urlpatterns = [
     path('servidores/',servidores, name="servidores"),
     path('logout/',logout,name="logout"),
     path('monitor/<str:pk>/',monitoreo,name="monitor"),
+    path('monitoreo_ajax/<str:pk>/',monitoreo_ajax,name="monitoreo_ajax"),
 ]

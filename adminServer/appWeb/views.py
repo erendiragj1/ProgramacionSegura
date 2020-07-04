@@ -15,8 +15,11 @@ import json
 import logging
 from django.views.decorators.cache import never_cache
 from django.views.decorators.csrf import csrf_protect
+from django.http import response
+from json_response import JsonResponse
 # Create your views here.
 from django.conf import settings
+
 
 #PATH_LOG: Se define en el archivo de settings.py
 logging.basicConfig(filename=settings.PATH_LOG, format='%(asctime)s %(message)s', level=logging.DEBUG)
@@ -111,37 +114,25 @@ def monitoreo(request,pk):
         except:
             logging.error('monitoreo: No se encontró el servidor: ' + id_srv)
             return render(request, "monitoreo.html",{'error': True})
-        url_srv='http://'+servidor.ip_srv+':'+str(servidor.puerto)
-        logging.info('monitoreo: url del servidor a monitorear: ' + url_srv)
-        data = {'username': servidor.usr_srv, 'password': servidor.llave+servidor.pwd_srv}
-        logging.info('monitoreo: Datos a consultar: ' + str(data))
-        try:
-            solicitud = requests.post(url_srv+'/authenticacion/', data=data) 
-            logging.info('monitoreo: Resultado de solicitud: ' + solicitud.text)
-            if solicitud.status_code != 200:
-                raise api.ConeccionSrvMonitor('Error al autenticar el servidor')
-            srv_token=solicitud.text[1:-1].split(':')[1][1:-1]
-            print(srv_token)
-            dir_headers={'Authorization':'Token '+ srv_token}
-            solicitud = requests.get(url_srv+'/datos_monitor/', headers=dir_headers)
-            logging.info('monitoreo: Resultado de datos de monitor: ' + solicitud.text)
-            if solicitud.status_code != 200:
-                raise api.ConeccionSrvMonitor('Error al tomar información de el servidor')
-            json_data=json.loads(solicitud.text)
-            data_full=json_data[1:-1].split(',')
-            cpu=data_full[0].split(':')[1].strip('"')
-            memoria=data_full[1].split(':')[1].strip('"')
-            disco=data_full[2].split(':')[1].strip('"')
-            datos_servidor={"cpu": cpu, "disco": disco, "ram": memoria, 
-            "srv_ip":servidor.ip_srv, "srv_puerto": servidor.puerto, "id_srv": id_srv, "token":srv_token}
-            logging.info('monitoreo: Datos del servidor: ' + solicitud.text)
-            return render(request, "monitoreo.html",{"usuario":usuario,"servidor":datos_servidor, "error": False})
-        except api.ConeccionSrvMonitor as error:
-            logging.error('monitoreo: ' + error.args[0] )
-            return render(request, "monitoreo.html",{'error': True})
-        except Exception as error:
-            logging.error('monitoreo: Ocurrió un error al intentar comunicarse con el servidor de monitoreo' )
-            return render(request, "monitoreo.html",{'error': True})
+        datos_servidor=api.solicitar_datos_srv(id_srv,servidor)
+        return render(request, "monitoreo.html",{"usuario":usuario,"servidor":datos_servidor, "error": False})
+
+def monitoreo_ajax(request,pk):
+    logging.info('monitoreo_ajax: Se intento una petición por el método: ' + request.method )
+    try:
+        id_srv = pk
+        servidor = Servidor.objects.get(estado=True,id=id_srv)
+    except:
+        logging.error('monitoreo: No se encontró el servidor: ' + id_srv)
+        return render(request, "monitoreo.html",{'error': True})
+    datos_servidor=api.solicitar_datos_srv(id_srv,servidor)
+    return JsonResponse({ 
+        'status': 200,
+        'data': datos_servidor,
+        'message': 'Ocurrió un error al procesar solicitud',
+         })
+    #datos_servidor=api.solicitar_datos_srv(id_srv,servidor)
+
 
 # MML Se crea la funcion vista para el logout
 @decoradores.esta_logueado
