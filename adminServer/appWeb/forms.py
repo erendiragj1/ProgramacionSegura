@@ -88,6 +88,25 @@ class tokenForm(forms.ModelForm):
         }
 
 
+class tokenGlobalForm(forms.ModelForm):
+    class Meta:
+        model = Tglobal
+        fields = ['token']
+        labels = {
+            'token': 'Ingresar Token: ',
+        }
+        widgets = {
+            'token': forms.TextInput(
+                attrs={
+                    'class': 'form-control',
+                    'placeholder': 'Ingrese su token',
+                    'name': 'token',
+                    'id': 'token',
+                }
+            ),
+        }
+
+
 ################# MML Forms del Admin global ########################
 
 class AdminForm(forms.ModelForm):

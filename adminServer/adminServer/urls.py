@@ -22,6 +22,7 @@ urlpatterns = [
     path('login/',login,name='login'),
     path('accounts/login/',login_global,name='login_global'),
     path('global/', include(('appWeb.urls','global'))),
+    path('token_global/', solicitar_token_global, name="token_global"),
     path('',login),
     path('esperar_token/', solicitar_token, name="solicitar_token"),
     path('servidores/',servidores, name="servidores"),
