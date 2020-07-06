@@ -17,6 +17,15 @@ def esta_logueado(vista):
         return vista(request) 
     return interna
 
+  #
+def esperando_token_global(vista):
+    def interna(request):
+        if not request.session.get('token_global', False):
+            # MML (06-07-2020)
+            return redirect('login_global')
+        return vista(request)
+    return interna
+
 def esperando_token(vista):
     # JABM; Decorador que valida si esta esperando token
     # Tomese como esperando token un usuario que ya ingreso
@@ -24,7 +33,7 @@ def esperando_token(vista):
     def interna(request):
         if not request.session.get('token', False):
             # JABM (09-05-2020): Si no ha ingresado primero sus datos en login.
-            return redirect('/login/')
+            return redirect('login')
         #JABM (09-05-2020): Si ya ha ingresado primero sus datos en login.
         return vista(request) 
     return interna

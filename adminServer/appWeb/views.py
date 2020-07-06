@@ -177,6 +177,7 @@ def login_global(request):
                 h.start()
                 logging.info('login_global: Se guarda token en base de datos.')
                 request.session['nombre'] = user.username
+                request.session['token_global'] = True
                 do_login(request, user)  # MML requiere un request
                 return redirect('token_global')
             except Exception as error:
@@ -190,12 +191,13 @@ def login_global(request):
         return render(request, "global/login_global.html", {"form": admin_form})
 
 
-# @decoradores.esperando_token
+@decoradores.esperando_token_global
 @decoradores.no_esta_logueado
 def solicitar_token_global(request):
     logging.info('solicitar_token_global: Se intento una petición por el método: ' + request.method)
     token_form = tokenGlobalForm()
     if request.method == "POST":
+        request.session['token_global'] = False
         tokenUsuario = request.POST.get("token")
         try:  # JBarradas(22/05/2020): Se agrega por que manda error cuando el qry no hace match
             if tokenUsuario == 0:
