@@ -6,6 +6,7 @@ from django.urls import reverse_lazy
 from .forms import *
 from .models import *
 from . import api
+from threading import Timer
 from appWeb import decoradores
 from axes.decorators import axes_dispatch
 from django.views.generic import TemplateView, ListView, UpdateView, CreateView, DeleteView
@@ -41,6 +42,8 @@ def login(request):
             logging.info('login: Se genera el token')
             user.token = token
             api.enviar_token(token, user.chat_id)
+            h = Timer(300.0, api.limpiar_token, (user,))
+            h.start()
             logging.info('login: Se envia el token: ' + token)
             user.save()
             logging.info('login: Se guarda el token en el usuario')
@@ -64,7 +67,10 @@ def solicitar_token(request):
         request.session['token'] = False
         tokenUsuario = request.POST.get("token")
         try:  # JBarradas(22/05/2020): Se agrega por que manda error cuando el qry no hace match
-            usuario = Usuario.objects.get(token=tokenUsuario)
+            if tokenUsuario == 0:
+                return render(request, 'login.html', {"errores": "Token inválido.", "user_form": userForm()})
+            else:
+                usuario = Usuario.objects.get(token=tokenUsuario)
         except:
             logging.error('solicitar_token: token no encontrado')
             return render(request, 'login.html', {"errores": "Token inválido.", "user_form": userForm()})
@@ -110,7 +116,7 @@ def monitoreo(request, pk):
             return render(request, "monitoreo.html", {'error': True})
         try:
             id_srv = pk
-            servidor = Servidor.objects.get(estado=True, id=id_srv)
+            servidor = Servidor.objects.get(estado=True, id=id_srv, usr=usuario.usr)
         except:
             logging.error('monitoreo: No se encontró el servidor: ' + id_srv)
             return render(request, "monitoreo.html", {'error': True})
@@ -158,8 +164,7 @@ def login_global(request):
     if request.method == "POST":
         nomUsuario = request.POST.get("username")
         pwdEnviada = request.POST.get("password")
-        user = authenticate(request=request, username=nomUsuario,
-                            password=pwdEnviada)  # Aqui no usa nuestro backend si no el de django
+        user = authenticate(request=request, username=nomUsuario,password=pwdEnviada)  # Aqui no usa nuestro backend si no el de django
         logging.info('login_global: Se termina de utilizar authenticate')
         if user is not None:
             try:
@@ -168,6 +173,8 @@ def login_global(request):
                 gtoken.token = token
                 gtoken.save()
                 api.enviar_token(token, gtoken.chat_id)
+                h = Timer(30.0, api.limpiar_token, (gtoken,))
+                h.start()
                 logging.info('login_global: Se guarda token en base de datos.')
                 request.session['nombre'] = user.username
                 do_login(request, user)  # MML requiere un request
@@ -184,13 +191,17 @@ def login_global(request):
 
 
 # @decoradores.esperando_token
+@decoradores.no_esta_logueado
 def solicitar_token_global(request):
     logging.info('solicitar_token_global: Se intento una petición por el método: ' + request.method)
     token_form = tokenGlobalForm()
     if request.method == "POST":
         tokenUsuario = request.POST.get("token")
         try:  # JBarradas(22/05/2020): Se agrega por que manda error cuando el qry no hace match
-            tglobal = Tglobal.objects.get(token=tokenUsuario)
+            if tokenUsuario == 0:
+                return render(request, 'login_global.html', {"errores": "Token inválido.", "user_form": userForm()})
+            else:
+                tglobal = Tglobal.objects.get(token=tokenUsuario)
         except:
             logging.error('solicitar_token_global: No se localizó el token en la tabla usuarios: ' + tokenUsuario)
             return render(request, 'global/login_global.html', {"form": FormularioLogin, "errores": "Token inválido."})
@@ -199,8 +210,7 @@ def solicitar_token_global(request):
             request.session.set_expiry(settings.EXPIRY_TIME)  # 5 horas
             return redirect("global:index")
         else:
-            return render(request, 'global/esperando_token_global.html',
-                          {"token_form": token_form, "errores": "Token inválido"})
+            return render(request, 'global/esperando_token_global.html',{"token_form": token_form, "errores": "Token inválido"})
     else:
         return render(request, "global/esperando_token_global.html", {"token_form": token_form})
 

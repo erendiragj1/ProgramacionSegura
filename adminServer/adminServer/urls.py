@@ -16,9 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from appWeb.views import *
-
+#path('admin/', admin.site.urls),
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('login/',login,name='login'),
     path('accounts/login/',login_global,name='login_global'),
     path('global/', include(('appWeb.urls','global'))),

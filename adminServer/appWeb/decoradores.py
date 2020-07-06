@@ -48,7 +48,6 @@ def esta_logueado_global(vista):
     # MML; Decorador que valida si esta logueado
     # Tomese como logueado que el usuario, pwd y token
     # estan correctos
-    print("esta intentando redireccionar")
     def interna(request):
         if not request.session.get('global', False):
             # MML (05-07-2020): Si no esta logueado se redirigue al login.

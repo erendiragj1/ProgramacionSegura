@@ -37,6 +37,17 @@ def generar_token():
     token = randomString(tam_token)
     return token
 
+def limpiar_token(o_usuario):
+    o_usuario.token=''
+    o_usuario.save()
+    return True
+
+
+def limpiar_token_global(o_usuario):
+    o_usuario.token=''
+    o_usuario.save()
+    return True
+
 
 def enviar_token(token, chatid):
     BOT_TOKEN = "1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w"

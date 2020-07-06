@@ -44,6 +44,7 @@
 {% endblock %}
 
 {% block extrajs %}
+{% if not error %}
 <script>
     setInterval(function() {
         $.ajax({
@@ -65,4 +66,5 @@
 
     }, 15000)
 </script>
+{% endif %}
 {% endblock %}

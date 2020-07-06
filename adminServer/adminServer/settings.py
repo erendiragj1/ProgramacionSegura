@@ -29,9 +29,8 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']  # JBarradas(25/04/2020): Se habilita para todos los hosts
 
 # Application definition
-
+#'django.contrib.admin',
 INSTALLED_APPS = [
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -112,8 +111,8 @@ USE_TZ = False  # JBarradas (25/04/2020): Se deshabilita para que tome la hora d
 # AXES
 # MML Se establece la configuracion de axes
 AXES_ENABLED = True
-AXES_FAILURE_LIMIT = 3
-AXES_ONLY_USER_FAILURES = True
+AXES_FAILURE_LIMIT = 5
+AXES_ONLY_USER_FAILURES = False
 AXES_COOLOFF_TIME = 1
 AXES_ENABLE_ADMIN = False
 AXES_LOCKOUT_URL = "bloqueado/"
