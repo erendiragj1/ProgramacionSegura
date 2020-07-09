@@ -1,0 +1,32 @@
+version: '3'
+services:
+  app:
+    environment:
+      SECRET_KEY: ${SECRET_KEY}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+    build:
+      ./app
+    restart: always
+    container_name: app
+    volumes:
+    - ./app/adminServer:/codigo
+    - ./app/logs:/tmp
+    ports:
+    - 8000:8000
+    depends_on:
+      - bd
+
+  bd:
+    image: mariadb:10.2.21
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    volumes:
+    - ./data:/var/lib/mysql
+
+

@@ -24,7 +24,7 @@ PROTOCOLO_MONITOR = 'http://' #http / https
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']  # JBarradas(25/04/2020): Se habilita para todos los hosts
 
@@ -121,7 +121,7 @@ AXES_LOCKOUT_TEMPLATE = "usuarioBloqueado.html"
 # Archivos estaticos
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-
+print(STATICFILES_DIRS)
 
 # Backends de authenticacion
 AUTHENTICATION_BACKENDS = (
