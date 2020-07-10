@@ -40,6 +40,7 @@ services:
       - 8000:80 #se redirige al 80 de nginx
       - 9000:443
     volumes:
+      - ./nginx/cnginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/conf.d:/etc/nginx/conf.d
       - ./app/adminServer/static:/static # se mapea a static del proyecto
       - ./nginx/certs:/tmp

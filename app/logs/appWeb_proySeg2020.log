@@ -378,3 +378,218 @@ django.core.exceptions.ImproperlyConfigured: You're using the staticfiles app wi
 2020-07-09 19:40:46,397 solicitar_token_global: Se intento una petición por el método: GET
 2020-07-09 19:41:00,508 solicitar_token_global: Se intento una petición por el método: POST
 2020-07-09 22:25:18,471 Using selector: EpollSelector
+2020-07-10 09:43:25,137 Using selector: EpollSelector
+2020-07-10 10:08:12,891 Using selector: EpollSelector
+2020-07-10 10:17:54,237 Using selector: EpollSelector
+2020-07-10 10:50:51,673 Using selector: EpollSelector
+2020-07-10 11:07:24,997 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:07:25,000 AXES: Getting access attempts that are newer than 2020-07-10 10:07:24.994651
+2020-07-10 11:07:25,023 Using selector: EpollSelector
+2020-07-10 11:07:25,155 login: Se hace petición por el método: GET
+2020-07-10 11:10:41,227 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:10:41,228 AXES: Getting access attempts that are newer than 2020-07-10 10:10:41.226854
+2020-07-10 11:10:41,238 login_global: Se intento una petición por el método: GET
+2020-07-10 11:10:49,107 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:10:49,109 AXES: Getting access attempts that are newer than 2020-07-10 10:10:49.107520
+2020-07-10 11:10:49,123 login_global: Se intento una petición por el método: POST
+2020-07-10 11:10:49,126 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:10:49,128 AXES: Getting access attempts that are newer than 2020-07-10 10:10:49.107520
+2020-07-10 11:10:49,771 login_global: Se termina de utilizar authenticate
+2020-07-10 11:10:49,871 Starting new HTTPS connection (1): api.telegram.org:443
+2020-07-10 11:10:50,786 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=vyzrlxjxdjvb HTTP/1.1" 200 262
+2020-07-10 11:10:50,793 login_global: Se guarda token en base de datos.
+2020-07-10 11:10:51,010 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-07-10 10:10:49.107520
+2020-07-10 11:10:51,011 AXES: Successful login by {username: "Manager", ip_address: "172.18.0.4", user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36", path_info: "/accounts/login/"}.
+2020-07-10 11:10:51,274 solicitar_token_global: Se intento una petición por el método: GET
+2020-07-10 11:11:23,480 solicitar_token_global: Se intento una petición por el método: POST
+2020-07-10 11:11:23,491 solicitar_token_global: No se localizó el token en la tabla usuarios: vyzrlxjxdjvb
+2020-07-10 11:11:46,454 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:11:46,456 AXES: Getting access attempts that are newer than 2020-07-10 10:11:46.454636
+2020-07-10 11:11:46,474 login: Se hace petición por el método: POST
+2020-07-10 11:11:46,477 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:11:46,478 AXES: Getting access attempts that are newer than 2020-07-10 10:11:46.454636
+2020-07-10 11:11:46,496 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-07-10 10:11:46.454636
+2020-07-10 11:11:46,496 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:11:46,497 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:11:46,499 AXES: Getting access attempts that are newer than 2020-07-10 10:11:46.454636
+2020-07-10 11:11:46,503 AXES: New login failure by {username: "None", ip_address: "172.18.0.4", user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36", path_info: "/login/"}. Creating new record in the database.
+2020-07-10 11:11:46,578 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/codigo/appWeb/views.py", line 35, in login
+    logging.info('login: Se termina de autenticar el usuario ' + user.usr)
+AttributeError: 'NoneType' object has no attribute 'usr'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/axes/decorators.py", line 10, in inner
+    return func(request, *args, **kwargs)
+  File "/codigo/appWeb/decoradores.py", line 53, in interna
+    return vista(request)
+  File "/codigo/appWeb/views.py", line 37, in login
+    logging.error('login: El usuario [ ' + nomUsuario + ' ] no existe')
+TypeError: can only concatenate str (not "NoneType") to str
+2020-07-10 11:11:47,275 Not Found: /favicon.ico
+2020-07-10 11:23:13,243 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:23:13,244 AXES: Getting access attempts that are newer than 2020-07-10 10:23:13.242879
+2020-07-10 11:23:13,255 login: Se hace petición por el método: POST
+2020-07-10 11:23:13,256 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:23:13,257 AXES: Getting access attempts that are newer than 2020-07-10 10:23:13.242879
+2020-07-10 11:23:13,268 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-07-10 10:23:13.242879
+2020-07-10 11:23:13,268 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:23:13,269 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:23:13,270 AXES: Getting access attempts that are newer than 2020-07-10 10:23:13.242879
+2020-07-10 11:23:13,273 AXES: Repeated login failure by {username: "None", ip_address: "172.18.0.4", user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36", path_info: "/login/"}. Count = 2 of 5. Updating existing record in the database.
+2020-07-10 11:23:13,273 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:23:13,274 AXES: Getting access attempts that are newer than 2020-07-10 10:23:13.242879
+2020-07-10 11:23:13,369 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/codigo/appWeb/views.py", line 35, in login
+    logging.info('login: Se termina de autenticar el usuario ' + user.usr)
+AttributeError: 'NoneType' object has no attribute 'usr'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/axes/decorators.py", line 10, in inner
+    return func(request, *args, **kwargs)
+  File "/codigo/appWeb/decoradores.py", line 53, in interna
+    return vista(request)
+  File "/codigo/appWeb/views.py", line 37, in login
+    logging.error('login: El usuario [ ' + nomUsuario + ' ] no existe')
+TypeError: can only concatenate str (not "NoneType") to str
+2020-07-10 11:23:19,833 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:23:19,835 AXES: Getting access attempts that are newer than 2020-07-10 10:23:19.833090
+2020-07-10 11:23:19,852 login: Se hace petición por el método: GET
+2020-07-10 11:23:22,428 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:23:22,431 AXES: Getting access attempts that are newer than 2020-07-10 10:23:22.428603
+2020-07-10 11:23:22,448 login_global: Se intento una petición por el método: GET
+2020-07-10 11:23:34,175 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:23:34,179 AXES: Getting access attempts that are newer than 2020-07-10 10:23:34.174865
+2020-07-10 11:23:34,196 login_global: Se intento una petición por el método: POST
+2020-07-10 11:23:34,198 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:23:34,199 AXES: Getting access attempts that are newer than 2020-07-10 10:23:34.174865
+2020-07-10 11:23:34,728 login_global: Se termina de utilizar authenticate
+2020-07-10 11:23:34,785 Starting new HTTPS connection (1): api.telegram.org:443
+2020-07-10 11:23:35,689 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=kzhljoygekcc HTTP/1.1" 200 262
+2020-07-10 11:23:35,695 login_global: Se guarda token en base de datos.
+2020-07-10 11:23:35,753 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-07-10 10:23:34.174865
+2020-07-10 11:23:35,754 AXES: Successful login by {username: "Manager", ip_address: "172.18.0.4", user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36", path_info: "/accounts/login/"}.
+2020-07-10 11:23:35,910 solicitar_token_global: Se intento una petición por el método: GET
+2020-07-10 11:23:48,255 solicitar_token_global: Se intento una petición por el método: POST
+2020-07-10 11:46:14,747 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:46:14,749 AXES: Getting access attempts that are newer than 2020-07-10 10:46:14.732987
+2020-07-10 11:46:14,757 Using selector: EpollSelector
+2020-07-10 11:46:14,789 login: Se hace petición por el método: GET
+2020-07-10 11:47:07,344 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:47:07,346 AXES: Getting access attempts that are newer than 2020-07-10 10:47:07.344312
+2020-07-10 11:47:07,356 login_global: Se intento una petición por el método: GET
+2020-07-10 11:47:28,436 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:47:28,437 AXES: Getting access attempts that are newer than 2020-07-10 10:47:28.435948
+2020-07-10 11:47:28,444 login_global: Se intento una petición por el método: POST
+2020-07-10 11:47:28,446 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:47:28,447 AXES: Getting access attempts that are newer than 2020-07-10 10:47:28.435948
+2020-07-10 11:47:28,993 login_global: Se termina de utilizar authenticate
+2020-07-10 11:47:29,059 Starting new HTTPS connection (1): api.telegram.org:443
+2020-07-10 11:47:29,928 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=lhckrggnwyxr HTTP/1.1" 200 262
+2020-07-10 11:47:29,933 login_global: Se guarda token en base de datos.
+2020-07-10 11:47:30,126 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-07-10 10:47:28.435948
+2020-07-10 11:47:30,126 AXES: Successful login by {username: "Manager", ip_address: "172.18.0.4", user_agent: "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0", path_info: "/accounts/login/"}.
+2020-07-10 11:47:30,273 solicitar_token_global: Se intento una petición por el método: GET
+2020-07-10 11:48:07,634 solicitar_token_global: Se intento una petición por el método: POST
+2020-07-10 11:48:07,641 solicitar_token_global: No se localizó el token en la tabla usuarios: lhckrggnwyxr
+2020-07-10 11:48:31,017 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:48:31,019 AXES: Getting access attempts that are newer than 2020-07-10 10:48:31.017297
+2020-07-10 11:48:31,032 login: Se hace petición por el método: POST
+2020-07-10 11:48:31,034 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:48:31,036 AXES: Getting access attempts that are newer than 2020-07-10 10:48:31.017297
+2020-07-10 11:48:31,050 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-07-10 10:48:31.017297
+2020-07-10 11:48:31,051 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:48:31,052 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:48:31,052 AXES: Getting access attempts that are newer than 2020-07-10 10:48:31.017297
+2020-07-10 11:48:31,055 AXES: Repeated login failure by {username: "None", ip_address: "172.18.0.4", user_agent: "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0", path_info: "/login/"}. Count = 3 of 5. Updating existing record in the database.
+2020-07-10 11:48:31,056 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:48:31,057 AXES: Getting access attempts that are newer than 2020-07-10 10:48:31.017297
+2020-07-10 11:48:31,115 login: El usuario no existe
+2020-07-10 11:48:36,623 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:48:36,624 AXES: Getting access attempts that are newer than 2020-07-10 10:48:36.623099
+2020-07-10 11:48:36,639 login_global: Se intento una petición por el método: GET
+2020-07-10 11:48:40,908 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:48:40,910 AXES: Getting access attempts that are newer than 2020-07-10 10:48:40.908094
+2020-07-10 11:48:40,928 login: Se hace petición por el método: GET
+2020-07-10 11:48:42,411 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:48:42,412 AXES: Getting access attempts that are newer than 2020-07-10 10:48:42.411099
+2020-07-10 11:48:42,427 login_global: Se intento una petición por el método: GET
+2020-07-10 11:48:51,029 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:48:51,031 AXES: Getting access attempts that are newer than 2020-07-10 10:48:51.029041
+2020-07-10 11:48:51,046 login_global: Se intento una petición por el método: POST
+2020-07-10 11:48:51,048 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 11:48:51,049 AXES: Getting access attempts that are newer than 2020-07-10 10:48:51.029041
+2020-07-10 11:48:51,592 login_global: Se termina de utilizar authenticate
+2020-07-10 11:48:51,731 Starting new HTTPS connection (1): api.telegram.org:443
+2020-07-10 11:48:52,638 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=dhfljudylnlc HTTP/1.1" 200 262
+2020-07-10 11:48:52,646 login_global: Se guarda token en base de datos.
+2020-07-10 11:48:52,707 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-07-10 10:48:51.029041
+2020-07-10 11:48:52,707 AXES: Successful login by {username: "Manager", ip_address: "172.18.0.4", user_agent: "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0", path_info: "/accounts/login/"}.
+2020-07-10 11:48:52,845 solicitar_token_global: Se intento una petición por el método: GET
+2020-07-10 11:49:04,937 solicitar_token_global: Se intento una petición por el método: POST
+2020-07-10 11:49:06,028 Not Found: /favicon.ico
+2020-07-10 12:14:15,241 logoutAdmin: Se intento una petición por el método: GET
+2020-07-10 12:14:15,255 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-07-10 11:14:15.241916
+2020-07-10 12:14:15,256 AXES: Successful logout by {username: "Manager", ip_address: "172.18.0.4", user_agent: "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0", path_info: "/global/logout/"}.
+2020-07-10 12:14:15,446 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 12:14:15,448 AXES: Getting access attempts that are newer than 2020-07-10 11:14:15.445911
+2020-07-10 12:14:15,461 login_global: Se intento una petición por el método: GET
+2020-07-10 12:17:47,476 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 12:17:47,489 AXES: Getting access attempts that are newer than 2020-07-10 11:17:47.475793
+2020-07-10 12:17:47,511 login_global: Se intento una petición por el método: POST
+2020-07-10 12:17:47,512 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 12:17:47,513 AXES: Getting access attempts that are newer than 2020-07-10 11:17:47.475793
+2020-07-10 12:17:48,065 login_global: Se termina de utilizar authenticate
+2020-07-10 12:17:48,162 Starting new HTTPS connection (1): api.telegram.org:443
+2020-07-10 12:17:49,143 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=bgvxfyultzsj HTTP/1.1" 200 262
+2020-07-10 12:17:49,150 login_global: Se guarda token en base de datos.
+2020-07-10 12:17:49,381 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-07-10 11:17:47.475793
+2020-07-10 12:17:49,381 AXES: Successful login by {username: "Manager", ip_address: "172.18.0.4", user_agent: "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0", path_info: "/accounts/login/"}.
+2020-07-10 12:17:49,552 solicitar_token_global: Se intento una petición por el método: GET
+2020-07-10 12:18:01,545 solicitar_token_global: Se intento una petición por el método: POST
+2020-07-10 12:57:31,593 logoutAdmin: Se intento una petición por el método: GET
+2020-07-10 12:57:31,699 AXES: Cleaned up 1 expired access attempts from database that were older than 2020-07-10 11:57:31.594273
+2020-07-10 12:57:31,699 AXES: Successful logout by {username: "Manager", ip_address: "172.18.0.4", user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36", path_info: "/global/logout/"}.
+2020-07-10 12:57:31,899 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 12:57:31,901 AXES: Getting access attempts that are newer than 2020-07-10 11:57:31.899108
+2020-07-10 12:57:31,914 login_global: Se intento una petición por el método: GET
+2020-07-10 12:58:32,625 Invalid HTTP_HOST header: 'admin_server.com'. The domain name provided is not valid according to RFC 1034/1035.
+2020-07-10 12:58:32,960 Bad Request: /accounts/login/
+2020-07-10 12:58:33,530 Invalid HTTP_HOST header: 'admin_server.com'. The domain name provided is not valid according to RFC 1034/1035.
+2020-07-10 12:58:33,600 Bad Request: /favicon.ico
+2020-07-10 12:58:53,082 Invalid HTTP_HOST header: 'admin_server.com'. The domain name provided is not valid according to RFC 1034/1035.
+2020-07-10 12:58:53,158 Bad Request: /login/
+2020-07-10 12:58:53,467 Invalid HTTP_HOST header: 'admin_server.com'. The domain name provided is not valid according to RFC 1034/1035.
+2020-07-10 12:58:53,554 Bad Request: /favicon.ico
+2020-07-10 12:59:12,598 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 12:59:12,600 AXES: Getting access attempts that are newer than 2020-07-10 11:59:12.598689
+2020-07-10 12:59:12,618 login: Se hace petición por el método: GET
+2020-07-10 13:00:09,405 Invalid HTTP_HOST header: 'www.admin_server.com'. The domain name provided is not valid according to RFC 1034/1035.
+2020-07-10 13:00:09,479 Bad Request: /login/
+2020-07-10 13:00:09,986 Invalid HTTP_HOST header: 'www.admin_server.com'. The domain name provided is not valid according to RFC 1034/1035.
+2020-07-10 13:00:10,065 Bad Request: /favicon.ico
+2020-07-10 13:00:48,162 Invalid HTTP_HOST header: 'www.admin_server.com'. The domain name provided is not valid according to RFC 1034/1035.
+2020-07-10 13:00:48,250 Bad Request: /login/
+2020-07-10 13:00:48,819 Invalid HTTP_HOST header: 'www.admin_server.com'. The domain name provided is not valid according to RFC 1034/1035.
+2020-07-10 13:00:48,927 Bad Request: /favicon.ico
+2020-07-10 13:00:49,620 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 13:00:49,622 AXES: Getting access attempts that are newer than 2020-07-10 12:00:49.620694
+2020-07-10 13:00:49,634 login: Se hace petición por el método: GET

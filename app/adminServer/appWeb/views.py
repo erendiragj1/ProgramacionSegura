@@ -34,7 +34,7 @@ def login(request):
             user = authenticate(request=request, username=nomUsuario, password=pwdEnviada)
             logging.info('login: Se termina de autenticar el usuario ' + user.usr)
         except Exception as error:
-            logging.error('login: El usuario [ ' + nomUsuario + ' ] no existe')
+            logging.error('login: El usuario no existe')
             return render(request, 'login.html', {"user_form": user_form, "errores": "Usuario y contraseña inválidos."})
         if user is not None:
             request.session['usuario'] = user.usr
@@ -184,7 +184,7 @@ def login_global(request):
                 logging.error('login_global: ' + error.args[0])
                 return render(request, 'global/login_global.html', {"form": admin_form, "errores": "Error al iniciar sesión"})
         else:
-            logging.error('login_global: El usuario' + nomUsuario + 'no existente')
+            logging.error('login_global: El usuario no existe')
             return render(request, 'global/login_global.html',
                           {"form": admin_form, "errores": "Usuario y contraseña inválidos."})
     elif request.method == "GET":
