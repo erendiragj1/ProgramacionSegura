@@ -14,9 +14,7 @@ services:
     container_name: app
     volumes:
     - ./app/adminServer:/codigo
-    - ./app/logs:/tmp
-    ports:
-    - 8000:8000
+    - ./app/logs:/codigo/bitacora
     depends_on:
       - bd
 
@@ -30,3 +28,13 @@ services:
     - ./data:/var/lib/mysql
 
 
+  nginx:
+    image: nginx
+    restart: always
+    ports:
+      - 8000:80 #se redirige al 80 de nginx
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./app/adminServer/static:/static # se mapea a static del proyecto
+    depends_on:
+      - app

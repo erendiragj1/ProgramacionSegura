@@ -11,10 +11,18 @@ ENV DB_PASSWORD=""
 ENV DB_HOST=""
 ENV DB_PORT=3306
 
-RUN mkdir '/codigo'
-COPY inicioProyecto.sh '/codigo'
-RUN chmod 755  '/codigo/inicioProyecto.sh'
+RUN mkdir /codigo
+RUN mkdir /start
+RUN mkdir /codigo/bitacora
+
+COPY ./inicioProyecto.sh /start
+RUN useradd -s /bin/bash limitado
+RUN chown -R limitado /codigo
+RUN chown -R limitado /start
+RUN chmod +x  /start/inicioProyecto.sh
+USER limitado
+
 WORKDIR /codigo
-CMD /bin/bash -c 'inicioProyecto.sh'
+CMD /start/inicioProyecto.sh
 
 

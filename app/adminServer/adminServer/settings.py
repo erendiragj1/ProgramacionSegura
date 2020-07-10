@@ -17,7 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 #Inicia declaración de variables para el proyecto
 EXPIRY_TIME = 18000 #Se define el tiempo en que expirará la sesión
-PATH_LOG = '/tmp/appWeb_proySeg2020.log' #Ruta y nombre del archivo donde se guardará log.
+PATH_LOG = 'bitacora/appWeb_proySeg2020.log' #Ruta y nombre del archivo donde se guardará log.
 PROTOCOLO_MONITOR = 'http://' #http / https
 #Termina declaración de variables para el proyecto
 
@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'appWeb',
     'axes',
-    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -121,7 +120,6 @@ AXES_LOCKOUT_TEMPLATE = "usuarioBloqueado.html"
 # Archivos estaticos
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-print(STATICFILES_DIRS)
 
 # Backends de authenticacion
 AUTHENTICATION_BACKENDS = (
