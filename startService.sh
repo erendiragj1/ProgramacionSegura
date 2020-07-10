@@ -6,4 +6,4 @@ for var in $(ccdecrypt -c settings.env.cpt); do
 done
 
 docker-compose build
-docker-compose up -d
+docker-compose --compatibility up -d

@@ -17,6 +17,11 @@ services:
     - ./app/logs:/codigo/bitacora
     depends_on:
       - bd
+    deploy:
+      resources:
+        limits:
+          cpus: "1"
+          memory: "750M"
 
   bd:
     image: mariadb:10.2.21
@@ -33,8 +38,10 @@ services:
     restart: always
     ports:
       - 8000:80 #se redirige al 80 de nginx
+      - 9000:443
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d
       - ./app/adminServer/static:/static # se mapea a static del proyecto
+      - ./nginx/certs:/tmp
     depends_on:
       - app
