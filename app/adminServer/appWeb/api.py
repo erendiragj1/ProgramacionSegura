@@ -9,7 +9,7 @@ from django.contrib.auth.hashers import make_password, check_password
 import logging
 from django.conf import settings
 import json
-
+from os import environ
 #PATH_LOG: Se define en el archivo de settings.py
 logging.basicConfig(filename=settings.PATH_LOG, format='%(asctime)s %(message)s', level=logging.DEBUG)
 # Excepciones
@@ -110,6 +110,8 @@ def solicitar_datos_srv(id_srv, servidor):
             'password': servidor.llave+servidor.pwd_srv}
     logging.info('api.solicitar_datos_srv: Datos a consultar: ' + str(data))
     datos_servidor=datos_servidor={"status_code": 404}
+    environ['REQUESTS_CA_BUNDLE']=settings.CERT_MONITOR #Se agrega el path del certificado para acreditar confianza al srv de monitoreo
+    logging.info('monitoreo: Path cert: ' + str(settings.CERT_MONITOR) )
     try:
         solicitud = requests.post(url_srv+'/authenticacion/', data=data)
         logging.info('api.solicitar_datos_srv: Resultado de solicitud: ' + solicitud.text)
@@ -127,4 +129,6 @@ def solicitar_datos_srv(id_srv, servidor):
     except ConeccionSrvMonitor as error:
         logging.error('api.solicitar_datos_srv: Ocurrió un error al consultar datos al servidor: ' +  str(datos_servidor + 'el error es: ' + error))
         datos_servidor={"status_code": 401}#Se limpia en caso de que el error haya sido al actualizar diccionario
+    finally:
+        environ['REQUESTS_CA_BUNDLE']='' #Se regresa al valor de la variable original de entorno REQUESTS_CA_BUNDLE
     return datos_servidor #Si ocurrió un error este irá vacio.
