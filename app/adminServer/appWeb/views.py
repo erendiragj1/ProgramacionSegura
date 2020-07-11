@@ -13,6 +13,7 @@ from django.views.generic import TemplateView, ListView, UpdateView, CreateView,
 import logging
 from json_response import JsonResponse
 from django.conf import settings
+from os import environ
 
 # Create your views here.
 
@@ -34,7 +35,7 @@ def login(request):
             user = authenticate(request=request, username=nomUsuario, password=pwdEnviada)
             logging.info('login: Se termina de autenticar el usuario ' + user.usr)
         except Exception as error:
-            logging.error('login: El usuario [ ' + nomUsuario + ' ] no existe')
+            logging.error('login: El usuario no existe')
             return render(request, 'login.html', {"user_form": user_form, "errores": "Usuario y contraseña inválidos."})
         if user is not None:
             request.session['usuario'] = user.usr
@@ -120,6 +121,7 @@ def monitoreo(request, pk):
         except:
             logging.error('monitoreo: No se encontró el servidor: ' + id_srv)
             return render(request, "monitoreo.html", {'error': True})
+        logging.info('monitoreo: Path cert: ' + str(settings.CERT_MONITOR) )
         datos_servidor = api.solicitar_datos_srv(id_srv, servidor)
         return render(request, "monitoreo.html", {"usuario": usuario, "servidor": datos_servidor, "error": False})
 
@@ -184,7 +186,7 @@ def login_global(request):
                 logging.error('login_global: ' + error.args[0])
                 return render(request, 'global/login_global.html', {"form": admin_form, "errores": "Error al iniciar sesión"})
         else:
-            logging.error('login_global: El usuario' + nomUsuario + 'no existente')
+            logging.error('login_global: El usuario no existe')
             return render(request, 'global/login_global.html',
                           {"form": admin_form, "errores": "Usuario y contraseña inválidos."})
     elif request.method == "GET":

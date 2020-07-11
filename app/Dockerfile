@@ -20,7 +20,7 @@ RUN useradd -s /bin/bash limitado
 RUN chown -R limitado /codigo
 RUN chown -R limitado /start
 RUN chmod +x  /start/inicioProyecto.sh
-USER limitado
+#USER limitado
 
 WORKDIR /codigo
 CMD /start/inicioProyecto.sh
