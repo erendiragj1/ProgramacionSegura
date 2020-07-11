@@ -1,5 +1,4 @@
 #!/bin/bash
-#export REQUESTS_CA_BUNDLE="/tmp/srv_monitoreo_cert.crt"
 
 sleep 15
 

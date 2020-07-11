@@ -1,423 +1,41 @@
-2020-07-09 10:17:22,214 Using selector: EpollSelector
-2020-07-09 10:19:21,586 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 10:19:21,589 AXES: Getting access attempts that are newer than 2020-07-09 09:19:21.583279
-2020-07-09 10:19:21,625 login: Se hace petición por el método: GET
-2020-07-09 10:19:22,216 Not Found: /static/js/scripts.js
-2020-07-09 10:19:22,224 Not Found: /static/css/style.css
-2020-07-09 10:19:22,524 Not Found: /static/css/style.css
-2020-07-09 10:19:22,530 Not Found: /static/js/scripts.js
-2020-07-09 10:19:23,291 Not Found: /static/images/logo-16x16.png
-2020-07-09 10:22:11,050 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 10:22:11,052 AXES: Getting access attempts that are newer than 2020-07-09 09:22:11.050784
-2020-07-09 10:22:11,063 login: Se hace petición por el método: GET
-2020-07-09 10:22:11,217 Not Found: /static/css/style.css
-2020-07-09 10:22:11,230 Not Found: /static/js/scripts.js
-2020-07-09 10:22:11,496 Not Found: /static/css/style.css
-2020-07-09 10:22:11,497 Not Found: /static/js/scripts.js
-2020-07-09 10:22:13,750 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 10:22:13,752 AXES: Getting access attempts that are newer than 2020-07-09 09:22:13.750541
-2020-07-09 10:22:13,767 login_global: Se intento una petición por el método: GET
-2020-07-09 10:22:13,939 Not Found: /static/css/style.css
-2020-07-09 10:22:13,955 Not Found: /static/js/scripts.js
-2020-07-09 10:22:22,323 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 10:22:22,325 AXES: Getting access attempts that are newer than 2020-07-09 09:22:22.323261
-2020-07-09 10:22:22,337 login_global: Se intento una petición por el método: POST
-2020-07-09 10:22:22,339 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 10:22:22,341 AXES: Getting access attempts that are newer than 2020-07-09 09:22:22.323261
-2020-07-09 10:22:22,803 login_global: Se termina de utilizar authenticate
-2020-07-09 10:22:22,808 login_global: Tglobal matching query does not exist.
-2020-07-09 10:22:22,913 Not Found: /static/css/style.css
-2020-07-09 10:22:22,919 Not Found: /static/js/scripts.js
-2020-07-09 10:22:43,895 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 10:22:43,897 AXES: Getting access attempts that are newer than 2020-07-09 09:22:43.895708
-2020-07-09 10:22:43,913 login_global: Se intento una petición por el método: POST
-2020-07-09 10:22:43,914 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 10:22:43,916 AXES: Getting access attempts that are newer than 2020-07-09 09:22:43.895708
-2020-07-09 10:22:44,382 login_global: Se termina de utilizar authenticate
-2020-07-09 10:22:44,386 login_global: Tglobal matching query does not exist.
-2020-07-09 10:22:44,493 Not Found: /static/css/style.css
-2020-07-09 10:22:44,518 Not Found: /static/js/scripts.js
-2020-07-09 10:35:48,184 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 10:35:48,186 AXES: Getting access attempts that are newer than 2020-07-09 09:35:48.168145
-2020-07-09 10:35:48,210 login_global: Se intento una petición por el método: POST
-2020-07-09 10:35:48,212 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 10:35:48,213 AXES: Getting access attempts that are newer than 2020-07-09 09:35:48.168145
-2020-07-09 10:35:48,697 login_global: Se termina de utilizar authenticate
-2020-07-09 10:35:48,700 login_global: Tglobal matching query does not exist.
-2020-07-09 10:35:48,835 Not Found: /static/js/scripts.js
-2020-07-09 10:35:48,841 Not Found: /static/css/style.css
-2020-07-09 10:35:48,957 Not Found: /static/css/style.css
-2020-07-09 10:35:48,958 Not Found: /static/js/scripts.js
-2020-07-09 10:38:23,203 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 10:38:23,206 AXES: Getting access attempts that are newer than 2020-07-09 09:38:23.199748
-2020-07-09 10:38:23,225 login_global: Se intento una petición por el método: POST
-2020-07-09 10:38:23,228 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 10:38:23,229 AXES: Getting access attempts that are newer than 2020-07-09 09:38:23.199748
-2020-07-09 10:38:23,694 login_global: Se termina de utilizar authenticate
-2020-07-09 10:38:23,699 login_global: Tglobal matching query does not exist.
-2020-07-09 10:38:23,947 Not Found: /static/js/scripts.js
-2020-07-09 10:38:23,954 Not Found: /static/css/style.css
-2020-07-09 10:38:24,039 Not Found: /static/css/style.css
-2020-07-09 10:38:24,049 Not Found: /static/js/scripts.js
-2020-07-09 10:38:33,960 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 10:38:33,962 AXES: Getting access attempts that are newer than 2020-07-09 09:38:33.960404
-2020-07-09 10:38:33,977 login: Se hace petición por el método: GET
-2020-07-09 10:38:34,132 Not Found: /static/js/scripts.js
-2020-07-09 10:38:34,135 Not Found: /static/css/style.css
-2020-07-09 10:38:34,420 Not Found: /static/css/style.css
-2020-07-09 10:38:34,429 Not Found: /static/js/scripts.js
-2020-07-09 10:38:39,904 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 10:38:39,907 AXES: Getting access attempts that are newer than 2020-07-09 09:38:39.904525
-2020-07-09 10:38:39,922 login_global: Se intento una petición por el método: GET
-2020-07-09 10:38:40,015 Not Found: /static/css/style.css
-2020-07-09 10:38:40,022 Not Found: /static/js/scripts.js
-2020-07-09 10:38:52,454 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 10:38:52,456 AXES: Getting access attempts that are newer than 2020-07-09 09:38:52.454604
-2020-07-09 10:38:52,466 login_global: Se intento una petición por el método: POST
-2020-07-09 10:38:52,467 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 10:38:52,469 AXES: Getting access attempts that are newer than 2020-07-09 09:38:52.454604
-2020-07-09 10:38:52,958 login_global: Se termina de utilizar authenticate
-2020-07-09 10:38:52,962 login_global: Tglobal matching query does not exist.
-2020-07-09 10:38:53,041 Not Found: /static/css/style.css
-2020-07-09 10:38:53,091 Not Found: /static/js/scripts.js
-2020-07-09 10:40:00,151 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 10:40:00,153 AXES: Getting access attempts that are newer than 2020-07-09 09:40:00.151332
-2020-07-09 10:40:00,169 login_global: Se intento una petición por el método: POST
-2020-07-09 10:40:00,171 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 10:40:00,173 AXES: Getting access attempts that are newer than 2020-07-09 09:40:00.151332
-2020-07-09 10:40:00,637 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-07-09 09:40:00.151332
-2020-07-09 10:40:00,637 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 10:40:00,638 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 10:40:00,639 AXES: Getting access attempts that are newer than 2020-07-09 09:40:00.151332
-2020-07-09 10:40:00,642 AXES: New login failure by {username: "Manager", ip_address: "172.18.0.1", user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36", path_info: "/accounts/login/"}. Creating new record in the database.
-2020-07-09 10:40:00,713 login_global: Se termina de utilizar authenticate
-2020-07-09 10:40:00,714 login_global: El usuarioManagerno existente
-2020-07-09 10:40:00,823 Not Found: /static/css/style.css
-2020-07-09 10:40:00,840 Not Found: /static/js/scripts.js
-2020-07-09 10:40:00,950 Not Found: /static/css/style.css
-2020-07-09 10:40:00,960 Not Found: /static/js/scripts.js
-2020-07-09 10:40:14,053 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 10:40:14,055 AXES: Getting access attempts that are newer than 2020-07-09 09:40:14.053062
-2020-07-09 10:40:14,072 login_global: Se intento una petición por el método: POST
-2020-07-09 10:40:14,073 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 10:40:14,075 AXES: Getting access attempts that are newer than 2020-07-09 09:40:14.053062
-2020-07-09 10:40:14,535 login_global: Se termina de utilizar authenticate
-2020-07-09 10:40:14,539 login_global: Tglobal matching query does not exist.
-2020-07-09 10:40:14,638 Not Found: /static/css/style.css
-2020-07-09 10:40:14,642 Not Found: /static/js/scripts.js
-2020-07-09 10:40:14,747 Not Found: /static/css/style.css
-2020-07-09 10:40:14,751 Not Found: /static/js/scripts.js
-2020-07-09 10:55:03,363 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 10:55:03,365 AXES: Getting access attempts that are newer than 2020-07-09 09:55:03.362687
-2020-07-09 10:55:03,435 login_global: Se intento una petición por el método: POST
-2020-07-09 10:55:03,436 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 10:55:03,437 AXES: Getting access attempts that are newer than 2020-07-09 09:55:03.362687
-2020-07-09 10:55:03,902 login_global: Se termina de utilizar authenticate
-2020-07-09 10:55:04,046 Starting new HTTPS connection (1): api.telegram.org:443
-2020-07-09 10:55:05,038 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=wmtkfobvdngn HTTP/1.1" 200 262
-2020-07-09 10:55:05,046 login_global: Se guarda token en base de datos.
-2020-07-09 10:55:05,171 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-07-09 09:55:03.362687
-2020-07-09 10:55:05,176 AXES: Successful login by {username: "Manager", ip_address: "172.18.0.1", user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36", path_info: "/accounts/login/"}.
-2020-07-09 10:55:05,393 solicitar_token_global: Se intento una petición por el método: GET
-2020-07-09 10:55:05,570 Not Found: /static/css/style.css
-2020-07-09 10:55:05,578 Not Found: /static/js/scripts.js
-2020-07-09 10:55:18,604 solicitar_token_global: Se intento una petición por el método: POST
-2020-07-09 10:55:18,870 Not Found: /static/css/cs-skin-elastic.css
-2020-07-09 10:55:18,894 Not Found: /static/css/styles.css
-2020-07-09 10:55:19,007 Not Found: /static/js/main.js
-2020-07-09 10:55:19,009 Not Found: /static/images/logo.png
-2020-07-09 10:55:19,012 Not Found: /static/images/admin.png
-2020-07-09 10:55:19,545 Not Found: /static/js/main.js
-2020-07-09 10:55:19,713 Not Found: /favicon.ico
-2020-07-09 10:55:32,406 Not Found: /static/css/cs-skin-elastic.css
-2020-07-09 10:55:32,417 Not Found: /static/css/styles.css
-2020-07-09 10:55:32,495 Not Found: /static/js/main.js
-2020-07-09 10:55:32,533 Not Found: /static/images/logo.png
-2020-07-09 10:55:32,535 Not Found: /static/images/admin.png
-2020-07-09 10:55:32,942 Not Found: /static/js/main.js
-2020-07-09 10:55:45,533 Not Found: /static/css/cs-skin-elastic.css
-2020-07-09 10:55:45,540 Not Found: /static/css/styles.css
-2020-07-09 10:55:45,561 Not Found: /static/js/main.js
-2020-07-09 10:55:45,578 Not Found: /static/images/logo.png
-2020-07-09 10:55:45,575 Not Found: /static/images/admin.png
-2020-07-09 10:55:45,776 Not Found: /static/js/main.js
-2020-07-09 10:56:44,150 Not Found: /static/css/cs-skin-elastic.css
-2020-07-09 10:56:44,164 Not Found: /static/css/styles.css
-2020-07-09 10:56:44,223 Not Found: /static/js/main.js
-2020-07-09 10:56:44,234 Not Found: /static/images/admin.png
-2020-07-09 10:56:44,248 Not Found: /static/images/logo.png
-2020-07-09 10:56:44,406 Not Found: /static/js/main.js
-2020-07-09 10:56:46,458 Not Found: /static/css/cs-skin-elastic.css
-2020-07-09 10:56:46,464 Not Found: /static/css/styles.css
-2020-07-09 10:56:46,529 Not Found: /static/js/main.js
-2020-07-09 10:56:46,549 Not Found: /static/images/logo.png
-2020-07-09 10:56:46,550 Not Found: /static/images/admin.png
-2020-07-09 10:56:57,167 Not Found: /static/css/cs-skin-elastic.css
-2020-07-09 10:56:57,174 Not Found: /static/css/styles.css
-2020-07-09 10:56:57,247 Not Found: /static/js/main.js
-2020-07-09 10:56:57,286 Not Found: /static/images/logo.png
-2020-07-09 10:56:57,302 Not Found: /static/images/admin.png
-2020-07-09 10:57:20,418 Not Found: /static/css/cs-skin-elastic.css
-2020-07-09 10:57:20,425 Not Found: /static/css/styles.css
-2020-07-09 10:57:20,508 Not Found: /static/js/main.js
-2020-07-09 10:57:20,523 Not Found: /static/images/logo.png
-2020-07-09 10:57:20,525 Not Found: /static/images/admin.png
-2020-07-09 10:57:24,199 Not Found: /static/css/styles.css
-2020-07-09 10:57:24,203 Not Found: /static/css/cs-skin-elastic.css
-2020-07-09 10:57:24,327 Not Found: /static/images/logo.png
-2020-07-09 10:57:24,329 Not Found: /static/images/admin.png
-2020-07-09 10:57:24,345 Not Found: /static/js/main.js
-2020-07-09 10:57:31,053 Not Found: /static/css/cs-skin-elastic.css
-2020-07-09 10:57:31,075 Not Found: /static/css/styles.css
-2020-07-09 10:57:31,110 Not Found: /static/js/main.js
-2020-07-09 10:57:31,118 Not Found: /static/images/admin.png
-2020-07-09 10:57:31,125 Not Found: /static/images/logo.png
-2020-07-09 10:57:31,279 Not Found: /static/js/main.js
-2020-07-09 11:23:31,397 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 11:23:31,401 AXES: Getting access attempts that are newer than 2020-07-09 10:23:31.372292
-2020-07-09 11:23:31,687 login_global: Se intento una petición por el método: POST
-2020-07-09 11:23:31,692 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 11:23:31,694 AXES: Getting access attempts that are newer than 2020-07-09 10:23:31.372292
-2020-07-09 11:23:32,236 login_global: Se termina de utilizar authenticate
-2020-07-09 11:23:32,343 Starting new HTTPS connection (1): api.telegram.org:443
-2020-07-09 11:23:33,240 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=nbalwgkgmfwm HTTP/1.1" 200 262
-2020-07-09 11:23:33,253 login_global: Se guarda token en base de datos.
-2020-07-09 11:23:33,846 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-07-09 10:23:31.372292
-2020-07-09 11:23:33,847 AXES: Successful login by {username: "Manager", ip_address: "172.18.0.1", user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36", path_info: "/accounts/login/"}.
-2020-07-09 11:23:34,092 solicitar_token_global: Se intento una petición por el método: GET
-2020-07-09 11:23:34,277 Not Found: /static/css/style.css
-2020-07-09 11:23:34,292 Not Found: /static/js/scripts.js
-2020-07-09 11:23:47,059 solicitar_token_global: Se intento una petición por el método: POST
-2020-07-09 11:23:47,389 Not Found: /static/css/cs-skin-elastic.css
-2020-07-09 11:23:47,404 Not Found: /static/css/styles.css
-2020-07-09 11:23:47,588 Not Found: /static/images/admin.png
-2020-07-09 11:23:47,617 Not Found: /static/js/main.js
-2020-07-09 11:23:47,620 Not Found: /static/images/logo.png
-2020-07-09 11:23:48,636 Not Found: /static/js/main.js
-2020-07-09 11:41:56,163 Using selector: EpollSelector
-2020-07-09 11:43:29,977 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 11:43:29,980 AXES: Getting access attempts that are newer than 2020-07-09 10:43:29.973998
-2020-07-09 11:43:30,014 login: Se hace petición por el método: GET
-2020-07-09 11:43:30,414 Not Found: /static/css/style.css
-2020-07-09 11:43:30,450 Not Found: /static/js/scripts.js
-2020-07-09 11:43:31,035 Not Found: /static/css/style.css
-2020-07-09 11:43:31,032 Not Found: /static/js/scripts.js
-2020-07-09 11:43:36,824 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 11:43:36,827 AXES: Getting access attempts that are newer than 2020-07-09 10:43:36.824518
-2020-07-09 11:43:36,844 login_global: Se intento una petición por el método: GET
-2020-07-09 11:43:37,105 Not Found: /static/css/style.css
-2020-07-09 11:43:37,117 Not Found: /static/js/scripts.js
-2020-07-09 11:43:47,114 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 11:43:47,117 AXES: Getting access attempts that are newer than 2020-07-09 10:43:47.114555
-2020-07-09 11:43:47,137 login_global: Se intento una petición por el método: POST
-2020-07-09 11:43:47,140 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 11:43:47,141 AXES: Getting access attempts that are newer than 2020-07-09 10:43:47.114555
-2020-07-09 11:43:47,645 login_global: Se termina de utilizar authenticate
-2020-07-09 11:43:47,783 Starting new HTTPS connection (1): api.telegram.org:443
-2020-07-09 11:43:48,713 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=lrznxfwpprsp HTTP/1.1" 200 262
-2020-07-09 11:43:48,724 login_global: Se guarda token en base de datos.
-2020-07-09 11:43:48,922 AXES: Cleaned up 1 expired access attempts from database that were older than 2020-07-09 10:43:47.114555
-2020-07-09 11:43:48,923 AXES: Successful login by {username: "Manager", ip_address: "172.18.0.1", user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36", path_info: "/accounts/login/"}.
-2020-07-09 11:43:49,154 solicitar_token_global: Se intento una petición por el método: GET
-2020-07-09 11:43:49,601 Not Found: /static/css/style.css
-2020-07-09 11:43:49,634 Not Found: /static/js/scripts.js
-2020-07-09 11:44:01,023 solicitar_token_global: Se intento una petición por el método: POST
-2020-07-09 11:44:01,141 Internal Server Error: /global/
+2020-07-10 20:06:16,869 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 20:06:16,892 AXES: Getting access attempts that are newer than 2020-07-10 19:06:16.869648
+2020-07-10 20:06:16,933 login: Se hace petición por el método: POST
+2020-07-10 20:06:16,935 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 20:06:16,936 AXES: Getting access attempts that are newer than 2020-07-10 19:06:16.869648
+2020-07-10 20:06:17,421 login: Se termina de autenticar el usuario tony
+2020-07-10 20:06:17,421 login: Se genera el token
+2020-07-10 20:06:17,424 Starting new HTTPS connection (1): api.telegram.org:443
+2020-07-10 20:06:17,865 Internal Server Error: /login/
 Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
-    response = get_response(request)
-  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
-    response = self.process_exception_by_middleware(e, request)
-  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/codigo/appWeb/decoradores.py", line 65, in interna
-    return vista(request)
-  File "/codigo/appWeb/views.py", line 223, in Inicio
-    return render(request, 'global/index.html')
-  File "/usr/local/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
-    content = loader.render_to_string(template_name, context, request, using=using)
-  File "/usr/local/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
-    return template.render(context, request)
-  File "/usr/local/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
-    return self.template.render(context)
-  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 171, in render
-    return self._render(context)
-  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
-    return self.nodelist.render(context)
-  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
-    bit = node.render_annotated(context)
-  File "/usr/local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
-    return self.render(context)
-  File "/usr/local/lib/python3.8/site-packages/django/templatetags/static.py", line 106, in render
-    url = self.url(context)
-  File "/usr/local/lib/python3.8/site-packages/django/templatetags/static.py", line 103, in url
-    return self.handle_simple(path)
-  File "/usr/local/lib/python3.8/site-packages/django/templatetags/static.py", line 118, in handle_simple
-    return staticfiles_storage.url(path)
-  File "/usr/local/lib/python3.8/site-packages/django/utils/functional.py", line 224, in inner
-    self._setup()
-  File "/usr/local/lib/python3.8/site-packages/django/contrib/staticfiles/storage.py", line 501, in _setup
-    self._wrapped = get_storage_class(settings.STATICFILES_STORAGE)()
-  File "/usr/local/lib/python3.8/site-packages/django/contrib/staticfiles/storage.py", line 33, in __init__
-    check_settings(base_url)
-  File "/usr/local/lib/python3.8/site-packages/django/contrib/staticfiles/utils.py", line 49, in check_settings
-    raise ImproperlyConfigured(
-django.core.exceptions.ImproperlyConfigured: You're using the staticfiles app without having set the required STATIC_URL setting.
-2020-07-09 11:44:47,550 /codigo/adminServer/settings.py changed, reloading.
-2020-07-09 11:44:47,551 Using selector: EpollSelector
-2020-07-09 11:46:15,099 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 11:46:15,103 AXES: Getting access attempts that are newer than 2020-07-09 10:46:15.096411
-2020-07-09 11:46:15,156 login: Se hace petición por el método: GET
-2020-07-09 11:46:15,532 Not Found: /static/js/scripts.js
-2020-07-09 11:46:15,545 Not Found: /static/css/style.css
-2020-07-09 11:46:15,884 Not Found: /static/css/style.css
-2020-07-09 11:46:15,893 Not Found: /static/js/scripts.js
-2020-07-09 11:46:20,690 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 11:46:20,692 AXES: Getting access attempts that are newer than 2020-07-09 10:46:20.690169
-2020-07-09 11:46:20,705 login_global: Se intento una petición por el método: GET
-2020-07-09 11:46:20,932 Not Found: /static/css/style.css
-2020-07-09 11:46:20,941 Not Found: /static/js/scripts.js
-2020-07-09 11:46:29,011 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 11:46:29,014 AXES: Getting access attempts that are newer than 2020-07-09 10:46:29.011319
-2020-07-09 11:46:29,034 login_global: Se intento una petición por el método: POST
-2020-07-09 11:46:29,037 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 11:46:29,039 AXES: Getting access attempts that are newer than 2020-07-09 10:46:29.011319
-2020-07-09 11:46:29,751 login_global: Se termina de utilizar authenticate
-2020-07-09 11:46:29,899 Starting new HTTPS connection (1): api.telegram.org:443
-2020-07-09 11:46:30,787 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=kepkgtvnubco HTTP/1.1" 200 262
-2020-07-09 11:46:30,795 login_global: Se guarda token en base de datos.
-2020-07-09 11:46:30,958 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-07-09 10:46:29.011319
-2020-07-09 11:46:30,958 AXES: Successful login by {username: "Manager", ip_address: "172.18.0.1", user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36", path_info: "/accounts/login/"}.
-2020-07-09 11:46:31,348 solicitar_token_global: Se intento una petición por el método: GET
-2020-07-09 11:46:31,635 Not Found: /static/css/style.css
-2020-07-09 11:46:31,638 Not Found: /static/js/scripts.js
-2020-07-09 11:46:46,814 solicitar_token_global: Se intento una petición por el método: POST
-2020-07-09 11:46:47,201 Not Found: /static/css/cs-skin-elastic.css
-2020-07-09 11:46:47,212 Not Found: /static/css/styles.css
-2020-07-09 11:46:47,367 Not Found: /static/images/admin.png
-2020-07-09 11:46:47,375 Not Found: /static/js/main.js
-2020-07-09 11:46:47,382 Not Found: /static/images/logo.png
-2020-07-09 11:46:48,529 Not Found: /static/js/main.js
-2020-07-09 11:47:49,700 Not Found: /static/js/main.js
-2020-07-09 11:47:49,703 Not Found: /static/images/admin.png
-2020-07-09 11:47:49,710 Not Found: /static/images/logo.png
-2020-07-09 11:47:49,719 Not Found: /static/css/styles.css
-2020-07-09 11:47:49,727 Not Found: /static/css/cs-skin-elastic.css
-2020-07-09 11:47:49,924 Not Found: /static/js/main.js
-2020-07-09 11:47:54,889 Not Found: /static/css/cs-skin-elastic.css
-2020-07-09 11:47:54,963 Not Found: /static/css/styles.css
-2020-07-09 11:47:55,019 Not Found: /static/images/logo.png
-2020-07-09 11:47:55,024 Not Found: /static/images/admin.png
-2020-07-09 11:47:55,027 Not Found: /static/js/main.js
-2020-07-09 11:48:01,228 Not Found: /static/css/cs-skin-elastic.css
-2020-07-09 11:48:01,249 Not Found: /static/css/styles.css
-2020-07-09 11:48:01,257 Not Found: /static/js/main.js
-2020-07-09 11:48:01,289 Not Found: /static/images/logo.png
-2020-07-09 11:48:01,304 Not Found: /static/images/admin.png
-2020-07-09 11:48:09,557 Not Found: /static/css/cs-skin-elastic.css
-2020-07-09 11:48:09,624 Not Found: /static/js/main.js
-2020-07-09 11:48:09,628 Not Found: /static/css/styles.css
-2020-07-09 11:48:09,655 Not Found: /static/images/logo.png
-2020-07-09 11:48:09,770 Not Found: /static/images/admin.png
-2020-07-09 11:48:09,958 Not Found: /static/js/main.js
-2020-07-09 11:49:38,221 Not Found: /static/css/cs-skin-elastic.css
-2020-07-09 11:49:38,248 Not Found: /static/css/styles.css
-2020-07-09 11:53:53,141 Not Found: /static/css/cs-skin-elastic.css
-2020-07-09 11:53:53,155 Not Found: /static/css/styles.css
-2020-07-09 11:53:53,207 Not Found: /static/js/main.js
-2020-07-09 11:53:53,230 Not Found: /static/images/logo.png
-2020-07-09 11:53:53,240 Not Found: /static/images/admin.png
-2020-07-09 12:12:59,084 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 12:12:59,086 AXES: Getting access attempts that are newer than 2020-07-09 11:12:59.084483
-2020-07-09 12:22:52,270 /codigo/adminServer/settings.py changed, reloading.
-2020-07-09 12:22:52,403 Using selector: EpollSelector
-2020-07-09 13:02:07,999 Using selector: EpollSelector
-2020-07-09 13:06:21,613 Using selector: EpollSelector
-2020-07-09 13:12:01,302 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 13:12:01,305 AXES: Getting access attempts that are newer than 2020-07-09 12:12:01.299045
-2020-07-09 13:12:01,315 Using selector: EpollSelector
-2020-07-09 13:12:01,332 login: Se hace petición por el método: GET
-2020-07-09 13:12:08,869 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 13:12:08,871 AXES: Getting access attempts that are newer than 2020-07-09 12:12:08.869315
-2020-07-09 13:12:08,881 login_global: Se intento una petición por el método: GET
-2020-07-09 13:12:17,609 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 13:12:17,611 AXES: Getting access attempts that are newer than 2020-07-09 12:12:17.609559
-2020-07-09 13:12:17,625 login_global: Se intento una petición por el método: POST
-2020-07-09 13:12:17,627 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 13:12:17,629 AXES: Getting access attempts that are newer than 2020-07-09 12:12:17.609559
-2020-07-09 13:12:18,146 login_global: Se termina de utilizar authenticate
-2020-07-09 13:12:18,256 Starting new HTTPS connection (1): api.telegram.org:443
-2020-07-09 13:12:19,345 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=zjykaictedkp HTTP/1.1" 200 262
-2020-07-09 13:12:19,354 login_global: Se guarda token en base de datos.
-2020-07-09 13:12:19,474 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-07-09 12:12:17.609559
-2020-07-09 13:12:19,475 AXES: Successful login by {username: "Manager", ip_address: "172.18.0.4", user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36", path_info: "/accounts/login/"}.
-2020-07-09 13:12:19,686 solicitar_token_global: Se intento una petición por el método: GET
-2020-07-09 13:12:39,891 solicitar_token_global: Se intento una petición por el método: POST
-2020-07-09 13:12:41,268 Not Found: /favicon.ico
-2020-07-09 19:36:17,410 Using selector: EpollSelector
-2020-07-09 19:39:23,734 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 19:39:23,751 AXES: Getting access attempts that are newer than 2020-07-09 18:39:23.711226
-2020-07-09 19:39:23,762 Using selector: EpollSelector
-2020-07-09 19:39:23,813 login: Se hace petición por el método: GET
-2020-07-09 19:39:31,150 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 19:39:31,151 AXES: Getting access attempts that are newer than 2020-07-09 18:39:31.150208
-2020-07-09 19:39:31,161 login_global: Se intento una petición por el método: GET
-2020-07-09 19:40:43,796 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 19:40:43,797 AXES: Getting access attempts that are newer than 2020-07-09 18:40:43.795902
-2020-07-09 19:40:43,809 login_global: Se intento una petición por el método: POST
-2020-07-09 19:40:43,812 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-09 19:40:43,813 AXES: Getting access attempts that are newer than 2020-07-09 18:40:43.795902
-2020-07-09 19:40:44,355 login_global: Se termina de utilizar authenticate
-2020-07-09 19:40:44,461 Starting new HTTPS connection (1): api.telegram.org:443
-2020-07-09 19:40:45,540 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=csgsikruzopm HTTP/1.1" 200 262
-2020-07-09 19:40:45,547 login_global: Se guarda token en base de datos.
-2020-07-09 19:40:45,839 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-07-09 18:40:43.795902
-2020-07-09 19:40:45,840 AXES: Successful login by {username: "Manager", ip_address: "172.18.0.4", user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36", path_info: "/accounts/login/"}.
-2020-07-09 19:40:46,397 solicitar_token_global: Se intento una petición por el método: GET
-2020-07-09 19:41:00,508 solicitar_token_global: Se intento una petición por el método: POST
-2020-07-09 22:25:18,471 Using selector: EpollSelector
-2020-07-10 09:43:25,137 Using selector: EpollSelector
-2020-07-10 10:08:12,891 Using selector: EpollSelector
-2020-07-10 10:17:54,237 Using selector: EpollSelector
-2020-07-10 10:50:51,673 Using selector: EpollSelector
-2020-07-10 11:07:24,997 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:07:25,000 AXES: Getting access attempts that are newer than 2020-07-10 10:07:24.994651
-2020-07-10 11:07:25,023 Using selector: EpollSelector
-2020-07-10 11:07:25,155 login: Se hace petición por el método: GET
-2020-07-10 11:10:41,227 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:10:41,228 AXES: Getting access attempts that are newer than 2020-07-10 10:10:41.226854
-2020-07-10 11:10:41,238 login_global: Se intento una petición por el método: GET
-2020-07-10 11:10:49,107 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:10:49,109 AXES: Getting access attempts that are newer than 2020-07-10 10:10:49.107520
-2020-07-10 11:10:49,123 login_global: Se intento una petición por el método: POST
-2020-07-10 11:10:49,126 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:10:49,128 AXES: Getting access attempts that are newer than 2020-07-10 10:10:49.107520
-2020-07-10 11:10:49,771 login_global: Se termina de utilizar authenticate
-2020-07-10 11:10:49,871 Starting new HTTPS connection (1): api.telegram.org:443
-2020-07-10 11:10:50,786 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=vyzrlxjxdjvb HTTP/1.1" 200 262
-2020-07-10 11:10:50,793 login_global: Se guarda token en base de datos.
-2020-07-10 11:10:51,010 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-07-10 10:10:49.107520
-2020-07-10 11:10:51,011 AXES: Successful login by {username: "Manager", ip_address: "172.18.0.4", user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36", path_info: "/accounts/login/"}.
-2020-07-10 11:10:51,274 solicitar_token_global: Se intento una petición por el método: GET
-2020-07-10 11:11:23,480 solicitar_token_global: Se intento una petición por el método: POST
-2020-07-10 11:11:23,491 solicitar_token_global: No se localizó el token en la tabla usuarios: vyzrlxjxdjvb
-2020-07-10 11:11:46,454 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:11:46,456 AXES: Getting access attempts that are newer than 2020-07-10 10:11:46.454636
-2020-07-10 11:11:46,474 login: Se hace petición por el método: POST
-2020-07-10 11:11:46,477 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:11:46,478 AXES: Getting access attempts that are newer than 2020-07-10 10:11:46.454636
-2020-07-10 11:11:46,496 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-07-10 10:11:46.454636
-2020-07-10 11:11:46,496 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:11:46,497 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:11:46,499 AXES: Getting access attempts that are newer than 2020-07-10 10:11:46.454636
-2020-07-10 11:11:46,503 AXES: New login failure by {username: "None", ip_address: "172.18.0.4", user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36", path_info: "/login/"}. Creating new record in the database.
-2020-07-10 11:11:46,578 Internal Server Error: /login/
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 976, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 361, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 377, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1108)
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
-  File "/codigo/appWeb/views.py", line 35, in login
-    logging.info('login: Se termina de autenticar el usuario ' + user.usr)
-AttributeError: 'NoneType' object has no attribute 'usr'
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=eibrsfprdbsc (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1108)')))
 
 During handling of the above exception, another exception occurred:
 
@@ -432,27 +50,64 @@ Traceback (most recent call last):
     return func(request, *args, **kwargs)
   File "/codigo/appWeb/decoradores.py", line 53, in interna
     return vista(request)
-  File "/codigo/appWeb/views.py", line 37, in login
-    logging.error('login: El usuario [ ' + nomUsuario + ' ] no existe')
-TypeError: can only concatenate str (not "NoneType") to str
-2020-07-10 11:11:47,275 Not Found: /favicon.ico
-2020-07-10 11:23:13,243 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:23:13,244 AXES: Getting access attempts that are newer than 2020-07-10 10:23:13.242879
-2020-07-10 11:23:13,255 login: Se hace petición por el método: POST
-2020-07-10 11:23:13,256 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:23:13,257 AXES: Getting access attempts that are newer than 2020-07-10 10:23:13.242879
-2020-07-10 11:23:13,268 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-07-10 10:23:13.242879
-2020-07-10 11:23:13,268 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:23:13,269 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:23:13,270 AXES: Getting access attempts that are newer than 2020-07-10 10:23:13.242879
-2020-07-10 11:23:13,273 AXES: Repeated login failure by {username: "None", ip_address: "172.18.0.4", user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36", path_info: "/login/"}. Count = 2 of 5. Updating existing record in the database.
-2020-07-10 11:23:13,273 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:23:13,274 AXES: Getting access attempts that are newer than 2020-07-10 10:23:13.242879
-2020-07-10 11:23:13,369 Internal Server Error: /login/
+  File "/codigo/appWeb/views.py", line 44, in login
+    api.enviar_token(token, user.chat_id)
+  File "/codigo/appWeb/api.py", line 56, in enviar_token
+    response = requests.get(send_text)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=eibrsfprdbsc (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1108)')))
+2020-07-10 20:22:41,409 Using selector: EpollSelector
+2020-07-10 20:23:11,199 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 20:23:11,200 AXES: Getting access attempts that are newer than 2020-07-10 19:23:11.176965
+2020-07-10 20:23:11,204 Using selector: EpollSelector
+2020-07-10 20:23:11,218 login: Se hace petición por el método: GET
+2020-07-10 20:23:16,254 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 20:23:16,255 AXES: Getting access attempts that are newer than 2020-07-10 19:23:16.254814
+2020-07-10 20:23:16,261 login: Se hace petición por el método: POST
+2020-07-10 20:23:16,263 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 20:23:16,264 AXES: Getting access attempts that are newer than 2020-07-10 19:23:16.254814
+2020-07-10 20:23:16,718 login: Se termina de autenticar el usuario tony
+2020-07-10 20:23:16,718 login: Se genera el token
+2020-07-10 20:23:16,768 Starting new HTTPS connection (1): api.telegram.org:443
+2020-07-10 20:23:17,385 Internal Server Error: /login/
 Traceback (most recent call last):
-  File "/codigo/appWeb/views.py", line 35, in login
-    logging.info('login: Se termina de autenticar el usuario ' + user.usr)
-AttributeError: 'NoneType' object has no attribute 'usr'
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 976, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 361, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 377, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1108)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=amttrgldkdqp (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1108)')))
 
 During handling of the above exception, another exception occurred:
 
@@ -467,129 +122,458 @@ Traceback (most recent call last):
     return func(request, *args, **kwargs)
   File "/codigo/appWeb/decoradores.py", line 53, in interna
     return vista(request)
-  File "/codigo/appWeb/views.py", line 37, in login
-    logging.error('login: El usuario [ ' + nomUsuario + ' ] no existe')
+  File "/codigo/appWeb/views.py", line 44, in login
+    api.enviar_token(token, user.chat_id)
+  File "/codigo/appWeb/api.py", line 56, in enviar_token
+    response = requests.get(send_text)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=amttrgldkdqp (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1108)')))
+2020-07-10 20:23:17,953 Not Found: /favicon.ico
+2020-07-10 20:25:32,986 Not Found: /esperando_token
+2020-07-10 20:25:56,029 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 20:25:56,030 AXES: Getting access attempts that are newer than 2020-07-10 19:25:56.029404
+2020-07-10 20:25:56,037 login: Se hace petición por el método: GET
+2020-07-10 20:26:03,836 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 20:26:03,837 AXES: Getting access attempts that are newer than 2020-07-10 19:26:03.836763
+2020-07-10 20:26:03,841 login: Se hace petición por el método: POST
+2020-07-10 20:26:03,842 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 20:26:03,842 AXES: Getting access attempts that are newer than 2020-07-10 19:26:03.836763
+2020-07-10 20:26:04,286 login: Se termina de autenticar el usuario tony
+2020-07-10 20:26:04,286 login: Se genera el token
+2020-07-10 20:26:04,289 Starting new HTTPS connection (1): api.telegram.org:443
+2020-07-10 20:26:04,681 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 976, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 361, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 377, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1108)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=qytnjjotltkx (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1108)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/axes/decorators.py", line 10, in inner
+    return func(request, *args, **kwargs)
+  File "/codigo/appWeb/decoradores.py", line 53, in interna
+    return vista(request)
+  File "/codigo/appWeb/views.py", line 44, in login
+    api.enviar_token(token, user.chat_id)
+  File "/codigo/appWeb/api.py", line 56, in enviar_token
+    response = requests.get(send_text)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=qytnjjotltkx (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1108)')))
+2020-07-10 20:26:06,669 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 20:26:06,670 AXES: Getting access attempts that are newer than 2020-07-10 19:26:06.669477
+2020-07-10 20:26:06,674 login: Se hace petición por el método: GET
+2020-07-10 20:28:16,324 Using selector: EpollSelector
+2020-07-10 20:28:25,770 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 20:28:25,771 AXES: Getting access attempts that are newer than 2020-07-10 19:28:25.768520
+2020-07-10 20:28:25,776 Using selector: EpollSelector
+2020-07-10 20:28:25,787 login: Se hace petición por el método: GET
+2020-07-10 20:28:30,433 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 20:28:30,434 AXES: Getting access attempts that are newer than 2020-07-10 19:28:30.433872
+2020-07-10 20:28:30,440 login: Se hace petición por el método: POST
+2020-07-10 20:28:30,441 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 20:28:30,442 AXES: Getting access attempts that are newer than 2020-07-10 19:28:30.433872
+2020-07-10 20:28:30,977 login: Se termina de autenticar el usuario tony
+2020-07-10 20:28:30,977 login: Se genera el token
+2020-07-10 20:28:30,984 Starting new HTTPS connection (1): api.telegram.org:443
+2020-07-10 20:28:31,789 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=cvlusevcyvys HTTP/1.1" 200 262
+2020-07-10 20:28:31,794 login: Se envia el token: cvlusevcyvys
+2020-07-10 20:28:31,896 login: Se guarda el token en el usuario
+2020-07-10 20:28:31,982 solicitar_token: Se hace petición por el método: GET
+2020-07-10 20:30:15,654 Using selector: EpollSelector
+2020-07-10 20:30:33,261 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 20:30:33,264 AXES: Getting access attempts that are newer than 2020-07-10 19:30:33.257363
+2020-07-10 20:30:33,271 Using selector: EpollSelector
+2020-07-10 20:30:33,287 login: Se hace petición por el método: GET
+2020-07-10 20:30:37,742 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 20:30:37,743 AXES: Getting access attempts that are newer than 2020-07-10 19:30:37.742848
+2020-07-10 20:30:37,747 login: Se hace petición por el método: POST
+2020-07-10 20:30:37,749 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 20:30:37,750 AXES: Getting access attempts that are newer than 2020-07-10 19:30:37.742848
+2020-07-10 20:30:38,185 login: Se termina de autenticar el usuario tony
+2020-07-10 20:30:38,185 login: Se genera el token
+2020-07-10 20:30:38,191 Starting new HTTPS connection (1): api.telegram.org:443
+2020-07-10 20:30:38,725 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 976, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 361, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 377, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1108)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=sqzvamwojtgw (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1108)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/axes/decorators.py", line 10, in inner
+    return func(request, *args, **kwargs)
+  File "/codigo/appWeb/decoradores.py", line 53, in interna
+    return vista(request)
+  File "/codigo/appWeb/views.py", line 44, in login
+    api.enviar_token(token, user.chat_id)
+  File "/codigo/appWeb/api.py", line 56, in enviar_token
+    response = requests.get(send_text)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=sqzvamwojtgw (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1108)')))
+2020-07-10 20:30:38,955 Not Found: /favicon.ico
+2020-07-10 20:46:18,204 Using selector: EpollSelector
+2020-07-10 20:46:32,398 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 20:46:32,402 AXES: Getting access attempts that are newer than 2020-07-10 19:46:32.363171
+2020-07-10 20:46:32,407 Using selector: EpollSelector
+2020-07-10 20:46:32,452 login: Se hace petición por el método: GET
+2020-07-10 20:46:38,752 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 20:46:38,752 AXES: Getting access attempts that are newer than 2020-07-10 19:46:38.752280
+2020-07-10 20:46:38,756 login: Se hace petición por el método: POST
+2020-07-10 20:46:38,757 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 20:46:38,758 AXES: Getting access attempts that are newer than 2020-07-10 19:46:38.752280
+2020-07-10 20:46:39,192 login: Se termina de autenticar el usuario tony
+2020-07-10 20:46:39,192 login: Se genera el token
+2020-07-10 20:46:39,252 Starting new HTTPS connection (1): api.telegram.org:443
+2020-07-10 20:46:39,852 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 976, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 361, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 377, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1108)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=vybjylkuphqo (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1108)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/axes/decorators.py", line 10, in inner
+    return func(request, *args, **kwargs)
+  File "/codigo/appWeb/decoradores.py", line 53, in interna
+    return vista(request)
+  File "/codigo/appWeb/views.py", line 44, in login
+    api.enviar_token(token, user.chat_id)
+  File "/codigo/appWeb/api.py", line 56, in enviar_token
+    response = requests.get(send_text)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=vybjylkuphqo (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1108)')))
+2020-07-10 20:49:11,134 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 20:49:11,134 AXES: Getting access attempts that are newer than 2020-07-10 19:49:11.134029
+2020-07-10 20:49:11,140 login: Se hace petición por el método: GET
+2020-07-10 20:49:15,594 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 20:49:15,595 AXES: Getting access attempts that are newer than 2020-07-10 19:49:15.594267
+2020-07-10 20:49:15,601 login: Se hace petición por el método: POST
+2020-07-10 20:49:15,602 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 20:49:15,603 AXES: Getting access attempts that are newer than 2020-07-10 19:49:15.594267
+2020-07-10 20:49:16,141 login: Se termina de autenticar el usuario tony
+2020-07-10 20:49:16,142 login: Se genera el token
+2020-07-10 20:49:16,144 Starting new HTTPS connection (1): api.telegram.org:443
+2020-07-10 20:49:16,532 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 976, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connection.py", line 361, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 377, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/local/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1108)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=xbriuiblmhoy (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1108)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/axes/decorators.py", line 10, in inner
+    return func(request, *args, **kwargs)
+  File "/codigo/appWeb/decoradores.py", line 53, in interna
+    return vista(request)
+  File "/codigo/appWeb/views.py", line 44, in login
+    api.enviar_token(token, user.chat_id)
+  File "/codigo/appWeb/api.py", line 56, in enviar_token
+    response = requests.get(send_text)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=xbriuiblmhoy (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1108)')))
+2020-07-10 21:02:21,108 Using selector: EpollSelector
+2020-07-10 21:02:28,605 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 21:02:28,607 AXES: Getting access attempts that are newer than 2020-07-10 20:02:28.584252
+2020-07-10 21:02:28,613 Using selector: EpollSelector
+2020-07-10 21:02:28,640 login: Se hace petición por el método: GET
+2020-07-10 21:02:33,942 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 21:02:33,943 AXES: Getting access attempts that are newer than 2020-07-10 20:02:33.942404
+2020-07-10 21:02:33,948 login: Se hace petición por el método: POST
+2020-07-10 21:02:33,950 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 21:02:33,951 AXES: Getting access attempts that are newer than 2020-07-10 20:02:33.942404
+2020-07-10 21:02:34,453 login: Se termina de autenticar el usuario tony
+2020-07-10 21:02:34,454 login: Se genera el token
+2020-07-10 21:02:34,504 Starting new HTTPS connection (1): api.telegram.org:443
+2020-07-10 21:02:35,472 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=kwocqnqyoiax HTTP/1.1" 200 262
+2020-07-10 21:02:35,482 login: Se envia el token: kwocqnqyoiax
+2020-07-10 21:02:35,578 login: Se guarda el token en el usuario
+2020-07-10 21:02:35,664 solicitar_token: Se hace petición por el método: GET
+2020-07-10 21:02:59,688 solicitar_token: Se hace petición por el método: POST
+2020-07-10 21:02:59,762 solicitar_token: Se limpia el token al usuario: tony
+2020-07-10 21:02:59,865 servidores: Se intento una petición por el método: GET
+2020-07-10 21:03:03,371 monitoreo: Se intento una petición por el método: GET
+2020-07-10 21:03:03,435 Internal Server Error: /monitor/1/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/codigo/appWeb/views.py", line 124, in monitoreo
+    env=environ['REQUESTS_CA_BUNDLE'] #Se respalda la variable de entorno REQUESTS_CA_BUNDLE
+  File "/usr/local/lib/python3.8/os.py", line 675, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'REQUESTS_CA_BUNDLE'
+2020-07-10 21:05:25,287 Using selector: EpollSelector
+2020-07-10 21:05:30,837 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 21:05:30,839 AXES: Getting access attempts that are newer than 2020-07-10 20:05:30.835529
+2020-07-10 21:05:30,843 Using selector: EpollSelector
+2020-07-10 21:05:30,898 servidores: Se intento una petición por el método: GET
+2020-07-10 21:05:34,257 monitoreo: Se intento una petición por el método: GET
+2020-07-10 21:05:34,276 api.solicitar_datos_srv: url del servidor a monitorear: https://127.0.0.1:8000
+2020-07-10 21:05:34,276 api.solicitar_datos_srv: Datos a consultar: {'username': 'tony', 'password': '+lULZP2BCU4ng9KQw9IECnENDj+H+FlJNMCQmk7QmmM=lsy4cqM='}
+2020-07-10 21:05:34,282 Starting new HTTPS connection (1): 127.0.0.1:8000
+2020-07-10 21:08:42,947 monitoreo: Se intento una petición por el método: GET
+2020-07-10 21:08:42,983 Using selector: EpollSelector
+2020-07-10 21:08:43,068 api.solicitar_datos_srv: url del servidor a monitorear: https://127.0.0.1:8000
+2020-07-10 21:08:43,068 api.solicitar_datos_srv: Datos a consultar: {'username': 'tony', 'password': '+lULZP2BCU4ng9KQw9IECnENDj+H+FlJNMCQmk7QmmM=lsy4cqM='}
+2020-07-10 21:08:43,074 Starting new HTTPS connection (1): 127.0.0.1:8000
+2020-07-10 21:17:37,784 Using selector: EpollSelector
+2020-07-10 21:17:47,956 monitoreo: Se intento una petición por el método: GET
+2020-07-10 21:17:47,961 Using selector: EpollSelector
+2020-07-10 21:17:48,075 Internal Server Error: /monitor/1/
+Traceback (most recent call last):
+  File "/codigo/appWeb/views.py", line 114, in monitoreo
+    usuario = Usuario.objects.get(usr=nom_usuario)
+  File "/usr/local/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/django/db/models/query.py", line 415, in get
+    raise self.model.DoesNotExist(
+appWeb.models.Usuario.DoesNotExist: Usuario matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/codigo/appWeb/views.py", line 116, in monitoreo
+    logging.error('monitoreo: No se encontró el usuario: ' + nom_usuario)
 TypeError: can only concatenate str (not "NoneType") to str
-2020-07-10 11:23:19,833 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:23:19,835 AXES: Getting access attempts that are newer than 2020-07-10 10:23:19.833090
-2020-07-10 11:23:19,852 login: Se hace petición por el método: GET
-2020-07-10 11:23:22,428 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:23:22,431 AXES: Getting access attempts that are newer than 2020-07-10 10:23:22.428603
-2020-07-10 11:23:22,448 login_global: Se intento una petición por el método: GET
-2020-07-10 11:23:34,175 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:23:34,179 AXES: Getting access attempts that are newer than 2020-07-10 10:23:34.174865
-2020-07-10 11:23:34,196 login_global: Se intento una petición por el método: POST
-2020-07-10 11:23:34,198 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:23:34,199 AXES: Getting access attempts that are newer than 2020-07-10 10:23:34.174865
-2020-07-10 11:23:34,728 login_global: Se termina de utilizar authenticate
-2020-07-10 11:23:34,785 Starting new HTTPS connection (1): api.telegram.org:443
-2020-07-10 11:23:35,689 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=kzhljoygekcc HTTP/1.1" 200 262
-2020-07-10 11:23:35,695 login_global: Se guarda token en base de datos.
-2020-07-10 11:23:35,753 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-07-10 10:23:34.174865
-2020-07-10 11:23:35,754 AXES: Successful login by {username: "Manager", ip_address: "172.18.0.4", user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36", path_info: "/accounts/login/"}.
-2020-07-10 11:23:35,910 solicitar_token_global: Se intento una petición por el método: GET
-2020-07-10 11:23:48,255 solicitar_token_global: Se intento una petición por el método: POST
-2020-07-10 11:46:14,747 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:46:14,749 AXES: Getting access attempts that are newer than 2020-07-10 10:46:14.732987
-2020-07-10 11:46:14,757 Using selector: EpollSelector
-2020-07-10 11:46:14,789 login: Se hace petición por el método: GET
-2020-07-10 11:47:07,344 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:47:07,346 AXES: Getting access attempts that are newer than 2020-07-10 10:47:07.344312
-2020-07-10 11:47:07,356 login_global: Se intento una petición por el método: GET
-2020-07-10 11:47:28,436 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:47:28,437 AXES: Getting access attempts that are newer than 2020-07-10 10:47:28.435948
-2020-07-10 11:47:28,444 login_global: Se intento una petición por el método: POST
-2020-07-10 11:47:28,446 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:47:28,447 AXES: Getting access attempts that are newer than 2020-07-10 10:47:28.435948
-2020-07-10 11:47:28,993 login_global: Se termina de utilizar authenticate
-2020-07-10 11:47:29,059 Starting new HTTPS connection (1): api.telegram.org:443
-2020-07-10 11:47:29,928 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=lhckrggnwyxr HTTP/1.1" 200 262
-2020-07-10 11:47:29,933 login_global: Se guarda token en base de datos.
-2020-07-10 11:47:30,126 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-07-10 10:47:28.435948
-2020-07-10 11:47:30,126 AXES: Successful login by {username: "Manager", ip_address: "172.18.0.4", user_agent: "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0", path_info: "/accounts/login/"}.
-2020-07-10 11:47:30,273 solicitar_token_global: Se intento una petición por el método: GET
-2020-07-10 11:48:07,634 solicitar_token_global: Se intento una petición por el método: POST
-2020-07-10 11:48:07,641 solicitar_token_global: No se localizó el token en la tabla usuarios: lhckrggnwyxr
-2020-07-10 11:48:31,017 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:48:31,019 AXES: Getting access attempts that are newer than 2020-07-10 10:48:31.017297
-2020-07-10 11:48:31,032 login: Se hace petición por el método: POST
-2020-07-10 11:48:31,034 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:48:31,036 AXES: Getting access attempts that are newer than 2020-07-10 10:48:31.017297
-2020-07-10 11:48:31,050 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-07-10 10:48:31.017297
-2020-07-10 11:48:31,051 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:48:31,052 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:48:31,052 AXES: Getting access attempts that are newer than 2020-07-10 10:48:31.017297
-2020-07-10 11:48:31,055 AXES: Repeated login failure by {username: "None", ip_address: "172.18.0.4", user_agent: "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0", path_info: "/login/"}. Count = 3 of 5. Updating existing record in the database.
-2020-07-10 11:48:31,056 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:48:31,057 AXES: Getting access attempts that are newer than 2020-07-10 10:48:31.017297
-2020-07-10 11:48:31,115 login: El usuario no existe
-2020-07-10 11:48:36,623 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:48:36,624 AXES: Getting access attempts that are newer than 2020-07-10 10:48:36.623099
-2020-07-10 11:48:36,639 login_global: Se intento una petición por el método: GET
-2020-07-10 11:48:40,908 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:48:40,910 AXES: Getting access attempts that are newer than 2020-07-10 10:48:40.908094
-2020-07-10 11:48:40,928 login: Se hace petición por el método: GET
-2020-07-10 11:48:42,411 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:48:42,412 AXES: Getting access attempts that are newer than 2020-07-10 10:48:42.411099
-2020-07-10 11:48:42,427 login_global: Se intento una petición por el método: GET
-2020-07-10 11:48:51,029 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:48:51,031 AXES: Getting access attempts that are newer than 2020-07-10 10:48:51.029041
-2020-07-10 11:48:51,046 login_global: Se intento una petición por el método: POST
-2020-07-10 11:48:51,048 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 11:48:51,049 AXES: Getting access attempts that are newer than 2020-07-10 10:48:51.029041
-2020-07-10 11:48:51,592 login_global: Se termina de utilizar authenticate
-2020-07-10 11:48:51,731 Starting new HTTPS connection (1): api.telegram.org:443
-2020-07-10 11:48:52,638 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=dhfljudylnlc HTTP/1.1" 200 262
-2020-07-10 11:48:52,646 login_global: Se guarda token en base de datos.
-2020-07-10 11:48:52,707 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-07-10 10:48:51.029041
-2020-07-10 11:48:52,707 AXES: Successful login by {username: "Manager", ip_address: "172.18.0.4", user_agent: "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0", path_info: "/accounts/login/"}.
-2020-07-10 11:48:52,845 solicitar_token_global: Se intento una petición por el método: GET
-2020-07-10 11:49:04,937 solicitar_token_global: Se intento una petición por el método: POST
-2020-07-10 11:49:06,028 Not Found: /favicon.ico
-2020-07-10 12:14:15,241 logoutAdmin: Se intento una petición por el método: GET
-2020-07-10 12:14:15,255 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-07-10 11:14:15.241916
-2020-07-10 12:14:15,256 AXES: Successful logout by {username: "Manager", ip_address: "172.18.0.4", user_agent: "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0", path_info: "/global/logout/"}.
-2020-07-10 12:14:15,446 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 12:14:15,448 AXES: Getting access attempts that are newer than 2020-07-10 11:14:15.445911
-2020-07-10 12:14:15,461 login_global: Se intento una petición por el método: GET
-2020-07-10 12:17:47,476 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 12:17:47,489 AXES: Getting access attempts that are newer than 2020-07-10 11:17:47.475793
-2020-07-10 12:17:47,511 login_global: Se intento una petición por el método: POST
-2020-07-10 12:17:47,512 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 12:17:47,513 AXES: Getting access attempts that are newer than 2020-07-10 11:17:47.475793
-2020-07-10 12:17:48,065 login_global: Se termina de utilizar authenticate
-2020-07-10 12:17:48,162 Starting new HTTPS connection (1): api.telegram.org:443
-2020-07-10 12:17:49,143 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=bgvxfyultzsj HTTP/1.1" 200 262
-2020-07-10 12:17:49,150 login_global: Se guarda token en base de datos.
-2020-07-10 12:17:49,381 AXES: Cleaned up 0 expired access attempts from database that were older than 2020-07-10 11:17:47.475793
-2020-07-10 12:17:49,381 AXES: Successful login by {username: "Manager", ip_address: "172.18.0.4", user_agent: "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0", path_info: "/accounts/login/"}.
-2020-07-10 12:17:49,552 solicitar_token_global: Se intento una petición por el método: GET
-2020-07-10 12:18:01,545 solicitar_token_global: Se intento una petición por el método: POST
-2020-07-10 12:57:31,593 logoutAdmin: Se intento una petición por el método: GET
-2020-07-10 12:57:31,699 AXES: Cleaned up 1 expired access attempts from database that were older than 2020-07-10 11:57:31.594273
-2020-07-10 12:57:31,699 AXES: Successful logout by {username: "Manager", ip_address: "172.18.0.4", user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36", path_info: "/global/logout/"}.
-2020-07-10 12:57:31,899 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 12:57:31,901 AXES: Getting access attempts that are newer than 2020-07-10 11:57:31.899108
-2020-07-10 12:57:31,914 login_global: Se intento una petición por el método: GET
-2020-07-10 12:58:32,625 Invalid HTTP_HOST header: 'admin_server.com'. The domain name provided is not valid according to RFC 1034/1035.
-2020-07-10 12:58:32,960 Bad Request: /accounts/login/
-2020-07-10 12:58:33,530 Invalid HTTP_HOST header: 'admin_server.com'. The domain name provided is not valid according to RFC 1034/1035.
-2020-07-10 12:58:33,600 Bad Request: /favicon.ico
-2020-07-10 12:58:53,082 Invalid HTTP_HOST header: 'admin_server.com'. The domain name provided is not valid according to RFC 1034/1035.
-2020-07-10 12:58:53,158 Bad Request: /login/
-2020-07-10 12:58:53,467 Invalid HTTP_HOST header: 'admin_server.com'. The domain name provided is not valid according to RFC 1034/1035.
-2020-07-10 12:58:53,554 Bad Request: /favicon.ico
-2020-07-10 12:59:12,598 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 12:59:12,600 AXES: Getting access attempts that are newer than 2020-07-10 11:59:12.598689
-2020-07-10 12:59:12,618 login: Se hace petición por el método: GET
-2020-07-10 13:00:09,405 Invalid HTTP_HOST header: 'www.admin_server.com'. The domain name provided is not valid according to RFC 1034/1035.
-2020-07-10 13:00:09,479 Bad Request: /login/
-2020-07-10 13:00:09,986 Invalid HTTP_HOST header: 'www.admin_server.com'. The domain name provided is not valid according to RFC 1034/1035.
-2020-07-10 13:00:10,065 Bad Request: /favicon.ico
-2020-07-10 13:00:48,162 Invalid HTTP_HOST header: 'www.admin_server.com'. The domain name provided is not valid according to RFC 1034/1035.
-2020-07-10 13:00:48,250 Bad Request: /login/
-2020-07-10 13:00:48,819 Invalid HTTP_HOST header: 'www.admin_server.com'. The domain name provided is not valid according to RFC 1034/1035.
-2020-07-10 13:00:48,927 Bad Request: /favicon.ico
-2020-07-10 13:00:49,620 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
-2020-07-10 13:00:49,622 AXES: Getting access attempts that are newer than 2020-07-10 12:00:49.620694
-2020-07-10 13:00:49,634 login: Se hace petición por el método: GET
+2020-07-10 21:17:50,698 Not Found: /monitor
+2020-07-10 21:17:53,713 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 21:17:53,720 AXES: Getting access attempts that are newer than 2020-07-10 20:17:53.660337
+2020-07-10 21:17:53,728 login: Se hace petición por el método: GET
+2020-07-10 21:17:59,128 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 21:17:59,129 AXES: Getting access attempts that are newer than 2020-07-10 20:17:59.128059
+2020-07-10 21:17:59,134 login: Se hace petición por el método: POST
+2020-07-10 21:17:59,136 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 21:17:59,137 AXES: Getting access attempts that are newer than 2020-07-10 20:17:59.128059
+2020-07-10 21:17:59,619 login: Se termina de autenticar el usuario tony
+2020-07-10 21:17:59,620 login: Se genera el token
+2020-07-10 21:17:59,624 Starting new HTTPS connection (1): api.telegram.org:443
+2020-07-10 21:18:00,527 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=nrueckuhpsxp HTTP/1.1" 200 262
+2020-07-10 21:18:00,533 login: Se envia el token: nrueckuhpsxp
+2020-07-10 21:18:00,596 login: Se guarda el token en el usuario
+2020-07-10 21:18:00,644 solicitar_token: Se hace petición por el método: GET
+2020-07-10 21:18:20,968 solicitar_token: Se hace petición por el método: POST
+2020-07-10 21:18:21,455 solicitar_token: Se limpia el token al usuario: tony
+2020-07-10 21:18:21,656 servidores: Se intento una petición por el método: GET
+2020-07-10 21:18:23,546 monitoreo: Se intento una petición por el método: GET
+2020-07-10 21:18:23,555 monitoreo: Path cert: /tmp/srv_monitoreo_cert.crt
+2020-07-10 21:18:23,555 api.solicitar_datos_srv: url del servidor a monitorear: https://127.0.0.1:8000
+2020-07-10 21:18:23,555 api.solicitar_datos_srv: Datos a consultar: {'username': 'tony', 'password': '+lULZP2BCU4ng9KQw9IECnENDj+H+FlJNMCQmk7QmmM=lsy4cqM='}
+2020-07-10 21:18:23,558 Starting new HTTPS connection (1): 127.0.0.1:8000
+2020-07-10 21:21:52,216 Using selector: EpollSelector
+2020-07-10 21:21:58,632 monitoreo: Se intento una petición por el método: GET
+2020-07-10 21:21:58,638 Using selector: EpollSelector
+2020-07-10 21:21:58,669 monitoreo: Path cert: /tmp/srv_monitoreo_cert.crt
+2020-07-10 21:21:58,670 api.solicitar_datos_srv: url del servidor a monitorear: https://127.0.0.1:8000
+2020-07-10 21:21:58,671 api.solicitar_datos_srv: Datos a consultar: {'username': 'tony', 'password': '+lULZP2BCU4ng9KQw9IECnENDj+H+FlJNMCQmk7QmmM=lsy4cqM='}
+2020-07-10 21:21:58,678 Starting new HTTPS connection (1): 127.0.0.1:8000
+2020-07-10 21:22:29,225 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 21:22:29,226 AXES: Getting access attempts that are newer than 2020-07-10 20:22:29.223781
+2020-07-10 21:22:29,231 Using selector: EpollSelector
+2020-07-10 21:22:29,250 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 21:22:29,250 AXES: Getting access attempts that are newer than 2020-07-10 20:22:29.249953
+2020-07-10 21:22:41,460 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 21:22:41,461 AXES: Getting access attempts that are newer than 2020-07-10 20:22:41.460161
+2020-07-10 21:22:41,465 login: Se hace petición por el método: GET
+2020-07-10 21:22:46,760 Using parameter request.POST to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 21:22:46,761 AXES: Getting access attempts that are newer than 2020-07-10 20:22:46.760131
+2020-07-10 21:22:46,769 login: Se hace petición por el método: POST
+2020-07-10 21:22:46,771 Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+2020-07-10 21:22:46,772 AXES: Getting access attempts that are newer than 2020-07-10 20:22:46.760131
+2020-07-10 21:22:47,257 login: Se termina de autenticar el usuario tony
+2020-07-10 21:22:47,257 login: Se genera el token
+2020-07-10 21:22:47,261 Starting new HTTPS connection (1): api.telegram.org:443
+2020-07-10 21:22:48,006 https://api.telegram.org:443 "GET /bot1223842209:AAFeSFdD7as7v8ziRJwmKpH95W0rr48o81w/sendMessage?chat_id=-1001441327218&parse_mode=Markdown&text=lufhpdyvofuc HTTP/1.1" 200 262
+2020-07-10 21:22:48,011 login: Se envia el token: lufhpdyvofuc
+2020-07-10 21:22:48,077 login: Se guarda el token en el usuario
+2020-07-10 21:22:48,160 solicitar_token: Se hace petición por el método: GET
+2020-07-10 21:22:57,178 solicitar_token: Se hace petición por el método: POST
+2020-07-10 21:22:57,227 solicitar_token: Se limpia el token al usuario: tony
+2020-07-10 21:22:57,330 servidores: Se intento una petición por el método: GET
+2020-07-10 21:22:58,885 monitoreo: Se intento una petición por el método: GET
+2020-07-10 21:22:58,904 monitoreo: Path cert: /tmp/srv_monitoreo_cert.crt
+2020-07-10 21:22:58,904 api.solicitar_datos_srv: url del servidor a monitorear: https://127.0.0.1:8000
+2020-07-10 21:22:58,905 api.solicitar_datos_srv: Datos a consultar: {'username': 'tony', 'password': '+lULZP2BCU4ng9KQw9IECnENDj+H+FlJNMCQmk7QmmM=lsy4cqM='}
+2020-07-10 21:22:58,912 Starting new HTTPS connection (1): 127.0.0.1:8000
+2020-07-10 21:23:31,681 Not Found: /favicon.ico
