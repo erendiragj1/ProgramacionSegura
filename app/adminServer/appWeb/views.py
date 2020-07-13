@@ -121,8 +121,11 @@ def monitoreo(request, pk):
         except:
             logging.error('monitoreo: No se encontró el servidor: ' + id_srv)
             return render(request, "monitoreo.html", {'error': True})
-        logging.info('monitoreo: Path cert: ' + str(settings.CERT_MONITOR) )
+        #env=environ['REQUESTS_CA_BUNDLE'] #Se respalda la variable de entorno REQUESTS_CA_BUNDLE
+        environ['REQUESTS_CA_BUNDLE']=settings.CERT_MONITOR #Se agrega el path del certificado para acreditar confianza al srv de monitoreo
+        logging.info('monitoreo: Path cert: ' + str(environ['REQUESTS_CA_BUNDLE']) )
         datos_servidor = api.solicitar_datos_srv(id_srv, servidor)
+        environ['REQUESTS_CA_BUNDLE']='' #Se regresa al valor de la variable original de entorno REQUESTS_CA_BUNDLE
         return render(request, "monitoreo.html", {"usuario": usuario, "servidor": datos_servidor, "error": False})
 
 
